@@ -106,7 +106,7 @@ header{
         margin: 80px;
     }
     h1{
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     header{
         background-color: rgba(0, 0, 0, 0.5);
@@ -117,7 +117,10 @@ header{
         width: 30%;
         height: 130px;
         align-items: center;
-        margin-top: 100px;
+        margin-top: -3px;
+    }
+    #sites{
+        margin-top: 30%;
     }
     .carrousel-item:hover{
         border-radius: 5px 5px 5px 5px;
@@ -140,18 +143,18 @@ header{
         margin: 1px;
     }
     .fotos-redes{
-        width: 23px;
+        width: 20px;
     }
     .redes-sociais{
         position: absolute;
         bottom: 0;
         left: 0;
-        margin: 0% 40% 100px 40%;
+        margin: 0% 40% 15% 40%;
     }
     h3{
         font-size: 0.9em;
     }
     #foto-ht{
-        width: 50px;
+        width: 40px;
     }
 }
