@@ -31,7 +31,7 @@ header{
     font-family: 'Poppins', sans-serif;
     color:#ffffff
 }
-.carousel{
+.carousel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@ header{
 .carrousel-item{
     padding: 10px;
     margin: 15px;
-    background-color: #dfcdcd ;
+    background-color: #ffffffb7 ;
     width: 250px;
     height: 250px;
     border-radius: 50px 50px 50px 50px;
@@ -57,10 +57,7 @@ header{
 .carrousel-item:hover{
     border-radius: 5px 5px 5px 5px;
     transition: 0.2s;
-    width: 260px;
-    height: 250px;
     background-color: #ffffff ;
-
 }
 .foto{
     width: 50px;
@@ -84,6 +81,9 @@ header{
 #foto-jss , #foto-html {
     width: 80px;
 }
+.descricao-do-site{
+    font-style: oblique;
+}
 .redes-sociais{
     margin-top: 40px;
     text-align: center;
@@ -94,11 +94,13 @@ header{
     
 }
 #foto-ht{
-    width: 100px;  
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 0 30px 0px 0px;
+    margin-right: 10px;
+    width: 100px;  
+} a{
+    text-decoration: none;
 }
 @media ( max-width: 800px) { 
     #foto-jss, #foto-html {
@@ -117,6 +119,7 @@ header{
         width: 30%;
         height: 130px;
         align-items: center;
+        margin: 15px;
         margin-top: -3px;
     }
     #sites{
@@ -143,18 +146,18 @@ header{
         margin: 1px;
     }
     .fotos-redes{
-        width: 20px;
+        width: 15px;
     }
     .redes-sociais{
-        position: absolute;
         bottom: 0;
         left: 0;
-        margin: 0% 40% 15% 40%;
+        margin: 0% 40% 10x 40%;
     }
     h3{
         font-size: 0.9em;
     }
     #foto-ht{
         width: 40px;
+        margin-bottom: -5px;
     }
 }
