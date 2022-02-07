@@ -88,10 +88,10 @@ header{
     margin-top: 40px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    color: #ffffff;
 }
 .fotos-redes{
     width: 35px;
-    
 }
 #foto-ht{
     position: absolute;
@@ -146,7 +146,7 @@ header{
         margin: 1px;
     }
     .fotos-redes{
-        width: 15px;
+        width: 28px;
     }
     .redes-sociais{
         bottom: 0;
