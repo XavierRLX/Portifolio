@@ -36,7 +36,7 @@ header{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 120px ;
+    margin-top: 120px;
     max-width: 1000px;
 }
 .carrousel-item{
@@ -101,6 +101,7 @@ header{
     width: 100px;  
 } a{
     text-decoration: none;
+    color: #3111e9;
 }
 @media ( max-width: 800px) { 
     #foto-jss, #foto-html {
