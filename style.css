@@ -37,15 +37,25 @@ header{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 120px;
-    max-width: 900px;
+    max-width: 1500px;
+}
+.fundo-card{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+    transition: 1s;
+}
+.fundo-card:hover{
+    border-radius: 0px;
+    transition: .3s;
 }
 .carrousel-item{
-    padding: 10px;
     margin: 15px;
     background-color: #ffffffb7 ;
-    width: 220px;
-    height: 220px;
-    border-radius: 50px 50px 50px 50px;
+    width: 400px;
+    height: 400px;
+    border-radius: 40px;
     text-align: center;
     box-shadow: 0px 0px 25px black;
     color: #000000;
@@ -57,14 +67,16 @@ header{
 .carrousel-item:hover{
     border-radius: 5px 5px 5px 5px;
     transition: 0.2s;
-    background-color: #ffffff ;
+    background-color: #ffffff;
 }
 .foto{
     width: 50px;
     margin: 5px;
+    display: none;
 }
 .nome-do-site{
     margin: 10px;
+    font-size: 2em;
 }
 .foto-html-css{
     position: absolute;
@@ -83,6 +95,7 @@ header{
 }
 .descricao-do-site{
     font-style: oblique;
+    font-size: 1.5em;
 }
 .redes-sociais{
     margin-top: 40px;
@@ -122,6 +135,9 @@ header{
         margin: 15px;
         margin-top: -3px;
     }
+    .fundo-card {
+        display: none;
+    }
     #sites{
         margin-top: 30%;
     }
@@ -134,6 +150,7 @@ header{
     
     }
     .foto{
+        display: inline;
         width: 20px;
         margin: 1px;
     }
@@ -159,5 +176,8 @@ header{
     #foto-ht{
         width: 40px;
         margin-bottom: -5px;
+    }
+    #site6 > .descricao-do-site, #site9 > .descricao-do-site{
+        line-height: 14px;
     }
 }
