@@ -5,117 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="xavier.ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo/stle.css">
     <title>Renan Xavier</title>
 </head>
 <body>
-<div>
-    <header>
-        <h1>Sites desenvolvidos por <br> Renan Xavier</h1>
-    </header>
-    <div id="sites" class="carousel">
-        <div id="site1" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-ham.jpg" alt="">
-            <a href="https://xavierrlx.github.io/Xavierburger/1Pagweb/index.html" target="_blanck">
-                <img class="foto" src="hamburguer.png"> <br>
-                <h2 class="nome-do-site">RLX Burger</h2>
-            </a>
-            <p class="descricao-do-site">Projeto de uma hamburgueria, testando "Modal", "Menu" e "Formulários".
-            </p>
-        </div>
-        <div id="site2"class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-ex.js.jpg" alt="">
-            <a href="https://xavierrlx.github.io/javascriptex" target="_blanck">
-                <img class="foto" src="javascript.png"> <br>
-                <h2 class="nome-do-site">JavaScript</h2>
-            </a>
-            <p class="descricao-do-site">Alguns exercícios praticados com a linguagem JavaScript.</p>
-        </div>
-        <div id="site3" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-android.jpg" alt="">
-            <a href="https://xavierrlx.github.io/projeto/siteproj/index.html" target="_blanck">
-                <img class="foto" src="droid.png"> <br>
-                <h2 class="nome-do-site">Android</h2> </a>
-                <p class="descricao-do-site">Primeiro
-            site criado com as noções inicias de HTML5 e CSS 3, pelo curso em vídeo.</p>
-        </div>
-        
-        <div id="site4" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-calc.jpg" alt="">
-            <a href="https://xavierrlx.github.io/calculadora" target="_blanck">
-                <img class="foto" src="calculadora.png"> <br>
-                <h2 class="nome-do-site">Calculadora</h2>
-            </a>
-            <p class="descricao-do-site"> Calculadora feita com javascript com opção de tema claro e escuro.</p>
-        </div>
+    <div class="fundoPrincipal">
+        <header>
+            <div class="logotipo">
+                <img class="fotoLogo" src="pngs/xavier.ico.png" alt=""><h1 id="nomeLogo">AVIER</h1>
+            </div>
+            <div class="menu">
+                <p>Home</p>
+                <p>Sobre</p>
+                <p>Projetos</p>
+                <p>Contato</p>
+            </div>
+        </header>
 
-        <div id="site5" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-vinga.jpg" alt="">
-            <a href="https://xavierrlx.github.io/osvingadores" target="_blanck">
-                <img class="foto" src="logovingadores.png"> <br>
-                <h2 class="nome-do-site">Os vingadores</h2>
-            </a>
-            <p class="descricao-do-site"> Demonstração do efeito paralax das imagens, usando o tema dos vingadores</p>
-        </div>
-        
-        <div id="site6" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-boot.jpg" alt="">
-            <a href="https://xavierrlx.github.io/Bootstrap.2/" target="_blanck">
-                <img class="foto" src="bootstrap.png"> <br>
-                <h2 class="nome-do-site">Bootstrap</h2>
-            </a>
-            <p class="descricao-do-site">Site construido com o Framework de CSS. Utilizando junto Jquery para as dinamicas do site como o carrosel. <br>(RLX BURGUER 2.0)</p>
-        </div>
-
-        <div id="site7" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-lista.jpg" alt="">
-            <a href=" https://xavierrlx.github.io/AdicionarProdutos/" target="_blanck">
-                <img class="foto" src="lista-de-afazeres.png"> <br>
-                <h2 class="nome-do-site">Adicionar Produtos</h2>
-            </a>
-            <p class="descricao-do-site">Lista de produtos que são adicionado dinamicamente pelo JavaScript</p>
-        </div>
-
-        <div id="site9" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-relogio.jpg" alt="">
-            <a href="https://xavierrlx.github.io/Relogio/" target="_blanck">
-                <img class="foto" src="relogio.png"> <br>
-                <h2 class="nome-do-site">Relógio</h2>
-            </a>
-            <p class="descricao-do-site"> Relógio digítal com a data, previsão do tempo local. Mais o cronômetro e temporizador, todos feito com JavaScript.</p>
-        </div>
-
-        <div id="site8" class="carrousel-item">
-            <img class="fundo-card" src="fundos-fotos/fundo-curriculo.jpg" alt="">
-            <a href="https://xavierrlx.github.io/curriculo" target="_blanck">
-                <img class="foto" src="correspondencia.png"> <br>
-                <h2 class="nome-do-site">Curriculo</h2>
-            </a>
-            <p class="descricao-do-site">Curriculo online para mais informações pessoais e para contato profissional.</p>
-        </div>
-
+        <section class="fundoApresentação">
+            <img class="foto-react" src="pngs/react.png" alt="">
+            <div class="apresentação">
+                <h1>Olá, me chamo</h1>
+                <h2>Renan Xavier.</h2>
+                <p>Eu construo coisas para o "Word".</p>
+                <p id="descrição">Sou um desenvolvedor web especializado em construir experiências digitais excepcionais. Atualmente, estou focando em criar landing pages, sites para empresas e entre outros...</p>
+            </div>
+        </section>
     </div>
 
-    <div class="redes-sociais">
-        <h3> Redes Sociais</h3>
-        <div class="fotos-redes-pai">
-            <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blanck"><img class="fotos-redes" src="logotipo-do-linkedin.png"></a>
-            <a href="https://github.com/XavierRLX" target="_blanck"><img class="fotos-redes" src="github.png"></a>
-            <a href="https://www.instagram.com/yxavier_rlx/"><img class="fotos-redes" src="instagram (1).png"></a>
+    <section class="fundoProjetos">
+        <h2 class="tituloProjeto">Meus Projetos</h2>
+        <h3 class="subTituloProjeto">Sites/Landing Pages</h3>
+        <div class="cardProjeto">
+            <div class="card">
+                    <img class="imagemProjeto" src="fundos-fotos/fundo-boot.jpg" alt="">
+                    <div class="hoverTeste">
+                        <h1 class="tituloHover">Bootstrap</h1>
+                        <p class="descriçãoHover">Site desenvolvido pelo framework do css, utilizando DropDown, carrousel em animçãoes</p>
+                    </div>
+            </div>
+            <div class="card">
+                <img class="imagemProjeto" src="fundos-fotos/fundo-vinga.jpg" alt="">
+            </div>
+            <div class="card">
+                <img class="imagemProjeto" src="fundos-fotos/fundo-ham.jpg" alt="">
+            </div>
+            <div class="card">
+                <img class="imagemProjeto" src="fundos-fotos/fundo-android.jpg" alt="">           
+            </div>
+            <div class="card">
+                <img class="imagemProjeto" src="fundos-fotos/fundo-curriculo.jpg" alt="">               
+            </div>
         </div>
-    </div>
-    
+        <h3 class="tituloCardUti">Utilitários</h3>
+            <div class="cardProjeto">
+                <div class="card">
+                    <img class="imagemProjeto" src="fundos-fotos/fundo-calc.jpg" alt="">        
+                </div>
+                <div class="card">
+                    <img class="imagemProjeto" src="fundos-fotos/fundo-relogio.jpg" alt="">                 
+                </div>
+                <div class="card">
+                    <img class="imagemProjeto" src="fundos-fotos/fundo-lista.jpg" alt="">
+                </div>
+            </div>
+    </section>
+
 
     <div class="foto-html-css">
-        <img id="foto-html" src="codificacao.png" >
+        <img id="foto-html" src="/pngs/codificacao.png" >
     </div>
     <div class="foto-js">
-        <img id="foto-jss" src="js.png" alt="">
+        <img id="foto-jss" src="/pngs/js.png" alt="">
     </div>
 
     <div class="html">
-        <img id="foto-ht" src="programacao.png">
+        <img id="foto-ht" src="/pngs/programacao.png">
     </div>
-</div>
+
 </body>
 </html>

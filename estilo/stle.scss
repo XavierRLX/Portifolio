@@ -1,0 +1,203 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    } 
+    50%{
+       background-position: 50% 100% ;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.fundoPrincipal{
+    background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee );
+    background-size: 400% 300%;
+    animation: colors 5s ease alternate infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Parte do cabeçalho*/
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  color:#ffffff ;
+
+  .logotipo, .fotoLogo, #nomeLogo, .menu {
+      cursor: pointer;
+  }
+
+  .logotipo{
+    display: flex;
+    padding: 20px;
+  }
+  .fotoLogo{
+    width: 40px;
+    height: 40px;
+  }
+  #nomeLogo{
+    margin: 6.5px 0px 0px 10px;
+    font-weight: 300;
+    letter-spacing: 4px;
+  }
+  .menu{
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    padding: 20px;
+    position: relative;
+  }
+  .menu :hover{
+  box-shadow: inset 0 -10px 0 #11c0e5;
+  }
+}
+ /* Apresentação */
+
+.fundoApresentação{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+    color: #ffffff;
+
+    .foto-react{
+        width: 600px;
+        height: 600px;
+        top: 15%;
+        left: 50%;
+        position: absolute;
+        animation: rotate 40s infinite linear;
+        
+    }
+    .apresentação{
+        position: relative;
+    }
+    h1{
+        font-family: 'Kdam Thmor Pro', sans-serif;
+    }
+    h2, p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 4em;
+    }
+    #descrição{
+        font-size: 1em;
+        width: 700px;
+    }
+}
+
+/*Projetos*/
+
+.fundoProjetos{
+    background-color: rgb(0, 0, 0);
+    padding: 200px 0px 0px 0px;
+
+    .hoverTeste{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #000000;
+        width: 400px;
+        height: 600px;
+        background-color: #4203ee;
+        border-radius: 10px;
+    }
+    .tituloHover, .descriçãoHover{
+        text-align: center;
+        letter-spacing: 3px;
+        margin: 40px;
+        font-size: 2em;
+        font-family: 'Poppins', sans-serif;
+    }
+    .card{
+        border-radius: 10px;
+        width: 400px;
+        height: 600px;
+        margin: 10px;
+        position: relative;
+    }
+    .card:hover{
+        box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    }
+    .imagemProjeto{
+        width: 400px;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .tituloProjeto{
+        margin-bottom: 100px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 4em;
+        text-align: center;
+        color: #ffffff;
+    }
+    .subTituloProjeto, .tituloCardUti{
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .cardProjeto{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+.foto-html-css{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10% 2% 0% 0%;
+    cursor: pointer;
+}
+.foto-js{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0% 0% 10% 2%;
+    cursor: pointer;
+}
+#foto-jss , #foto-html {
+    width: 80px;
+}
+#foto-ht{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    width: 100px;  
+} 
+
+@media ( max-width: 800px) { 
+    #foto-jss, #foto-html {
+        width: 50px; 
+        margin: 80px;
+    }
+    #foto-ht{
+        width: 40px;
+        margin-bottom: -5px;
+    }
+}
