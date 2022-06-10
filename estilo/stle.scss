@@ -108,41 +108,15 @@ header{
 /*Projetos*/
 
 .fundoProjetos{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(27, 26, 26);
     padding: 200px 0px 0px 0px;
 
-    .hoverTeste{
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: #000000;
-        width: 400px;
-        height: 600px;
-        background-color: #4203ee;
-        border-radius: 10px;
-    }
     .tituloHover, .descriçãoHover{
         text-align: center;
         letter-spacing: 3px;
         margin: 40px;
         font-size: 2em;
         font-family: 'Poppins', sans-serif;
-    }
-    .card{
-        border-radius: 10px;
-        width: 400px;
-        height: 600px;
-        margin: 10px;
-        position: relative;
-    }
-    .card:hover{
-        box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    }
-    .imagemProjeto{
-        width: 400px;
-        height: 600px;
-        object-fit: cover;
-        border-radius: 10px;
     }
     .tituloProjeto{
         margin-bottom: 100px;
@@ -152,18 +126,47 @@ header{
         text-align: center;
         color: #ffffff;
     }
+    .displayFlex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+        max-width: 1700px;
+    }
+    .cardProjeto{
+        display: flex;
+        align-items: center;
+        max-width: 700px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin: 0px 10px 50px 10px;
+        cursor: pointer;
+    }
+    .cardProjeto:hover{
+        box-shadow:  0 3px 55px 0 #000000;
+}
+    }
+    .imagemProjeto{
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .descriçãoProjeto{
+        width:400px;
+        color: #ffffff;
+    }
     .subTituloProjeto, .tituloCardUti{
         color: #ffffff;
         font-family: 'Poppins', sans-serif;
         text-align: center;
         margin-bottom: 50px;
     }
-    .cardProjeto{
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    .tituloCardUti{
+        margin: 100px 0px 100px 0px;
     }
+
+.tr{
+    background-color: #11c0e5
 }
 
 
@@ -187,8 +190,10 @@ header{
 #foto-ht{
     position: absolute;
     right: 0;
+    bottom: 0;
     margin-right: 10px;
-    width: 100px;  
+    width: 100px;
+    cursor: pointer; 
 } 
 
 @media ( max-width: 800px) { 

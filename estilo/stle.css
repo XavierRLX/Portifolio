@@ -156,19 +156,8 @@ header .menu :hover {
 
 /*Projetos*/
 .fundoProjetos {
-  background-color: black;
+  background-color: #1b1a1a;
   padding: 200px 0px 0px 0px;
-}
-
-.fundoProjetos .hoverTeste {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #000000;
-  width: 400px;
-  height: 600px;
-  background-color: #4203ee;
-  border-radius: 10px;
 }
 
 .fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
@@ -177,27 +166,6 @@ header .menu :hover {
   margin: 40px;
   font-size: 2em;
   font-family: 'Poppins', sans-serif;
-}
-
-.fundoProjetos .card {
-  border-radius: 10px;
-  width: 400px;
-  height: 600px;
-  margin: 10px;
-  position: relative;
-}
-
-.fundoProjetos .card:hover {
-  -webkit-box-shadow: 0px 0px 5px white;
-          box-shadow: 0px 0px 5px white;
-}
-
-.fundoProjetos .imagemProjeto {
-  width: 400px;
-  height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
 }
 
 .fundoProjetos .tituloProjeto {
@@ -209,23 +177,63 @@ header .menu :hover {
   color: #ffffff;
 }
 
-.fundoProjetos .subTituloProjeto, .fundoProjetos .tituloCardUti {
+.fundoProjetos .displayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  max-width: 1700px;
+}
+
+.fundoProjetos .cardProjeto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 700px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0px 10px 50px 10px;
+  cursor: pointer;
+}
+
+.fundoProjetos .cardProjeto:hover {
+  -webkit-box-shadow: 0 3px 55px 0 #000000;
+          box-shadow: 0 3px 55px 0 #000000;
+}
+
+.imagemProjeto {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.descriçãoProjeto {
+  width: 400px;
+  color: #ffffff;
+}
+
+.subTituloProjeto, .tituloCardUti {
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.fundoProjetos .cardProjeto {
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.tituloCardUti {
+  margin: 100px 0px 100px 0px;
+}
+
+.tr {
+  background-color: #11c0e5;
 }
 
 .foto-html-css {
@@ -251,8 +259,10 @@ header .menu :hover {
 #foto-ht {
   position: absolute;
   right: 0;
+  bottom: 0;
   margin-right: 10px;
   width: 100px;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
