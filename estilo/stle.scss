@@ -141,15 +141,21 @@ header{
         text-align: center;
         margin: 0px 10px 50px 10px;
         cursor: pointer;
+        overflow: hidden;
     }
     .cardProjeto:hover{
         box-shadow:  0 3px 55px 0 #000000;
-}
     }
     .imagemProjeto{
         width: 300px;
         height: 200px;
         object-fit: cover;
+        -webkit-transition: .5s ease;
+        transition: transform .5s ease;
+    }
+    .imagemProjeto:hover{
+        -webkit-transform: scale(1.1);
+   transform: scale(1.1);
     }
     .descriçãoProjeto{
         width:400px;
@@ -164,11 +170,12 @@ header{
     .tituloCardUti{
         margin: 100px 0px 100px 0px;
     }
+}
+
 
 .tr{
     background-color: #11c0e5
 }
-
 
 .foto-html-css{
     position: absolute;
