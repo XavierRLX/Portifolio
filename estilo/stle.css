@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
-@-webkit-keyframes colors {
+@-webkit-keyframes fundoGradiente {
   0% {
     background-position: 0% 50%;
   }
@@ -12,7 +12,7 @@
     background-position: 100% 50%;
   }
 }
-@keyframes colors {
+@keyframes fundoGradiente {
   0% {
     background-position: 0% 50%;
   }
@@ -24,7 +24,7 @@
   }
 }
 
-@-webkit-keyframes rotate {
+@-webkit-keyframes girando360 {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -35,7 +35,7 @@
   }
 }
 
-@keyframes rotate {
+@keyframes girando360 {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -51,13 +51,19 @@
   padding: 0px;
 }
 
-.fundoPrincipal {
-  background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee);
-  background-size: 400% 300%;
-  -webkit-animation: colors 5s ease alternate infinite;
-          animation: colors 5s ease alternate infinite;
-  height: 100vh;
-  width: 100%;
+/* Style do srcoll*/
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a015f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4203ee;
+  border-radius: 2px;
+  border: 3px solid #4203ee;
 }
 
 /* Parte do cabeçalho*/
@@ -111,6 +117,15 @@ header .menu :hover {
           box-shadow: inset 0 -10px 0 #11c0e5;
 }
 
+.fundoPrincipal {
+  background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee);
+  background-size: 400% 300%;
+  -webkit-animation: fundoGradiente 5s ease alternate infinite;
+          animation: fundoGradiente 5s ease alternate infinite;
+  height: 100vh;
+  width: 100%;
+}
+
 /* Apresentação */
 .fundoApresentação {
   display: -webkit-box;
@@ -132,8 +147,8 @@ header .menu :hover {
   top: 15%;
   left: 50%;
   position: absolute;
-  -webkit-animation: rotate 40s infinite linear;
-          animation: rotate 40s infinite linear;
+  -webkit-animation: girando360 40s infinite linear;
+          animation: girando360 40s infinite linear;
 }
 
 .fundoApresentação .apresentação {
@@ -157,7 +172,7 @@ header .menu :hover {
 /*Projetos*/
 .fundoProjetos {
   background-color: #1b1a1a;
-  padding: 200px 0px 0px 0px;
+  padding: 50px 0px 50px 0px;
 }
 
 .fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
@@ -243,6 +258,14 @@ header .menu :hover {
   margin: 100px 0px 100px 0px;
 }
 
+.separador {
+  border-color: #4203ee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+}
+
 .tr {
   background-color: #11c0e5;
 }
@@ -276,14 +299,138 @@ header .menu :hover {
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
-  #foto-jss, #foto-html {
-    width: 50px;
-    margin: 80px;
+@media (max-width: 1450px) {
+  #foto-jss, #foto-html, #foto-ht {
+    width: 70px;
   }
-  #foto-ht {
+  .foto-react {
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 1260px) {
+  #foto-jss, #foto-html, #foto-ht {
+    width: 60px;
+  }
+  .fundoApresentação h1 {
+    font-size: 1em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 3em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .8em;
+    width: 700px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .foto-react {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 120px;
+  }
+  .fundoApresentação h1 {
+    font-size: .8em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 2em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .8em;
+    width: 700px;
+  }
+  #foto-jss, #foto-html, #foto-ht {
+    width: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 5px;
+  }
+  header .logotipo {
+    padding: 10px;
+  }
+  header .fotoLogo {
+    width: 20px;
+    height: 20px;
+  }
+  header #nomeLogo {
+    font-size: 1.2em;
+    margin: 0px 0px 0px 5px;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+  header .menu {
+    width: 400px;
+    padding: 15px;
+    position: relative;
+    font-size: .8em;
+  }
+  header .menu :hover {
+    -webkit-box-shadow: inset 0 -20px 0 #11c0e5;
+            box-shadow: inset 0 -20px 0 #11c0e5;
+  }
+  .foto-react {
+    max-width: 180px;
+    max-height: 180px;
+    margin-top: 110px;
+  }
+  .fundoApresentação h1 {
+    font-size: .6em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 1em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .5em;
+    width: 500px;
+  }
+  #foto-jss, #foto-html, #foto-ht {
     width: 40px;
-    margin-bottom: -5px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 5px;
+  }
+  header .logotipo {
+    padding: 10px;
+  }
+  header .fotoLogo {
+    width: 20px;
+    height: 20px;
+  }
+  header #nomeLogo {
+    font-size: 1.2em;
+    margin: 0px 0px 0px 5px;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+  header .menu {
+    display: none;
+  }
+  .foto-react {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 300px;
+  }
+  .fundoApresentação h1 {
+    font-size: .6em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 1em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .5em;
+    width: 350px;
+  }
+  #foto-jss, #foto-html, #foto-ht {
+    width: 40px;
   }
 }
 /*# sourceMappingURL=stle.css.map */

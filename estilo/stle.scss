@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-@keyframes colors {
+@keyframes fundoGradiente {
     0% {
         background-position: 0% 50%;
     } 
@@ -14,7 +14,7 @@
     }
 }
 
-@keyframes rotate {
+@keyframes girando360 {
     from {
       transform: rotate(0deg);
     }
@@ -27,13 +27,20 @@
     margin: 0px;
     padding: 0px;
 }
-.fundoPrincipal{
-    background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee );
-    background-size: 400% 300%;
-    animation: colors 5s ease alternate infinite;
-    height: 100vh;
-    width: 100%;
-}
+ /* Style do srcoll*/
+body::-webkit-scrollbar {
+    width: 10px;             
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1a015f;       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #4203ee;    
+    border-radius: 2px;       
+    border: 3px solid #4203ee; 
+  }
 
 /* Parte do cabeçalho*/
 header{
@@ -71,8 +78,16 @@ header{
   box-shadow: inset 0 -10px 0 #11c0e5;
   }
 }
- /* Apresentação */
 
+.fundoPrincipal{
+    background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee );
+    background-size: 400% 300%;
+    animation: fundoGradiente 5s ease alternate infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+ /* Apresentação */
 .fundoApresentação{
     display: flex;
     justify-content: center;
@@ -86,8 +101,7 @@ header{
         top: 15%;
         left: 50%;
         position: absolute;
-        animation: rotate 40s infinite linear;
-        
+        animation: girando360 40s infinite linear;  
     }
     .apresentação{
         position: relative;
@@ -109,7 +123,7 @@ header{
 
 .fundoProjetos{
     background-color: rgb(27, 26, 26);
-    padding: 200px 0px 0px 0px;
+    padding: 50px 0px 50px 0px;
 
     .tituloHover, .descriçãoHover{
         text-align: center;
@@ -172,6 +186,12 @@ header{
     }
 }
 
+.separador{
+    border-color:#4203ee;
+    box-sizing:border-box;
+    margin: auto;
+    width:100%;  
+  }
 
 .tr{
     background-color: #11c0e5
@@ -202,14 +222,153 @@ header{
     width: 100px;
     cursor: pointer; 
 } 
-
-@media ( max-width: 800px) { 
-    #foto-jss, #foto-html {
-        width: 50px; 
-        margin: 80px;
+@media (max-width:1450px) {
+    #foto-jss, #foto-html, #foto-ht
+    {
+        width: 70px;
     }
-    #foto-ht{
-        width: 40px;
-        margin-bottom: -5px;
+    .foto-react{
+        max-width: 400px;
+        max-height: 400px;
+        margin-top: 90px
     }
 }
+@media (max-width:1260px){
+
+    #foto-jss, #foto-html, #foto-ht
+    {
+        width: 60px;
+    }
+    .fundoApresentação{
+
+        h1{
+            font-size: 1em;
+        }
+        h2, p {
+            font-size: 3em;
+        }
+        #descrição{
+            font-size: .8em;
+            width: 700px;
+        }
+    }
+}
+@media (max-width:1260px){
+    .foto-react{
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 120px
+    }
+    .fundoApresentação{
+
+        h1{
+            font-size: .8em;
+        }
+        h2, p {
+            font-size: 2em;
+        }
+        #descrição{
+            font-size: .8em;
+            width: 700px;
+        }
+    }
+    #foto-jss, #foto-html, #foto-ht
+    {
+        width: 50px;
+    }
+}
+@media (max-width:800px){
+    header{
+        padding: 5px;
+        .logotipo{
+          padding: 10px;
+        }
+        .fotoLogo{
+          width: 20px;
+          height: 20px;
+        }
+        #nomeLogo{
+          font-size: 1.2em;
+          margin: 0px 0px 0px 5px;
+          font-weight: 300;
+          letter-spacing: 3px;
+        }
+        .menu{
+          width: 400px;
+          padding: 15px;
+          position: relative;
+          font-size: .8em;
+        }
+        .menu :hover{
+        box-shadow: inset 0 -20px 0 #11c0e5;
+        }
+      }
+
+    .foto-react{
+        max-width: 180px;
+        max-height: 180px;
+        margin-top: 110px;
+    }
+    .fundoApresentação{
+
+        h1{
+            font-size: .6em;
+        }
+        h2, p {
+            font-size: 1em;
+        }
+        #descrição{
+            font-size: .5em;
+            width: 500px;
+        }
+    }
+    #foto-jss, #foto-html, #foto-ht
+    {
+        width: 40px;
+    }
+}
+@media (max-width:600px){
+    header{
+        padding: 5px;
+        .logotipo{
+          padding: 10px;
+        }
+        .fotoLogo{
+          width: 20px;
+          height: 20px;
+        }
+        #nomeLogo{
+          font-size: 1.2em;
+          margin: 0px 0px 0px 5px;
+          font-weight: 300;
+          letter-spacing: 3px;
+        }
+        .menu{
+          display: none;
+        }
+      }
+
+    .foto-react{
+        max-width: 150px;
+        max-height: 150px;
+        margin-top: 300px;
+    }
+    .fundoApresentação{
+
+        h1{
+            font-size: .6em;
+        }
+        h2, p {
+            font-size: 1em;
+        }
+        #descrição{
+            font-size: .5em;
+            width: 350px;
+        }
+    }
+    #foto-jss, #foto-html, #foto-ht
+    {
+        width: 40px;
+    }
+}
+
