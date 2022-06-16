@@ -23,9 +23,49 @@
     }
   }
 
+  @keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes tremer {
+    0% {
+        transform: translate(0); 
+    }
+    20%{
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        transform: translate(0);
+    }
+    80%{
+        transform: translate(5px, 0px);
+    }
+    100%{
+        transform: translate(0);
+    }
+  }
+
 *{
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
  /* Style do srcoll*/
 body::-webkit-scrollbar {
@@ -43,6 +83,11 @@ body::-webkit-scrollbar {
   }
 
 /* Parte do cabeçalho*/
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 header{
   display: flex;
   justify-content: space-between;
@@ -74,8 +119,15 @@ header{
     padding: 20px;
     position: relative;
   }
-  .menu :hover{
-  box-shadow: inset 0 -10px 0 #11c0e5;
+  p
+  {
+    padding: 5px;
+  }
+  a :hover{
+    background-color: #179bb6;
+    box-shadow:  0 3px 20px 0 #000000;
+    border-radius: 5px; 
+    animation: 1s;
   }
 }
 
@@ -145,7 +197,6 @@ header{
         flex-wrap: wrap;
         justify-content: center;
         margin: auto;
-        max-width: 1700px;
     }
     .cardProjeto{
         display: flex;
@@ -193,10 +244,7 @@ header{
     width:100%;  
   }
 
-.tr{
-    background-color: #11c0e5
-}
-
+/* Png-fundoPrincipal*/
 .foto-html-css{
     position: absolute;
     top: 0;
@@ -204,12 +252,18 @@ header{
     margin: 10% 2% 0% 0%;
     cursor: pointer;
 }
+.foto-html-css:hover{
+    animation: girando360 1s infinite linear;
+}
 .foto-js{
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 0% 0% 10% 2%;
     cursor: pointer;
+}
+#foto-jss:hover{
+    animation: vibrate-1 0.5s linear infinite both;
 }
 #foto-jss , #foto-html {
     width: 80px;
@@ -222,6 +276,28 @@ header{
     width: 100px;
     cursor: pointer; 
 } 
+#foto-ht:hover{
+    animation: tremer 0.3   s linear infinite both
+}
+.redeSocias{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 47%;
+    width: 100px;
+    cursor: pointer; 
+
+    .imagensRedes{
+        display: flex;
+        padding: 10px;
+
+        img{
+            max-width: 50px;
+            max-height: 50px;
+            padding: 5px;
+        }
+    }
+}
 @media (max-width:1450px) {
     #foto-jss, #foto-html, #foto-ht
     {
@@ -231,6 +307,33 @@ header{
         max-width: 400px;
         max-height: 400px;
         margin-top: 90px
+    }
+    .fundoProjetos{
+
+        .cardProjeto{
+            max-width: 1000px;
+            margin: 0px 10px 50px 10px;
+        }
+        .imagemProjeto{
+            width: 250px;
+            height: 150px;
+        }
+        .descriçãoProjeto{
+            width:250px;
+            margin: auto;
+            margin-top: 30px;
+            font-size: .8em;
+        }
+    }
+    #projeto3 {
+        .descriçãoProjeto{
+            margin-top: 0px;
+        }
+    }
+    #projeto6 {
+        .descriçãoProjeto{
+            margin-top: 0px;
+        }
     }
 }
 @media (max-width:1260px){
@@ -253,7 +356,7 @@ header{
         }
     }
 }
-@media (max-width:1260px){
+@media (max-width:1100px){
     .foto-react{
         max-width: 300px;
         max-height: 300px;
@@ -270,6 +373,11 @@ header{
         #descrição{
             font-size: .8em;
             width: 700px;
+        }
+        .fundoApresentação{
+            h2{
+                
+            }
         }
     }
     #foto-jss, #foto-html, #foto-ht
@@ -347,28 +455,79 @@ header{
           display: none;
         }
       }
-
     .foto-react{
-        max-width: 150px;
-        max-height: 150px;
-        margin-top: 300px;
+        max-width: 250px;
+        max-height: 250px;
+        margin-top: 180px;
+        left: 18% !important ;
     }
     .fundoApresentação{
 
-        h1{
-            font-size: .6em;
+        .apresentação{
+            padding: 10px;
+            width: 100%;
+            margin: auto;
+            margin-top: 120px;
         }
-        h2, p {
+        h1{
             font-size: 1em;
         }
+        h2{
+            font-size: 2em;
+        } p {
+            font-size: 1.4em;
+        }
         #descrição{
-            font-size: .5em;
-            width: 350px;
+            font-size: .4em;
+            width: 300px;
         }
     }
     #foto-jss, #foto-html, #foto-ht
     {
         width: 40px;
+    }
+    .redeSocias{
+        margin-right: 35%;
+    
+        .imagensRedes{
+            display: flex;
+            padding: 10px;
+    
+            img{
+                max-width: 30px;
+                max-height: 30px;
+            }
+        }
+    }
+    .cardProjeto{
+        flex-wrap: wrap;
+        margin: auto;
+        padding: 10px;
+    }
+    .imagemProjeto{
+        max-width: 500px;
+        max-height: 350px;
+        margin: auto;
+    }
+    .descriçãoProjeto{
+        margin-top: 10px;
+        font-size: .4em;
+    }
+    .subTituloProjeto, .tituloCardUti {
+        font-size: .7em;
+    }
+    .tituloCardUti{
+        margin: 0px;
+    }
+    #projeto3 {
+        .descriçãoProjeto{
+            margin-top: 30px;
+        }
+    }
+    #projeto6 {
+        .descriçãoProjeto{
+            margin-top: 30px;
+        }
     }
 }
 

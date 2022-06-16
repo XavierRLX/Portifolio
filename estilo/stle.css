@@ -46,9 +46,110 @@
   }
 }
 
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+  40% {
+    -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+  }
+  60% {
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+  }
+  80% {
+    -webkit-transform: translate(5px, -5px);
+            transform: translate(5px, -5px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+  40% {
+    -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+  }
+  60% {
+    -webkit-transform: translate(5px, 5px);
+            transform: translate(5px, 5px);
+  }
+  80% {
+    -webkit-transform: translate(5px, -5px);
+            transform: translate(5px, -5px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes tremer {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 0px);
+            transform: translate(-5px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  80% {
+    -webkit-transform: translate(5px, 0px);
+            transform: translate(5px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes tremer {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 0px);
+            transform: translate(-5px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  80% {
+    -webkit-transform: translate(5px, 0px);
+            transform: translate(5px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 /* Style do srcoll*/
@@ -67,6 +168,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Parte do cabeçalho*/
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,9 +218,17 @@ header .menu {
   position: relative;
 }
 
-header .menu :hover {
-  -webkit-box-shadow: inset 0 -10px 0 #11c0e5;
-          box-shadow: inset 0 -10px 0 #11c0e5;
+header p {
+  padding: 5px;
+}
+
+header a :hover {
+  background-color: #179bb6;
+  -webkit-box-shadow: 0 3px 20px 0 #000000;
+          box-shadow: 0 3px 20px 0 #000000;
+  border-radius: 5px;
+  -webkit-animation: 1s;
+          animation: 1s;
 }
 
 .fundoPrincipal {
@@ -202,7 +316,6 @@ header .menu :hover {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  max-width: 1700px;
 }
 
 .fundoProjetos .cardProjeto {
@@ -266,10 +379,7 @@ header .menu :hover {
   width: 100%;
 }
 
-.tr {
-  background-color: #11c0e5;
-}
-
+/* Png-fundoPrincipal*/
 .foto-html-css {
   position: absolute;
   top: 0;
@@ -278,12 +388,22 @@ header .menu :hover {
   cursor: pointer;
 }
 
+.foto-html-css:hover {
+  -webkit-animation: girando360 1s infinite linear;
+          animation: girando360 1s infinite linear;
+}
+
 .foto-js {
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 0% 0% 10% 2%;
   cursor: pointer;
+}
+
+#foto-jss:hover {
+  -webkit-animation: vibrate-1 0.5s linear infinite both;
+          animation: vibrate-1 0.5s linear infinite both;
 }
 
 #foto-jss, #foto-html {
@@ -299,6 +419,33 @@ header .menu :hover {
   cursor: pointer;
 }
 
+#foto-ht:hover {
+  -webkit-animation: tremer 0.3   s linear infinite both;
+          animation: tremer 0.3   s linear infinite both;
+}
+
+.redeSocias {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 47%;
+  width: 100px;
+  cursor: pointer;
+}
+
+.redeSocias .imagensRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.redeSocias .imagensRedes img {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 5px;
+}
+
 @media (max-width: 1450px) {
   #foto-jss, #foto-html, #foto-ht {
     width: 70px;
@@ -307,6 +454,26 @@ header .menu :hover {
     max-width: 400px;
     max-height: 400px;
     margin-top: 90px;
+  }
+  .fundoProjetos .cardProjeto {
+    max-width: 1000px;
+    margin: 0px 10px 50px 10px;
+  }
+  .fundoProjetos .imagemProjeto {
+    width: 250px;
+    height: 150px;
+  }
+  .fundoProjetos .descriçãoProjeto {
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: .8em;
+  }
+  #projeto3 .descriçãoProjeto {
+    margin-top: 0px;
+  }
+  #projeto6 .descriçãoProjeto {
+    margin-top: 0px;
   }
 }
 
@@ -326,7 +493,7 @@ header .menu :hover {
   }
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1100px) {
   .foto-react {
     max-width: 300px;
     max-height: 300px;
@@ -415,22 +582,72 @@ header .menu :hover {
     display: none;
   }
   .foto-react {
-    max-width: 150px;
-    max-height: 150px;
-    margin-top: 300px;
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 180px;
+    left: 18% !important;
+  }
+  .fundoApresentação .apresentação {
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 120px;
   }
   .fundoApresentação h1 {
-    font-size: .6em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
     font-size: 1em;
   }
+  .fundoApresentação h2 {
+    font-size: 2em;
+  }
+  .fundoApresentação p {
+    font-size: 1.4em;
+  }
   .fundoApresentação #descrição {
-    font-size: .5em;
-    width: 350px;
+    font-size: .4em;
+    width: 300px;
   }
   #foto-jss, #foto-html, #foto-ht {
     width: 40px;
+  }
+  .redeSocias {
+    margin-right: 35%;
+  }
+  .redeSocias .imagensRedes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+  }
+  .redeSocias .imagensRedes img {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  .cardProjeto {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+  }
+  .imagemProjeto {
+    max-width: 500px;
+    max-height: 350px;
+    margin: auto;
+  }
+  .descriçãoProjeto {
+    margin-top: 10px;
+    font-size: .4em;
+  }
+  .subTituloProjeto, .tituloCardUti {
+    font-size: .7em;
+  }
+  .tituloCardUti {
+    margin: 0px;
+  }
+  #projeto3 .descriçãoProjeto {
+    margin-top: 30px;
+  }
+  #projeto6 .descriçãoProjeto {
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=stle.css.map */
