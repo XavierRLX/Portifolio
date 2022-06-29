@@ -8,141 +8,141 @@
     <link rel="stylesheet" href="estilo/stle.css">
     <title>Xavier</title>
 </head>
-<body>
-    <div class="fundoPrincipal">
-        <header>
-            <div class="logotipo">
-                <img class="fotoLogo" src="fundos-fotos/xavier.ico.png" alt=""><h1 id="nomeLogo">AVIER</h1>
-            </div>
-            <div class="menu">
-                <a href="">
-                    <p>Home</p>
-                </a>
-                <a href="">
-                    <p>Sobre</p>
-                </a>
-                <a href="#projeto">
-                    <p>Projetos</p>
-                </a>
-                <a href="">
-                    <p>Contato</p>
-                </a>
-            </div>
-        </header>
+<body onload="preload()">
 
-        <section class="fundoApresentação">
-            <img class="foto-react" src="fundos-fotos/react.png" alt="">
-            <div class="apresentação">
-                <h1>Olá, me chamo</h1>
-                <h2>Renan Xavier.</h2>
-                <p>Eu construo coisas para a internet</p>
-                <p id="descrição">Sou um desenvolvedor web especializado em construir experiências digitais excepcionais. Atualmente, estou focando em criar landing pages, sites para empresas e entre outros...</p>
-            </div>
+    <div id="preloadid" class="preload">
+        <div class="carregamento"></div>
+    </div>
+
+    <div id="onloadid">
+        <div class="fundoPrincipal">
+            <header>
+                <div class="logotipo">
+                    <img class="fotoLogo" src="fundos-fotos/xavier.ico.png" alt=""><h1 id="nomeLogo">AVIER</h1>
+                </div>
+                <ul class="menu">
+                    <a href="#"><p>Home</p></a>
+                    <a href="#"><p>Sobre</p></a>
+                    <a href="#projeto"><p>Projetos</p></a>
+                    <a href="#"><p>Contato</p></a>
+                </ul>
+            </header>
+            <section class="fundoApresentação">
+                <img class="foto-react" src="fundos-fotos/react.png" alt="">
+                <div class="apresentação">
+                    <h1>Olá, me chamo</h1>
+                    <h2>Renan Xavier.</h2>
+                    <p>Eu construo coisas para a internet</p>
+                    <p id="descrição">Sou um desenvolvedor web especializado em construir experiências digitais excepcionais. Atualmente, estou focando em criar landing pages, sites para empresas e entre outros...</p>
+                </div>
+            </section>
+        </div>
+        <section class="fundoProjetos">
+            <h2 id="projeto" class="tituloProjeto">Meus Projetos</h2>
+            <h3 class="subTituloProjeto">Sites/Landing Pages</h3>
+                <div class="displayFlex">
+                    <a href="https://xavierrlx.github.io/Bootstrap.2/" target="_blank">
+                        <div id="projeto1" class="cardProjeto">
+                            <img class="imagemProjeto" src="fundos-fotos/fundo-boot.jpg" alt="">
+                            <div class="descriçãoProjeto">
+                                <h1>BOOSTSTRAP</h1>
+                                <p>Desenvolvido pelo framework do css, utilizando DropDown, carrousel em animações</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://xavierrlx.github.io/osvingadores/" target="_blank">
+                        <div id="projeto2" class="cardProjeto">
+                            <img class="imagemProjeto" src="fundos-fotos/fundo-vinga.jpg" alt="">
+                           <div class="descriçãoProjeto">
+                               <h1>Paralax</h1>
+                               <p>Site criado para desmonstrar o efeito "paralax" das imagens com o tema dos VINGADORES
+                               </p>
+                           </div>
+                                       </div>
+                    </a>
+                   <a href="https://xavierrlx.github.io/Xavierburger/1Pagweb/index.html" target="_blank">
+                       <div id="projeto3" class="cardProjeto">
+                        <img class="imagemProjeto" src="fundos-fotos/fundo-ham.jpg" alt="">
+                       <div class="descriçãoProjeto">
+                           <h1>Burger</h1>
+                           <p>Primeiro site (responsivo) desenvolvido com as noções básicas de javaScript: funções, eventos, DOM.</p> <br>
+                           <p>Modal, Menu "Hamburguer", tela de login, formulário.</p>
+                       </div>
+                                  </div>
+                   </a>
+               <a href="https://xavierrlx.github.io/projeto" target="_blank">
+                   <div id="projeto4" class="cardProjeto">
+                       <img class="imagemProjeto" src="fundos-fotos/fundo-android.jpg" alt="">
+                      <div class="descriçãoProjeto">
+                          <h1>Android</h1>
+                          <p>Primeiro projeto responsivo com as noções básicas de HTML5 E CSS3</p>
+                      </div>
+                             </div>
+               </a>
+                </div>
         </section>
-    </div>
-
-    <section class="fundoProjetos">
-        <h2 id="projeto" class="tituloProjeto">Meus Projetos</h2>
-        <h3 class="subTituloProjeto">Sites/Landing Pages</h3>
-            <div class="displayFlex">
-
-                <div id="projeto1" class="cardProjeto">
-                     <img class="imagemProjeto" src="fundos-fotos/fundo-boot.jpg" alt="">
-                    <div class="descriçãoProjeto">
-                        <h1>BOOSTSTRAP</h1>
-                        <p>Desenvolvido pelo framework do css, utilizando DropDown, carrousel em animações</p>
-                    </div>
+        <hr class="separador">
+        <section id="fundoProjetosDois" class="fundoProjetos">
+            <h3 class="subTituloProjeto">Utilitários</h3>
+                <div class="displayFlex">
+                    <a href="https://xavierrlx.github.io/calculadora" target="_blank">
+                        <div id="projeto5" class="cardProjeto">
+                             <img class="imagemProjeto" src="fundos-fotos/fundo-calc.jpg" alt="">
+                            <div class="descriçãoProjeto">
+                                <h1>Calculadora</h1>
+                                <p>Criado com javaScript puro e possuindo a opção de modo de cor (claro e escuro)</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://xavierrlx.github.io/Relogio" target="_blank">
+                        <div id="projeto6" class="cardProjeto">
+                            <img class="imagemProjeto" src="fundos-fotos/fundo-relogio.jpg" alt="">
+                           <div class="descriçãoProjeto">
+                               <h1> Relógio </h1>
+                               <p>Relógio digital e com a API podendo ver a temperatura usando a sua localizção.</p> <br>
+                               <p>Junto desenvolvido um cronomêtro e um temporiazador</p>
+                           </div>
+                                       </div>
+                    </a>
+                   <a href="https://xavierrlx.github.io/AdicionarProdutos" target="_blank">
+                       <div id="projeto7" class="cardProjeto">
+                        <img class="imagemProjeto" src="fundos-fotos/fundo-lista.jpg" alt="">
+                       <div class="descriçãoProjeto">
+                           <h1>Lista de compras</h1>
+                           <p> Lista adcionada dinamicamento pelo javaScript, tendo opção de "adcionar", "editar" e "apagar" </p>
+                          </div>
+                        </div>
+                   </a>
+               <a href="https://xavierrlx.github.io/javascriptex" target="_blank">
+                   <div id="projeto8" class="cardProjeto">
+                       <img class="imagemProjeto" src="fundos-fotos/fundo-ex.js.jpg" alt="">
+                      <div class="descriçãoProjeto">
+                          <h1>Exercícios javaScript</h1>
+                          <p> Alguns exercícios feito meus aprendizados uniciais com linguagem javaScript</p>
+                      </div>
+                             </div>
+               </a>
+        
                 </div>
-
-                <div id="projeto2" class="cardProjeto">
-                    <img class="imagemProjeto" src="fundos-fotos/fundo-vinga.jpg" alt="">
-                   <div class="descriçãoProjeto">
-                       <h1>Paralax</h1>
-                       <p>Site criado para desmonstrar o efeito "paralax" das imagens com o tema dos VINGADORES
-                       </p>
-                   </div>
-               </div>
-
-               <div id="projeto3" class="cardProjeto">
-                <img class="imagemProjeto" src="fundos-fotos/fundo-ham.jpg" alt="">
-               <div class="descriçãoProjeto">
-                   <h1>Burger</h1>
-                   <p>Primeiro site (responsivo) desenvolvido com as noções básicas de javaScript: funções, eventos, DOM.</p> <br>
-                   <p>Modal, Menu "Hamburguer", tela de login, formulário.</p>
-               </div>
-           </div>
-
-           <div id="projeto4" class="cardProjeto">
-               <img class="imagemProjeto" src="fundos-fotos/fundo-android.jpg" alt="">
-              <div class="descriçãoProjeto">
-                  <h1>Android</h1>
-                  <p>Primeiro projeto responsivo com as noções básicas de HTML5 E CSS3</p>
-              </div>
-          </div>
-
+        <div class="foto-html-css">
+            <img id="foto-html" src="fundos-fotos/codificacao.png" alt="icone-html" >
+        </div>
+        <div class="foto-js">
+            <img id="foto-jss" src="fundos-fotos/js.png" alt="icone-js">
+        </div>
+        <div class="redeSocias">
+            <div class="imagensRedes">
+                <img src="fundos-fotos/instagram (1).png" alt="instagram">
+                <img src="fundos-fotos/github.png" alt="github">
             </div>
-    </section>
-
-    <hr class="separador">
-
-    <section id="fundoProjetosDois" class="fundoProjetos">
-        <h3 class="subTituloProjeto">Utilitários</h3>
-            <div class="displayFlex">
-
-                <div id="projeto5" class="cardProjeto">
-                     <img class="imagemProjeto" src="fundos-fotos/fundo-calc.jpg" alt="">
-                    <div class="descriçãoProjeto">
-                        <h1>Calculadora</h1>
-                        <p>Criado com javaScript puro e possuindo a opção de modo de cor (claro e escuro)</p>
-                    </div>
-                </div>
-
-                <div id="projeto6" class="cardProjeto">
-                    <img class="imagemProjeto" src="fundos-fotos/fundo-relogio.jpg" alt="">
-                   <div class="descriçãoProjeto">
-                       <h1> Relógio </h1>
-                       <p>Relógio digital e com a API podendo ver a temperatura usando a sua localizção.</p> <br>
-                       <p>Junto desenvolvido um cronomêtro e um temporiazador</p>
-                   </div>
-               </div>
-
-               <div id="projeto7" class="cardProjeto">
-                <img class="imagemProjeto" src="fundos-fotos/fundo-lista.jpg" alt="">
-               <div class="descriçãoProjeto">
-                   <h1>Lista de compras</h1>
-                   <p> Lista adcionada dinamicamento pelo javaScript, tendo opção de "adcionar", "editar" e "apagar" </p>
-               </div>
-           </div>
-
-           <div id="projeto8" class="cardProjeto">
-               <img class="imagemProjeto" src="fundos-fotos/fundo-ex.js.jpg" alt="">
-              <div class="descriçãoProjeto">
-                  <h1>Exercícios javaScript</h1>
-                  <p> Alguns exercícios feito meus aprendizados uniciais com linguagem javaScript</p>
-              </div>
-          </div>
-          
-            </div>
-
-    <div class="foto-html-css">
-        <img id="foto-html" src="fundos-fotos/codificacao.png" alt="icone-html" >
-    </div>
-    <div class="foto-js">
-        <img id="foto-jss" src="fundos-fotos/js.png" alt="icone-js">
-    </div>
-
-    <div class="redeSocias">
-        <div class="imagensRedes">
-            <img src="fundos-fotos/instagram (1).png" alt="instagram">
-            <img src="fundos-fotos/github.png" alt="github">
+        </div>
+        <div class="html">
+            <img id="foto-ht" src="fundos-fotos/programacao.png" alt="icone-fechamento">
         </div>
     </div>
 
-    <div class="html">
-        <img id="foto-ht" src="fundos-fotos/programacao.png" alt="icone-fechamento">
-    </div>
-
-    <script src="js/animar"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/menumobile.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,19 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@-webkit-keyframes preload {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes preload {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
 @-webkit-keyframes fundoGradiente {
   0% {
     background-position: 0% 50%;
@@ -12,6 +25,7 @@
     background-position: 100% 50%;
   }
 }
+
 @keyframes fundoGradiente {
   0% {
     background-position: 0% 50%;
@@ -46,7 +60,7 @@
   }
 }
 
-@-webkit-keyframes vibrate-1 {
+@-webkit-keyframes vibração {
   0% {
     -webkit-transform: translate(0);
             transform: translate(0);
@@ -73,7 +87,7 @@
   }
 }
 
-@keyframes vibrate-1 {
+@keyframes vibração {
   0% {
     -webkit-transform: translate(0);
             transform: translate(0);
@@ -152,22 +166,60 @@
   scroll-behavior: smooth;
 }
 
-/* Style do srcoll*/
+/*pre-laod*/
+#onloadid {
+  display: none;
+}
+
+.preload {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2d01a5;
+  -webkit-transition: 1000s;
+  transition: 1000s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.preload .carregamento {
+  -webkit-animation: preload 1s infinite;
+          animation: preload 1s infinite;
+  border: 6px solid #3201b9;
+  border-top-color: #11c0e5;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* cor do srcoll*/
 body::-webkit-scrollbar {
   width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background: #1a015f;
+  background: #ffffff;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #4203ee;
-  border-radius: 2px;
   border: 3px solid #4203ee;
 }
 
 /* Parte do cabeçalho*/
+body {
+  background: #2d01a5;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -232,7 +284,7 @@ header a :hover {
 }
 
 .fundoPrincipal {
-  background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee);
+  background-color: #2d01a5;
   background-size: 400% 300%;
   -webkit-animation: fundoGradiente 5s ease alternate infinite;
           animation: fundoGradiente 5s ease alternate infinite;
@@ -379,7 +431,7 @@ header a :hover {
   width: 100%;
 }
 
-/* Png-fundoPrincipal*/
+/* Pngs-fundoPrincipal*/
 .foto-html-css {
   position: absolute;
   top: 0;
@@ -402,8 +454,8 @@ header a :hover {
 }
 
 #foto-jss:hover {
-  -webkit-animation: vibrate-1 0.5s linear infinite both;
-          animation: vibrate-1 0.5s linear infinite both;
+  -webkit-animation: vibração 0.5s linear infinite both;
+          animation: vibração 0.5s linear infinite both;
 }
 
 #foto-jss, #foto-html {
@@ -420,8 +472,8 @@ header a :hover {
 }
 
 #foto-ht:hover {
-  -webkit-animation: tremer 0.3   s linear infinite both;
-          animation: tremer 0.3   s linear infinite both;
+  -webkit-animation: tremer 0.3s linear infinite both;
+          animation: tremer 0.3s linear infinite both;
 }
 
 .redeSocias {
@@ -444,6 +496,14 @@ header a :hover {
   max-width: 50px;
   max-height: 50px;
   padding: 5px;
+}
+
+.redeSocias .imagensRedes img:hover {
+  -webkit-box-shadow: 0 3px 20px 0 #000000;
+          box-shadow: 0 3px 20px 0 #000000;
+  border-radius: 5px;
+  -webkit-animation: 1s;
+          animation: 1s;
 }
 
 @media (max-width: 1450px) {

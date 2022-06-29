@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
+@keyframes preload{
+    to {
+        transform: rotate(1turn) ;
+    }
+}
 @keyframes fundoGradiente {
     0% {
         background-position: 0% 50%;
@@ -23,7 +28,7 @@
     }
   }
 
-  @keyframes vibrate-1 {
+  @keyframes vibração {
     0% {
       transform: translate(0);
     }
@@ -67,22 +72,50 @@
     padding: 0px;
     scroll-behavior: smooth;
 }
- /* Style do srcoll*/
+/*pre-laod*/
+#onloadid{
+    display: none;
+}
+.preload{
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2d01a5;
+    transition: 1000s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .carregamento{
+        animation: preload 1s infinite;
+        border: 6px solid #3201b9;
+        border-top-color: #11c0e5;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}
+
+ /* cor do srcoll*/
 body::-webkit-scrollbar {
     width: 10px;             
   }
   
   body::-webkit-scrollbar-track {
-    background: #1a015f;       
+    background: #ffffff;       
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: #4203ee;    
-    border-radius: 2px;       
+    background-color: #4203ee;        
     border: 3px solid #4203ee; 
   }
 
 /* Parte do cabeçalho*/
+body{
+    background: #2d01a5;
+}
 a{
     text-decoration: none;
     color: #ffffff;
@@ -132,7 +165,7 @@ header{
 }
 
 .fundoPrincipal{
-    background: linear-gradient(45deg, #1a015f, #1a015f, #2d01a5, #3201b9, #3804c7, #4203ee );
+   background-color: #2d01a5;
     background-size: 400% 300%;
     animation: fundoGradiente 5s ease alternate infinite;
     height: 100vh;
@@ -244,7 +277,7 @@ header{
     width:100%;  
   }
 
-/* Png-fundoPrincipal*/
+/* Pngs-fundoPrincipal*/
 .foto-html-css{
     position: absolute;
     top: 0;
@@ -263,7 +296,7 @@ header{
     cursor: pointer;
 }
 #foto-jss:hover{
-    animation: vibrate-1 0.5s linear infinite both;
+    animation: vibração 0.5s linear infinite both;
 }
 #foto-jss , #foto-html {
     width: 80px;
@@ -277,7 +310,7 @@ header{
     cursor: pointer; 
 } 
 #foto-ht:hover{
-    animation: tremer 0.3   s linear infinite both
+    animation: tremer 0.3s linear infinite both
 }
 .redeSocias{
     position: absolute;
@@ -296,8 +329,14 @@ header{
             max-height: 50px;
             padding: 5px;
         }
+        img:hover {
+            box-shadow:  0 3px 20px 0 #000000;
+            border-radius: 5px; 
+            animation: 1s;
+        }
     }
 }
+
 @media (max-width:1450px) {
     #foto-jss, #foto-html, #foto-ht
     {
