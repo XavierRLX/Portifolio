@@ -14,6 +14,104 @@
   }
 }
 
+@-webkit-keyframes ponteiro {
+  from {
+    border-right-color: #A940E8;
+  }
+  to {
+    border-right-color: #ffffff00;
+  }
+}
+
+@keyframes ponteiro {
+  from {
+    border-right-color: #A940E8;
+  }
+  to {
+    border-right-color: #ffffff00;
+  }
+}
+
+@-webkit-keyframes digitando {
+  from {
+    max-width: 0px;
+  }
+  to {
+    max-width: 438px;
+  }
+}
+
+@keyframes digitando {
+  from {
+    max-width: 0px;
+  }
+  to {
+    max-width: 438px;
+  }
+}
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes fundoGradiente {
   0% {
     background-position: 0% 50%;
@@ -160,6 +258,128 @@
   }
 }
 
+@-webkit-keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -177,7 +397,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #2d01a5;
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, #070335 97.5%);
   -webkit-transition: 1000s;
   transition: 1000s;
   display: -webkit-box;
@@ -275,7 +495,7 @@ header p {
 }
 
 header a :hover {
-  background-color: #179bb6;
+  background-color: #A940E8;
   -webkit-box-shadow: 0 3px 20px 0 #000000;
           box-shadow: 0 3px 20px 0 #000000;
   border-radius: 5px;
@@ -284,10 +504,7 @@ header a :hover {
 }
 
 .fundoPrincipal {
-  background-color: #2d01a5;
-  background-size: 400% 300%;
-  -webkit-animation: fundoGradiente 5s ease alternate infinite;
-          animation: fundoGradiente 5s ease alternate infinite;
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, #070335 97.5%);
   height: 100vh;
   width: 100%;
 }
@@ -313,8 +530,8 @@ header a :hover {
   top: 15%;
   left: 50%;
   position: absolute;
-  -webkit-animation: girando360 40s infinite linear;
-          animation: girando360 40s infinite linear;
+  -webkit-animation: girando360 40s 5s infinite linear, text-flicker-in-glow 10s linear both;
+          animation: girando360 40s 5s infinite linear, text-flicker-in-glow 10s linear both;
 }
 
 .fundoApresentação .apresentação {
@@ -325,14 +542,36 @@ header a :hover {
   font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
+.fundoApresentação #hmdois {
+  color: #970ee7;
+  border-right: 3px solid #000000;
+  max-width: 438px;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: ponteiro .7s infinite normal, digitando 1.5s 0s normal;
+          animation: ponteiro .7s infinite normal, digitando 1.5s 0s normal;
+}
+
 .fundoApresentação h2, .fundoApresentação p {
   font-family: 'Poppins', sans-serif;
   font-size: 4em;
 }
 
+.fundoApresentação #preEscrição {
+  max-width: 1250px;
+  -webkit-animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 .fundoApresentação #descrição {
   font-size: 1em;
-  width: 700px;
+  max-width: 700px;
+  -webkit-animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.fundoApresentação #descrição, .fundoApresentação #preEscrição {
+  display: none;
 }
 
 /*Projetos*/
@@ -644,8 +883,9 @@ header a :hover {
   .foto-react {
     max-width: 250px;
     max-height: 250px;
-    margin-top: 180px;
-    left: 18% !important;
+    margin-top: 270px;
+    overflow: hidden;
+    left: 15% !important;
   }
   .fundoApresentação .apresentação {
     padding: 10px;
@@ -657,6 +897,7 @@ header a :hover {
     font-size: 1em;
   }
   .fundoApresentação h2 {
+    width: 220px;
     font-size: 2em;
   }
   .fundoApresentação p {
