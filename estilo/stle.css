@@ -1,12 +1,585 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+/*pre-laod*/
+#onloadid {
+  display: none;
+}
+
+.preload {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, #070335 97.5%);
+  -webkit-transition: 1000s;
+  transition: 1000s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.preload .carregamento {
+  -webkit-animation: preload 1s infinite;
+          animation: preload 1s infinite;
+  border: 6px solid #3201b9;
+  border-top-color: #11c0e5;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* cor do srcoll*/
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4203ee;
+  border: 3px solid #4203ee;
+}
+
+/* Parte do cabeçalho*/
+body {
+  background: #2d01a5;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+header .logotipo, header .fotoLogo, header #nomeLogo, header .menu {
+  cursor: pointer;
+}
+
+header .logotipo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+header .fotoLogo {
+  width: 40px;
+  height: 40px;
+}
+
+header #nomeLogo {
+  margin: 6.5px 0px 0px 10px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+header p {
+  padding: 5px;
+}
+
+header a :hover {
+  background-color: #A940E8;
+  -webkit-box-shadow: 0 3px 20px 0 #000000;
+          box-shadow: 0 3px 20px 0 #000000;
+  border-radius: 5px;
+  -webkit-animation: 1s;
+          animation: 1s;
+}
+
+.fundoPrincipal {
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, #070335 97.5%);
+  height: 100vh;
+  width: 100%;
+}
+
+/* Apresentação */
+.fundoApresentação {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  color: #ffffff;
+}
+
+.fundoApresentação .foto-react {
+  width: 600px;
+  height: 600px;
+  top: 15%;
+  left: 50%;
+  position: absolute;
+  -webkit-animation: girando360 25s 5.5s infinite linear, text-flicker-in-glow 9.5s linear both;
+          animation: girando360 25s 5.5s infinite linear, text-flicker-in-glow 9.5s linear both;
+}
+
+.fundoApresentação .apresentação {
+  position: relative;
+}
+
+.fundoApresentação h1 {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.fundoApresentação #hmdois {
+  color: #970ee7;
+  border-right: 3px solid #000000;
+  max-width: 438px;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
+          animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
+}
+
+.fundoApresentação h2, .fundoApresentação p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4em;
+}
+
+.fundoApresentação #preEscrição {
+  max-width: 1250px;
+  -webkit-animation: focus-in-expand 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: focus-in-expand 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.fundoApresentação #descrição {
+  font-size: 1em;
+  max-width: 700px;
+  -webkit-animation: tracking-in-expand-fwd-top 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand-fwd-top 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.fundoApresentação #descrição, .fundoApresentação #preEscrição {
+  display: none;
+}
+
+/*Projetos*/
+.fundoProjetos {
+  background-color: #1b1a1a;
+  padding: 50px 0px 50px 0px;
+}
+
+.fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 40px;
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.fundoProjetos .tituloProjeto {
+  margin-bottom: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 4em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.fundoProjetos .displayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.fundoProjetos .cardProjeto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 700px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0px 10px 50px 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.fundoProjetos .cardProjeto:hover {
+  -webkit-box-shadow: 0 3px 55px 0 #000000;
+          box-shadow: 0 3px 55px 0 #000000;
+}
+
+.fundoProjetos .imagemProjeto {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .5s ease;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.fundoProjetos .imagemProjeto:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.fundoProjetos .descriçãoProjeto {
+  width: 400px;
+  color: #ffffff;
+}
+
+.fundoProjetos .subTituloProjeto, .fundoProjetos .tituloCardUti {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.fundoProjetos .tituloCardUti {
+  margin: 100px 0px 100px 0px;
+}
+
+.separador {
+  border-color: #4203ee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+}
+
+/* Pngs-fundoPrincipal*/
+.foto-html-css {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10% 2% 0% 0%;
+  cursor: pointer;
+}
+
+.foto-html-css:hover {
+  -webkit-animation: girando360 1s infinite linear;
+          animation: girando360 1s infinite linear;
+}
+
+.foto-js {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0% 0% 10% 2%;
+  cursor: pointer;
+}
+
+#foto-jss:hover {
+  -webkit-animation: vibração 0.5s linear infinite both;
+          animation: vibração 0.5s linear infinite both;
+}
+
+#foto-jss, #foto-html {
+  width: 80px;
+}
+
+#foto-ht {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#foto-ht:hover {
+  -webkit-animation: tremer 0.3s linear infinite both;
+          animation: tremer 0.3s linear infinite both;
+}
+
+.redeSocias {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 50%;
+  width: 100px;
+  cursor: pointer;
+}
+
+.redeSocias .imagensRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.redeSocias .imagensRedes img {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 5px;
+}
+
+.redeSocias .imagensRedes img:hover {
+  -webkit-box-shadow: 0 3px 20px 0 #000000;
+          box-shadow: 0 3px 20px 0 #000000;
+  border-radius: 5px;
+  -webkit-animation: 1s;
+          animation: 1s;
+}
+
+@media (max-width: 1450px) {
+  #foto-jss, #foto-html, #foto-ht {
+    width: 70px;
+  }
+  .foto-react {
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 90px;
+  }
+  .fundoProjetos .cardProjeto {
+    max-width: 1000px;
+    margin: 0px 10px 50px 10px;
+  }
+  .fundoProjetos .imagemProjeto {
+    width: 250px;
+    height: 150px;
+  }
+  .fundoProjetos .descriçãoProjeto {
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: .8em;
+  }
+  #projeto3 .descriçãoProjeto {
+    margin-top: 0px;
+  }
+  #projeto6 .descriçãoProjeto {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1260px) {
+  #foto-jss, #foto-html, #foto-ht {
+    width: 60px;
+  }
+  .fundoApresentação h1 {
+    font-size: 1em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 3em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .8em;
+    width: 700px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .foto-react {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 120px;
+  }
+  .fundoApresentação h1 {
+    font-size: .8em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 2em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .8em;
+    width: 700px;
+  }
+  #foto-jss, #foto-html, #foto-ht {
+    width: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 5px;
+  }
+  header .logotipo {
+    padding: 10px;
+  }
+  header .fotoLogo {
+    width: 20px;
+    height: 20px;
+  }
+  header #nomeLogo {
+    font-size: 1.2em;
+    margin: 0px 0px 0px 5px;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+  header .menu {
+    width: 400px;
+    padding: 15px;
+    position: relative;
+    font-size: .8em;
+  }
+  header .menu :hover {
+    -webkit-box-shadow: inset 0 -20px 0 #11c0e5;
+            box-shadow: inset 0 -20px 0 #11c0e5;
+  }
+  .foto-react {
+    max-width: 180px;
+    max-height: 180px;
+    margin-top: 110px;
+  }
+  .fundoApresentação h1 {
+    font-size: .6em;
+  }
+  .fundoApresentação h2, .fundoApresentação p {
+    font-size: 1em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .5em;
+    width: 500px;
+  }
+  #foto-jss, #foto-html, #foto-ht {
+    width: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 5px;
+  }
+  header .logotipo {
+    padding: 10px;
+  }
+  header .fotoLogo {
+    width: 20px;
+    height: 20px;
+  }
+  header #nomeLogo {
+    font-size: 1.2em;
+    margin: 0px 0px 0px 5px;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+  header .menu {
+    display: none;
+  }
+  .foto-react {
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 270px;
+    overflow: hidden;
+    left: 15% !important;
+  }
+  .fundoApresentação .apresentação {
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 120px;
+  }
+  .fundoApresentação h1 {
+    font-size: 1em;
+  }
+  .fundoApresentação h2 {
+    width: 220px;
+    font-size: 2em;
+  }
+  .fundoApresentação p {
+    font-size: 1.4em;
+  }
+  .fundoApresentação #descrição {
+    font-size: .4em;
+    width: 300px;
+  }
+  #foto-jss, #foto-html, #foto-ht {
+    width: 40px;
+  }
+  .redeSocias {
+    margin-right: 42%;
+  }
+  .redeSocias .imagensRedes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+  }
+  .redeSocias .imagensRedes img {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  .cardProjeto {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+  }
+  .imagemProjeto {
+    max-width: 500px;
+    max-height: 350px;
+    margin: auto;
+  }
+  .descriçãoProjeto {
+    margin-top: 10px;
+    font-size: .4em;
+  }
+  .subTituloProjeto, .tituloCardUti {
+    font-size: .7em;
+  }
+  .tituloCardUti {
+    margin: 0px;
+  }
+  #projeto3 .descriçãoProjeto {
+    margin-top: 30px;
+  }
+  #projeto6 .descriçãoProjeto {
+    margin-top: 30px;
+  }
+}
+
 @-webkit-keyframes preload {
   to {
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
   }
 }
+
 @keyframes preload {
   to {
     -webkit-transform: rotate(1turn);
@@ -377,578 +950,6 @@
   }
   55% {
     opacity: 1;
-  }
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-  scroll-behavior: smooth;
-}
-
-/*pre-laod*/
-#onloadid {
-  display: none;
-}
-
-.preload {
-  width: 100%;
-  min-height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, #070335 97.5%);
-  -webkit-transition: 1000s;
-  transition: 1000s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.preload .carregamento {
-  -webkit-animation: preload 1s infinite;
-          animation: preload 1s infinite;
-  border: 6px solid #3201b9;
-  border-top-color: #11c0e5;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-/* cor do srcoll*/
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #4203ee;
-  border: 3px solid #4203ee;
-}
-
-/* Parte do cabeçalho*/
-body {
-  background: #2d01a5;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px;
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-}
-
-header .logotipo, header .fotoLogo, header #nomeLogo, header .menu {
-  cursor: pointer;
-}
-
-header .logotipo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px;
-}
-
-header .fotoLogo {
-  width: 40px;
-  height: 40px;
-}
-
-header #nomeLogo {
-  margin: 6.5px 0px 0px 10px;
-  font-weight: 300;
-  letter-spacing: 4px;
-}
-
-header .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 400px;
-  padding: 20px;
-  position: relative;
-}
-
-header p {
-  padding: 5px;
-}
-
-header a :hover {
-  background-color: #A940E8;
-  -webkit-box-shadow: 0 3px 20px 0 #000000;
-          box-shadow: 0 3px 20px 0 #000000;
-  border-radius: 5px;
-  -webkit-animation: 1s;
-          animation: 1s;
-}
-
-.fundoPrincipal {
-  background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, #070335 97.5%);
-  height: 100vh;
-  width: 100%;
-}
-
-/* Apresentação */
-.fundoApresentação {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 70vh;
-  color: #ffffff;
-}
-
-.fundoApresentação .foto-react {
-  width: 600px;
-  height: 600px;
-  top: 15%;
-  left: 50%;
-  position: absolute;
-  -webkit-animation: girando360 40s 5s infinite linear, text-flicker-in-glow 10s linear both;
-          animation: girando360 40s 5s infinite linear, text-flicker-in-glow 10s linear both;
-}
-
-.fundoApresentação .apresentação {
-  position: relative;
-}
-
-.fundoApresentação h1 {
-  font-family: 'Kdam Thmor Pro', sans-serif;
-}
-
-.fundoApresentação #hmdois {
-  color: #970ee7;
-  border-right: 3px solid #000000;
-  max-width: 438px;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: ponteiro .7s infinite normal, digitando 1.5s 0s normal;
-          animation: ponteiro .7s infinite normal, digitando 1.5s 0s normal;
-}
-
-.fundoApresentação h2, .fundoApresentação p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 4em;
-}
-
-.fundoApresentação #preEscrição {
-  max-width: 1250px;
-  -webkit-animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-.fundoApresentação #descrição {
-  font-size: 1em;
-  max-width: 700px;
-  -webkit-animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-          animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
-.fundoApresentação #descrição, .fundoApresentação #preEscrição {
-  display: none;
-}
-
-/*Projetos*/
-.fundoProjetos {
-  background-color: #1b1a1a;
-  padding: 50px 0px 50px 0px;
-}
-
-.fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
-  text-align: center;
-  letter-spacing: 3px;
-  margin: 40px;
-  font-size: 2em;
-  font-family: 'Poppins', sans-serif;
-}
-
-.fundoProjetos .tituloProjeto {
-  margin-bottom: 100px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 4em;
-  text-align: center;
-  color: #ffffff;
-}
-
-.fundoProjetos .displayFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
-}
-
-.fundoProjetos .cardProjeto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 700px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin: 0px 10px 50px 10px;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.fundoProjetos .cardProjeto:hover {
-  -webkit-box-shadow: 0 3px 55px 0 #000000;
-          box-shadow: 0 3px 55px 0 #000000;
-}
-
-.fundoProjetos .imagemProjeto {
-  width: 300px;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: .5s ease;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
-}
-
-.fundoProjetos .imagemProjeto:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.fundoProjetos .descriçãoProjeto {
-  width: 400px;
-  color: #ffffff;
-}
-
-.fundoProjetos .subTituloProjeto, .fundoProjetos .tituloCardUti {
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.fundoProjetos .tituloCardUti {
-  margin: 100px 0px 100px 0px;
-}
-
-.separador {
-  border-color: #4203ee;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: auto;
-  width: 100%;
-}
-
-/* Pngs-fundoPrincipal*/
-.foto-html-css {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10% 2% 0% 0%;
-  cursor: pointer;
-}
-
-.foto-html-css:hover {
-  -webkit-animation: girando360 1s infinite linear;
-          animation: girando360 1s infinite linear;
-}
-
-.foto-js {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0% 0% 10% 2%;
-  cursor: pointer;
-}
-
-#foto-jss:hover {
-  -webkit-animation: vibração 0.5s linear infinite both;
-          animation: vibração 0.5s linear infinite both;
-}
-
-#foto-jss, #foto-html {
-  width: 80px;
-}
-
-#foto-ht {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-right: 10px;
-  width: 100px;
-  cursor: pointer;
-}
-
-#foto-ht:hover {
-  -webkit-animation: tremer 0.3s linear infinite both;
-          animation: tremer 0.3s linear infinite both;
-}
-
-.redeSocias {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-right: 47%;
-  width: 100px;
-  cursor: pointer;
-}
-
-.redeSocias .imagensRedes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px;
-}
-
-.redeSocias .imagensRedes img {
-  max-width: 50px;
-  max-height: 50px;
-  padding: 5px;
-}
-
-.redeSocias .imagensRedes img:hover {
-  -webkit-box-shadow: 0 3px 20px 0 #000000;
-          box-shadow: 0 3px 20px 0 #000000;
-  border-radius: 5px;
-  -webkit-animation: 1s;
-          animation: 1s;
-}
-
-@media (max-width: 1450px) {
-  #foto-jss, #foto-html, #foto-ht {
-    width: 70px;
-  }
-  .foto-react {
-    max-width: 400px;
-    max-height: 400px;
-    margin-top: 90px;
-  }
-  .fundoProjetos .cardProjeto {
-    max-width: 1000px;
-    margin: 0px 10px 50px 10px;
-  }
-  .fundoProjetos .imagemProjeto {
-    width: 250px;
-    height: 150px;
-  }
-  .fundoProjetos .descriçãoProjeto {
-    width: 250px;
-    margin: auto;
-    margin-top: 30px;
-    font-size: .8em;
-  }
-  #projeto3 .descriçãoProjeto {
-    margin-top: 0px;
-  }
-  #projeto6 .descriçãoProjeto {
-    margin-top: 0px;
-  }
-}
-
-@media (max-width: 1260px) {
-  #foto-jss, #foto-html, #foto-ht {
-    width: 60px;
-  }
-  .fundoApresentação h1 {
-    font-size: 1em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
-    font-size: 3em;
-  }
-  .fundoApresentação #descrição {
-    font-size: .8em;
-    width: 700px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .foto-react {
-    max-width: 300px;
-    max-height: 300px;
-    margin-top: 120px;
-  }
-  .fundoApresentação h1 {
-    font-size: .8em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
-    font-size: 2em;
-  }
-  .fundoApresentação #descrição {
-    font-size: .8em;
-    width: 700px;
-  }
-  #foto-jss, #foto-html, #foto-ht {
-    width: 50px;
-  }
-}
-
-@media (max-width: 800px) {
-  header {
-    padding: 5px;
-  }
-  header .logotipo {
-    padding: 10px;
-  }
-  header .fotoLogo {
-    width: 20px;
-    height: 20px;
-  }
-  header #nomeLogo {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 5px;
-    font-weight: 300;
-    letter-spacing: 3px;
-  }
-  header .menu {
-    width: 400px;
-    padding: 15px;
-    position: relative;
-    font-size: .8em;
-  }
-  header .menu :hover {
-    -webkit-box-shadow: inset 0 -20px 0 #11c0e5;
-            box-shadow: inset 0 -20px 0 #11c0e5;
-  }
-  .foto-react {
-    max-width: 180px;
-    max-height: 180px;
-    margin-top: 110px;
-  }
-  .fundoApresentação h1 {
-    font-size: .6em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
-    font-size: 1em;
-  }
-  .fundoApresentação #descrição {
-    font-size: .5em;
-    width: 500px;
-  }
-  #foto-jss, #foto-html, #foto-ht {
-    width: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    padding: 5px;
-  }
-  header .logotipo {
-    padding: 10px;
-  }
-  header .fotoLogo {
-    width: 20px;
-    height: 20px;
-  }
-  header #nomeLogo {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 5px;
-    font-weight: 300;
-    letter-spacing: 3px;
-  }
-  header .menu {
-    display: none;
-  }
-  .foto-react {
-    max-width: 250px;
-    max-height: 250px;
-    margin-top: 270px;
-    overflow: hidden;
-    left: 15% !important;
-  }
-  .fundoApresentação .apresentação {
-    padding: 10px;
-    width: 100%;
-    margin: auto;
-    margin-top: 120px;
-  }
-  .fundoApresentação h1 {
-    font-size: 1em;
-  }
-  .fundoApresentação h2 {
-    width: 220px;
-    font-size: 2em;
-  }
-  .fundoApresentação p {
-    font-size: 1.4em;
-  }
-  .fundoApresentação #descrição {
-    font-size: .4em;
-    width: 300px;
-  }
-  #foto-jss, #foto-html, #foto-ht {
-    width: 40px;
-  }
-  .redeSocias {
-    margin-right: 35%;
-  }
-  .redeSocias .imagensRedes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 10px;
-  }
-  .redeSocias .imagensRedes img {
-    max-width: 30px;
-    max-height: 30px;
-  }
-  .cardProjeto {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: auto;
-    padding: 10px;
-  }
-  .imagemProjeto {
-    max-width: 500px;
-    max-height: 350px;
-    margin: auto;
-  }
-  .descriçãoProjeto {
-    margin-top: 10px;
-    font-size: .4em;
-  }
-  .subTituloProjeto, .tituloCardUti {
-    font-size: .7em;
-  }
-  .tituloCardUti {
-    margin: 0px;
-  }
-  #projeto3 .descriçãoProjeto {
-    margin-top: 30px;
-  }
-  #projeto6 .descriçãoProjeto {
-    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=stle.css.map */

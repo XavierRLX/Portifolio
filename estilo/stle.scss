@@ -2,175 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-@keyframes preload{
-    to {
-        transform: rotate(1turn) ;
-    }
-}
-@keyframes ponteiro{
-    from {
-        border-right-color: #A940E8;
-    }
-    to {
-        border-right-color: #ffffff00;
-    }
-}
-@keyframes digitando {
-    from {
-        max-width: 0px;
-    }
-    to {
-        max-width: 438px;
-    }
-}
-@keyframes focus-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes tracking-in-expand-fwd-top {
-    0% {
-      letter-spacing: -0.5em;
-      transform: translateZ(-700px) translateY(-500px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateZ(0) translateY(0);
-      opacity: 1;
-    }
-  }
-  
-@keyframes fundoGradiente {
-    0% {
-        background-position: 0% 50%;
-    } 
-    50%{
-       background-position: 50% 100% ;
-    }
-    100%{
-        background-position: 100% 50%;
-    }
-}
-
-@keyframes girando360 {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-
-  @keyframes vibração {
-    0% {
-      transform: translate(0);
-    }
-    20% {
-      transform: translate(-5px, 5px);
-    }
-    40% {
-      transform: translate(-5px, -5px);
-    }
-    60% {
-      transform: translate(5px, 5px);
-    }
-    80% {
-      transform: translate(5px, -5px);
-    }
-    100% {
-      transform: translate(0);
-    }
-  }
-
-  @keyframes tremer {
-    0% {
-        transform: translate(0); 
-    }
-    20%{
-        transform: translate(-5px, 0px);
-    }
-    50% {
-        transform: translate(0);
-    }
-    80%{
-        transform: translate(5px, 0px);
-    }
-    100%{
-        transform: translate(0);
-    }
-  }
-
-  @keyframes text-flicker-in-glow {
-    0% {
-        opacity: 0;
-      }
-      10% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      10.1% {
-        opacity: 1;
-        text-shadow: none;
-      }
-      10.2% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      20% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      20.1% {
-        opacity: 1;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-      }
-      20.6% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      30% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      30.1% {
-        opacity: 1;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-      }
-      30.5% {
-        opacity: 1;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-      }
-      30.6% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      45% {
-        opacity: 0;
-        text-shadow: none;
-      }
-      45.1% {
-        opacity: 1;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-      }
-      50% {
-        opacity: 1;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-      }
-      55% {
-        opacity: 1;
-      }
-}
-
 *{
     margin: 0px;
     padding: 0px;
@@ -290,7 +121,7 @@ header{
         top: 15%;
         left: 50%;
         position: absolute;
-        animation: girando360 40s 5s infinite linear, text-flicker-in-glow 10s linear both;
+        animation: girando360 25s 5.5s infinite linear, text-flicker-in-glow 9.5s linear both;
     }
     .apresentação{
         position: relative;
@@ -304,7 +135,7 @@ header{
         max-width: 438px;
         white-space: nowrap;
         overflow: hidden;
-        animation: ponteiro .7s infinite normal, digitando 1.5s 0s normal;
+        animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
     }
     h2, p {
         font-family: 'Poppins', sans-serif;
@@ -312,12 +143,12 @@ header{
     }
     #preEscrição{
         max-width: 1250px;
-        animation: focus-in-expand 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: focus-in-expand 1.5s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     #descrição{
         font-size: 1em;
         max-width: 700px;
-        animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand-fwd-top 1s 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     #descrição, #preEscrição {
         display: none;
@@ -436,7 +267,7 @@ header{
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-right: 47%;
+    margin-right: 50%;
     width: 100px;
     cursor: pointer; 
 
@@ -645,7 +476,7 @@ header{
         width: 40px;
     }
     .redeSocias{
-        margin-right: 35%;
+        margin-right: 42%;
     
         .imagensRedes{
             display: flex;
@@ -687,5 +518,175 @@ header{
             margin-top: 30px;
         }
     }
+}
+
+
+@keyframes preload{
+    to {
+        transform: rotate(1turn) ;
+    }
+}
+@keyframes ponteiro{
+    from {
+        border-right-color: #A940E8;
+    }
+    to {
+        border-right-color: #ffffff00;
+    }
+}
+@keyframes digitando {
+    from {
+        max-width: 0px;
+    }
+    to {
+        max-width: 438px;
+    }
+}
+@keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes tracking-in-expand-fwd-top {
+    0% {
+      letter-spacing: -0.5em;
+      transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+@keyframes fundoGradiente {
+    0% {
+        background-position: 0% 50%;
+    } 
+    50%{
+       background-position: 50% 100% ;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes girando360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes vibração {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes tremer {
+    0% {
+        transform: translate(0); 
+    }
+    20%{
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        transform: translate(0);
+    }
+    80%{
+        transform: translate(5px, 0px);
+    }
+    100%{
+        transform: translate(0);
+    }
+  }
+
+  @keyframes text-flicker-in-glow {
+    0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      10.1% {
+        opacity: 1;
+        text-shadow: none;
+      }
+      10.2% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      20% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      20.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+      }
+      20.6% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      30% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      30.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+      }
+      30.5% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+      }
+      30.6% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      45% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      45.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+      }
+      55% {
+        opacity: 1;
+      }
 }
 
