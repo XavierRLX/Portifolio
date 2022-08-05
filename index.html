@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="fundos-fotos/xavier.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="estilo/stle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Xavier</title>
 </head>
 <body onload="preload()">
@@ -22,8 +23,8 @@
                 </div>
                 <ul class="menu">
                     <a href="#"><p>Home</p></a>
-                    <a href="#"><p>Sobre</p></a>
                     <a href="#projeto"><p>Projetos</p></a>
+                    <a href="#sobre"><p>Sobre</p></a>
                     <a href="#"><p>Contato</p></a>
                 </ul>
             </header>
@@ -33,17 +34,19 @@
                 <div class="apresentação">
                     <h1>Olá, me chamo</h1>
                     <h2 id="hmdois">Renan Xavier.</h2>
-                    <p id="preEscrição">Eu construo elementos para a internet.</p> <br>
+                    <p id="preEscrição">Construo elementos para a internet.</p> <br>
                     <p id="descrição">Sou um desenvolvedor web especializado em construir experiências digitais excepcionais. Atualmente, estou focando em criar landing pages, sites para empresas e entre outros...</p>
                 </div>
             </section>
         </div>
+
         <section class="fundoProjetos">
-            <h2 id="projeto" class="tituloProjeto">Meus Projetos</h2>
-            <h3 class="subTituloProjeto">Sites/Landing Pages</h3>
+            
+            <h2  data-aos="fade-down" id="projeto" class="tituloProjeto"> <span>P</span><span>r</span><span>o</span><span>j</span>e<span></span><span>t</span><span>o</span><span>s</span></h2>
+            <h3 data-aos="fade-up" class="subTituloProjeto">Sites/Landing Pages</h3>
                 <div class="displayFlex">
                     <a href="https://xavierrlx.github.io/Bootstrap.2/" target="_blank">
-                        <div id="projeto1" class="cardProjeto">
+                        <div data-aos="fade-up" id="projeto1" class="cardProjeto">
                             <img class="imagemProjeto" src="fundos-fotos/fundo-boot.jpg" alt="">
                             <div class="descriçãoProjeto">
                                 <h1>BOOSTSTRAP</h1>
@@ -52,7 +55,7 @@
                         </div>
                     </a>
                     <a href="https://xavierrlx.github.io/osvingadores/" target="_blank">
-                        <div id="projeto2" class="cardProjeto">
+                        <div data-aos="fade-up" id="projeto2" class="cardProjeto">
                             <img class="imagemProjeto" src="fundos-fotos/fundo-vinga.jpg" alt="">
                            <div class="descriçãoProjeto">
                                <h1>Paralax</h1>
@@ -62,7 +65,7 @@
                                        </div>
                     </a>
                    <a href="https://xavierrlx.github.io/Xavierburger/1Pagweb/index.html" target="_blank">
-                       <div id="projeto3" class="cardProjeto">
+                       <div data-aos="fade-up" id="projeto3" class="cardProjeto">
                         <img class="imagemProjeto" src="fundos-fotos/fundo-ham.jpg" alt="">
                        <div class="descriçãoProjeto">
                            <h1>Burger</h1>
@@ -72,7 +75,7 @@
                                   </div>
                    </a>
                <a href="https://xavierrlx.github.io/projeto" target="_blank">
-                   <div id="projeto4" class="cardProjeto">
+                   <div data-aos="fade-up" id="projeto4" class="cardProjeto">
                        <img class="imagemProjeto" src="fundos-fotos/fundo-android.jpg" alt="">
                       <div class="descriçãoProjeto">
                           <h1>Android</h1>
@@ -82,12 +85,14 @@
                </a>
                 </div>
         </section>
+
         <hr class="separador">
+        
         <section id="fundoProjetosDois" class="fundoProjetos">
-            <h3 class="subTituloProjeto">Utilitários</h3>
-                <div class="displayFlex">
+            <h3 data-aos="fade-up" class="subTituloProjeto">Utilitários</h3>
+                <main class="displayFlex">
                     <a href="https://xavierrlx.github.io/calculadora" target="_blank">
-                        <div id="projeto5" class="cardProjeto">
+                        <div data-aos="fade-up" id="projeto5" class="cardProjeto">
                              <img class="imagemProjeto" src="fundos-fotos/fundo-calc.jpg" alt="">
                             <div class="descriçãoProjeto">
                                 <h1>Calculadora</h1>
@@ -96,7 +101,7 @@
                         </div>
                     </a>
                     <a href="https://xavierrlx.github.io/Relogio" target="_blank">
-                        <div id="projeto6" class="cardProjeto">
+                        <div data-aos="fade-up" id="projeto6" class="cardProjeto">
                             <img class="imagemProjeto" src="fundos-fotos/fundo-relogio.jpg" alt="">
                            <div class="descriçãoProjeto">
                                <h1> Relógio </h1>
@@ -105,46 +110,113 @@
                            </div>
                                        </div>
                     </a>
-                   <a href="https://xavierrlx.github.io/AdicionarProdutos" target="_blank">
-                       <div id="projeto7" class="cardProjeto">
+                    <a href="https://xavierrlx.github.io/AdicionarProdutos" target="_blank">
+                       <div data-aos="fade-up" id="projeto7" class="cardProjeto">
                         <img class="imagemProjeto" src="fundos-fotos/fundo-lista.jpg" alt="">
                        <div class="descriçãoProjeto">
                            <h1>Lista de compras</h1>
                            <p> Lista adcionada dinamicamento pelo javaScript, tendo opção de "adcionar", "editar" e "apagar" </p>
                           </div>
                         </div>
-                   </a>
-               <a href="https://xavierrlx.github.io/javascriptex" target="_blank">
-                   <div id="projeto8" class="cardProjeto">
-                       <img class="imagemProjeto" src="fundos-fotos/fundo-ex.js.jpg" alt="">
-                      <div class="descriçãoProjeto">
-                          <h1>Exercícios javaScript</h1>
-                          <p> Alguns exercícios feito meus aprendizados uniciais com linguagem javaScript</p>
-                      </div>
-                             </div>
-               </a>
-        
-                </div>
-        <div class="foto-html-css">
-            <img id="foto-html" src="fundos-fotos/codificacao.png" alt="icone-html" >
-        </div>
-        <div class="foto-js">
-            <img id="foto-jss" src="fundos-fotos/js.png" alt="icone-js">
-        </div>
-        <div class="redeSocias">
-            <div class="imagensRedes">
-                <img src="fundos-fotos/instagram (1).png" alt="instagram">
-                <img src="fundos-fotos/github.png" alt="github">
-                <img src="fundos-fotos/linkedin.png" alt="linkedin">
+                    </a>
+                    <a href="https://xavierrlx.github.io/javascriptex" target="_blank">
+                        <div data-aos="fade-up" id="projeto8" class="cardProjeto">
+                            <img class="imagemProjeto" src="fundos-fotos/fundo-ex.js.jpg" alt="">
+                            <div class="descriçãoProjeto">
+                                <h1>Exercícios javaScript</h1>
+                                <p> Alguns exercícios feito meus aprendizados uniciais com linguagem javaScript</p>
+                            </div>
+                        </div>
+                    </a>
+                </main>
+
+
+
+            <div class="foto-html-css">
+                <img id="foto-html" src="fundos-fotos/codificacao.png" alt="icone-html" >
             </div>
-        </div>
-        <div class="html">
-            <img id="foto-ht" src="fundos-fotos/programacao.png" alt="icone-fechamento">
-        </div>
+            <div class="foto-js">
+                <img id="foto-jss" src="fundos-fotos/js.png" alt="icone-js">
+            </div>
+            <div class="redeSocias">
+                <div class="imagensRedes">
+                    <a href="https://www.instagram.com/yxavier_rlx/" target="_blank"><img src="fundos-fotos/instagram (1).png" alt="instagram"></a>
+                    <a href="https://github.com/XavierRLX" target="_blank"><img src="fundos-fotos/github.png" alt="github"></a>
+                    <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank"><img src="fundos-fotos/linkedin.png" alt="linkedin"></a>
+                </div>
+            </div>
+            <div class="html">
+                <img id="foto-ht" src="fundos-fotos/programacao.png" alt="icone-fechamento">
+            </div>
     </div>
+
+    <section class="fundoSobre">
+        <h1 data-aos="fade-down"><span>S</span><span>o</span><span>b</span><span>r</span><span>e</span> <span>m</span><span>i</span><span>m</span></h1>
+        <div id="sobre" class="flexSobre">
+            <div data-aos="fade-right"class="imagemSobre"><img src="fundos-fotos/avatarRenanSite.png" alt=""></div>
+            <main data-aos="fade-left" class="textoSobre">
+                <h2>Desde pequeno sempre tive uma certa facilidade com a tecnoligia em geral mas nunca me despertou o desejo de estudar sobre esta area.</h2> <br>
+                <h2>Após o termino do meu ensino médio em 2017, tentei ingressar na carreira militar, na logistica e na enfermagem.</h2> <br>
+                <h2>Apenas em 2021 fui realmente me informar sobre o espaço da tecnoligia e descobri esse "word" gigantesco e me apaixonei desde então. Ingressei na faculdade e inicializei diversos cursos pela internet para aprender e me desenvolver progressivamente para junta-se profissionalmente na area da tecnoligia.  </h2> <br>
+                <h2> Diante disso, venho focando a grande parte dos meus estudos no Front-end. Tenho uma base solida em HTML 5, CSS 3 e JAVASCRIPT. Atualmente estou me dedicando ao REACT e MySQL que são umas das areas significantes a minha carreira.   </h2>
+            </main>
+        </div>
+
+        <main class="tecSobre">
+            <div data-aos="fade-up" class="TecImgSobre">
+                <figure><img src="fundos-fotos/html-5.png" alt="">
+                <figcaption>HTML 5</figcaption></figure>
+
+                <figure><img src="fundos-fotos/css-3.png" alt="">
+                <figcaption>CSS 3</figcaption></figure>
+
+                <figure><img src="fundos-fotos/bootstrap.png" alt="">
+                <figcaption>BOOTSTRAP</figcaption></figure>
+
+                <figure><img src="fundos-fotos/sass.png">
+                <figcaption>SASS</figcaption></figure>
+
+                <figure><img src="fundos-fotos/jsSobre.png">
+                <figcaption>JAVASCRIPT</figcaption></figure>
+
+                <figure><img src="fundos-fotos/icons8-react-64.png" alt="">
+                <figcaption>REACT</figcaption></figure>
+
+                <figure><img src="fundos-fotos/mysql.png">
+                <figcaption>BANCO DE DADOS</figcaption></figure>
+            </div>
+        </main>
+    </section>
+
+    <section class="fundoContato">
+        <main>
+            <h1><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>t</span><span>o</span></h1>
+                <h2>Agradeço por visitar o meu <span>portifolio</span> !</h2>
+                <h3>Caso se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato comigo atravez desses meios abaixo.</h3>
+                <article>
+                <h2>E-mail :</h2>
+                <p onclick="copiarEm()" value = "renanlima2000.aer@gmail.com" id="copiarEmail">renanlima2000.aer@gmail.com</p>
+                </article>
+
+                <article>
+                <h2>Telefone :</h2>
+                <p onclick="copiarNumb()" id="copiarNum">+55 21 96473-4161</p>
+                </article>
+                <article>
+                </article>
+        </main>
+    </section>
 
     <script src="js/preload.js"></script>
     <script src="js/digitando.js"></script>
+    <script src="js/copiarEcolar.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 100,
+        duration: 1000,
+      });
+    </script>
 
 </body>
 </html>
