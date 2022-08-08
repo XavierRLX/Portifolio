@@ -606,10 +606,11 @@ header a :hover {
 
 /*Sobre mim*/
 .fundoSobre {
-  background-image: radial-gradient(rgb(5, 8, 114) 0%, rgb(7, 3, 53) 100%);
-  width: 100%;
-  height: 100vh;
   letter-spacing: 3px;
+  background-image: radial-gradient(rgb(5, 8, 114) 0%, rgb(7, 3, 53) 100%);
+}
+.fundoSobre #testeInline {
+  display: none;
 }
 .fundoSobre h1 {
   padding-top: 50px;
@@ -915,47 +916,4 @@ header a :hover {
   #projeto6 .descriçãoProjeto {
     margin-top: 30px;
   }
-}
-.fundoSobre h1 {
-  font-size: 2em;
-}
-.fundoSobre h2 {
-  text-align: center;
-  font-size: 0.2em !important;
-  padding: 10px;
-}
-.fundoSobre .flexSobre {
-  flex-direction: column;
-}
-.fundoSobre .imagemSobre img {
-  margin-top: -30px;
-  width: 150px;
-}
-.fundoSobre .tecSobre {
-  margin-top: 50px;
-  text-align: center;
-}
-.fundoSobre .tecSobre .TecImgSobre {
-  display: flex;
-  margin: auto;
-  margin: 0px 0px 0px 0px;
-}
-.fundoSobre .tecSobre .TecImgSobre figcaption {
-  display: none;
-}
-.fundoSobre .tecSobre .TecImgSobre img {
-  width: 20px;
-  margin: 20px;
-}
-
-.fundoContato h1 {
-  font-weight: 300;
-  font-size: 2em;
-}
-.fundoContato h2 {
-  font-size: 1em;
-}
-.fundoContato h3 {
-  padding: 20px;
-  font-size: 0.8em;
 }/*# sourceMappingURL=stle.css.map */

@@ -7,9 +7,15 @@ function preload(){
     setTimeout(() => {
         pre_carregamento.style.display = "none"
         conteudo.style.display = "inline"
-    }, 5000);
-}
+    }, 2000);
+};
 
+const SobreInline = setTimeout(ConteudoSobre, 2500);
+
+function ConteudoSobre(){
+
+    document.getElementById("testeInline").style.display = "inline"
+}
 
 
 
