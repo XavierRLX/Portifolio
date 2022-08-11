@@ -420,6 +420,7 @@ header a :hover {
   align-items: center;
   height: 70vh;
   color: #ffffff;
+  padding: 10px;
 }
 .fundoApresentação .foto-react {
   width: 600px;
@@ -482,7 +483,7 @@ header a :hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 0% 0% 10% 2%;
+  margin: 0% 0% 5% 2%;
   cursor: pointer;
 }
 
@@ -538,6 +539,9 @@ header a :hover {
 .fundoProjetos {
   background-color: rgb(15, 15, 15);
   padding: 50px 0px 50px 0px;
+}
+.fundoProjetos .subTituloProjeto {
+  color: #970ee7 !important;
 }
 .fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
   text-align: center;
@@ -613,7 +617,7 @@ header a :hover {
   display: none;
 }
 .fundoSobre h1 {
-  padding-top: 50px;
+  padding: 50px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -636,7 +640,7 @@ header a :hover {
   font-family: "Poppins", sans-serif;
 }
 .fundoSobre .imagemSobre img {
-  width: 350px;
+  width: 400px;
   margin-right: 80px;
   filter: drop-shadow(10px 10px 10px #000000);
   cursor: pointer;
@@ -783,6 +787,24 @@ header a :hover {
   #foto-jss, #foto-html, #foto-ht {
     width: 50px;
   }
+  .flexSobre img {
+    max-width: 250px;
+    margin-left: 30px;
+  }
+  .flexSobre h2 {
+    font-size: 0.8em;
+  }
+  .flexSobre .textoSobre {
+    max-width: 800px;
+  }
+  .flexSobre .tecSobre .TecImgSobre {
+    max-width: 80%;
+    max-height: 500px;
+  }
+  .flexSobre .tecSobre .TecImgSobre img {
+    width: 24px;
+    margin: 30px;
+  }
 }
 @media (max-width: 800px) {
   header {
@@ -852,7 +874,7 @@ header a :hover {
   .foto-react {
     max-width: 250px;
     max-height: 250px;
-    margin-top: 270px;
+    margin-top: 210px;
     overflow: hidden;
     left: 15% !important;
   }
@@ -860,20 +882,20 @@ header a :hover {
     padding: 10px;
     width: 100%;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 50px;
   }
   .fundoApresentação h1 {
     font-size: 1em;
   }
   .fundoApresentação h2 {
-    width: 220px;
+    width: 240px;
     font-size: 2em;
   }
   .fundoApresentação p {
     font-size: 1.4em;
   }
   .fundoApresentação #descrição {
-    font-size: 0.4em;
+    font-size: 0.6em;
     width: 300px;
   }
   #foto-jss, #foto-html, #foto-ht {
@@ -889,6 +911,9 @@ header a :hover {
   .redeSocias .imagensRedes img {
     max-width: 30px;
     max-height: 30px;
+  }
+  #projeto {
+    font-size: 2em;
   }
   .cardProjeto {
     flex-wrap: wrap;
@@ -915,5 +940,55 @@ header a :hover {
   }
   #projeto6 .descriçãoProjeto {
     margin-top: 30px;
+  }
+  .fundoSobre h1 {
+    padding: 50px;
+    font-size: 2em;
+  }
+  .fundoSobre h2 {
+    padding: 20px;
+    font-size: 0.8em;
+    font-weight: 400;
+    word-spacing: 1px;
+  }
+  .fundoSobre .flexSobre {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .fundoSobre .imagemSobre img {
+    width: 220px;
+    margin: 0px 30px 20px 0px;
+  }
+  .fundoSobre .tecSobre {
+    margin-top: 20px;
+  }
+  .fundoSobre .tecSobre .TecImgSobre {
+    display: flex;
+  }
+  .fundoSobre .tecSobre .TecImgSobre img {
+    width: 30px;
+    margin: 10px;
+  }
+  .fundoSobre .tecSobre .TecImgSobre figcaption {
+    display: none;
+  }
+  .fundoContato {
+    height: 80vh;
+  }
+  .fundoContato h1 {
+    margin: -80px 0px 20px 0px;
+    font-size: 2em;
+  }
+  .fundoContato h2 {
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+  .fundoContato h2 span {
+    color: #970ee7;
+  }
+  .fundoContato h3 {
+    font-size: 0.6em;
+    padding: 10px;
   }
 }/*# sourceMappingURL=stle.css.map */
