@@ -10,7 +10,7 @@ function preload(){
     }, 2000);
 };
 
-const SobreInline = setTimeout(ConteudoSobre, 2500);
+const SobreInline = setTimeout(ConteudoSobre, 5000);
 
 function ConteudoSobre(){
 

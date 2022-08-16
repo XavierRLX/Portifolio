@@ -256,7 +256,7 @@ header{
     padding: 5px;
   }
   a :hover{
-    background-color: #A940E8;;
+    background-color: #A940E8;
     box-shadow:  0 3px 20px 0 #000000;
     border-radius: 5px; 
     animation: 1s;
@@ -419,15 +419,17 @@ header{
     .cardProjeto{
         display: flex;
         align-items: center;
-        max-width: 700px;
+        flex-direction: column;
+        height: 350px;
         font-family: 'Poppins', sans-serif;
         text-align: center;
-        margin: 0px 10px 50px 10px;
+        margin: 0px;
         cursor: pointer;
         overflow: hidden;
+        box-shadow:  0 3px 20px 0 #000000;
     }
     .cardProjeto:hover{
-        box-shadow:  0 3px 55px 0 #000000;
+        box-shadow:  0 3px 10px 0 #4203ee;
     }
     .imagemProjeto{
         width: 300px;
@@ -441,11 +443,27 @@ header{
    transform: scale(1.1);
     }
     .descriçãoProjeto{
-        width:400px;
-        color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width:400px;
+      height: 300px;
+      padding: 10px;
+      color: #ffffff;
     }
     .tituloCardUti{
         margin: 100px 0px 100px 0px;
+    }
+    .botaocard{
+      padding: 10px;
+      button{
+        width: 80px;
+        height: 30px;
+        border-style: none;
+        background-color: #A940E8;
+        border-radius: 2px;
+      }
     }
 }
 .separador{
@@ -555,10 +573,32 @@ header{
     article{
       color: #970ee7;
       margin-top: 80px;
-      p{
+      input{
+        width: 212px;
+        background-color: rgb(15, 15, 15);
         color: #ffffff;
+        border: none;
+        font-family: 'Poppins';
+        text-align: center;
       }
     }
+    .imagensRedes{
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      padding: 10px;
+
+      img{
+          max-width: 30px;
+          max-height: 30px;
+          padding: 5px;
+      }
+      img:hover {
+          box-shadow:  0 3px 20px 0 #000000;
+          border-radius: 5px; 
+          animation: 1s;
+      }
+    } 
   }
   
   h1{
@@ -576,6 +616,15 @@ header{
       color: #970ee7;
     }
   }
+ }
+ .CopiaeCola, .NumberCopiaeCola{
+  img{
+    width: 20px;
+    height: 20px;
+    margin: 3px 0px 0px 5px;
+  }
+  display: flex;
+  justify-content: center;
  }
 
 @media (max-width:1450px) {
@@ -601,7 +650,6 @@ header{
         .descriçãoProjeto{
             width:250px;
             margin: auto;
-            margin-top: 30px;
             font-size: .8em;
         }
     }

@@ -573,15 +573,17 @@ header a :hover {
 .fundoProjetos .cardProjeto {
   display: flex;
   align-items: center;
-  max-width: 700px;
+  flex-direction: column;
+  height: 350px;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin: 0px 10px 50px 10px;
+  margin: 0px;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 3px 20px 0 #000000;
 }
 .fundoProjetos .cardProjeto:hover {
-  box-shadow: 0 3px 55px 0 #000000;
+  box-shadow: 0 3px 10px 0 #4203ee;
 }
 .fundoProjetos .imagemProjeto {
   width: 300px;
@@ -594,11 +596,27 @@ header a :hover {
   transform: scale(1.1);
 }
 .fundoProjetos .descriçãoProjeto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 400px;
+  height: 300px;
+  padding: 10px;
   color: #ffffff;
 }
 .fundoProjetos .tituloCardUti {
   margin: 100px 0px 100px 0px;
+}
+.fundoProjetos .botaocard {
+  padding: 10px;
+}
+.fundoProjetos .botaocard button {
+  width: 80px;
+  height: 30px;
+  border-style: none;
+  background-color: #A940E8;
+  border-radius: 2px;
 }
 
 .separador {
@@ -705,8 +723,30 @@ header a :hover {
   color: #970ee7;
   margin-top: 80px;
 }
-.fundoContato main article p {
+.fundoContato main article input {
+  width: 212px;
+  background-color: rgb(15, 15, 15);
   color: #ffffff;
+  border: none;
+  font-family: "Poppins";
+  text-align: center;
+}
+.fundoContato main .imagensRedes {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+.fundoContato main .imagensRedes img {
+  max-width: 30px;
+  max-height: 30px;
+  padding: 5px;
+}
+.fundoContato main .imagensRedes img:hover {
+  box-shadow: 0 3px 20px 0 #000000;
+  border-radius: 5px;
+  -webkit-animation: 1s;
+          animation: 1s;
 }
 .fundoContato h1 {
   margin: -50px 0px 100px 0px;
@@ -721,6 +761,16 @@ header a :hover {
 }
 .fundoContato h2 span {
   color: #970ee7;
+}
+
+.CopiaeCola, .NumberCopiaeCola {
+  display: flex;
+  justify-content: center;
+}
+.CopiaeCola img, .NumberCopiaeCola img {
+  width: 20px;
+  height: 20px;
+  margin: 3px 0px 0px 5px;
 }
 
 @media (max-width: 1450px) {
@@ -743,7 +793,6 @@ header a :hover {
   .fundoProjetos .descriçãoProjeto {
     width: 250px;
     margin: auto;
-    margin-top: 30px;
     font-size: 0.8em;
   }
   #projeto3 .descriçãoProjeto {
