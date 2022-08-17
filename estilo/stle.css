@@ -610,6 +610,9 @@ header a :hover {
 }
 .fundoProjetos .botaocard {
   padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
 }
 .fundoProjetos .botaocard button {
   width: 80px;
@@ -771,6 +774,18 @@ header a :hover {
   width: 20px;
   height: 20px;
   margin: 3px 0px 0px 5px;
+}
+
+#copiadoNum, #copiadoEm {
+  margin: auto;
+  margin-top: 10px;
+  padding: 3px;
+  text-align: center;
+  width: 80px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  display: none;
 }
 
 @media (max-width: 1450px) {
@@ -964,11 +979,6 @@ header a :hover {
   #projeto {
     font-size: 2em;
   }
-  .cardProjeto {
-    flex-wrap: wrap;
-    margin: auto;
-    padding: 10px;
-  }
   .imagemProjeto {
     max-width: 500px;
     max-height: 350px;
@@ -983,12 +993,6 @@ header a :hover {
   }
   .tituloCardUti {
     margin: 0px;
-  }
-  #projeto3 .descriçãoProjeto {
-    margin-top: 30px;
-  }
-  #projeto6 .descriçãoProjeto {
-    margin-top: 30px;
   }
   .fundoSobre h1 {
     padding: 50px;
@@ -1026,7 +1030,8 @@ header a :hover {
     height: 80vh;
   }
   .fundoContato h1 {
-    margin: -80px 0px 20px 0px;
+    margin: -60px 0px 20px 0px;
+    padding: 20px 0px 0px 0px;
     font-size: 2em;
   }
   .fundoContato h2 {
