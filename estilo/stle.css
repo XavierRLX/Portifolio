@@ -577,7 +577,7 @@ header a :hover {
   height: 350px;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin: 0px;
+  margin: 0px 10px 50px 10px;
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 3px 20px 0 #000000;
@@ -587,7 +587,6 @@ header a :hover {
 }
 .fundoProjetos .imagemProjeto {
   width: 300px;
-  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.5s ease;
@@ -595,12 +594,15 @@ header a :hover {
 .fundoProjetos .imagemProjeto:hover {
   transform: scale(1.1);
 }
+.fundoProjetos #projeto3 p {
+  font-size: 0.8em;
+}
 .fundoProjetos .descriçãoProjeto {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 250px;
   height: 300px;
   padding: 10px;
   color: #ffffff;
@@ -803,18 +805,11 @@ header a :hover {
   }
   .fundoProjetos .imagemProjeto {
     width: 250px;
-    height: 150px;
   }
   .fundoProjetos .descriçãoProjeto {
     width: 250px;
     margin: auto;
     font-size: 0.8em;
-  }
-  #projeto3 .descriçãoProjeto {
-    margin-top: 0px;
-  }
-  #projeto6 .descriçãoProjeto {
-    margin-top: 0px;
   }
 }
 @media (max-width: 1260px) {
