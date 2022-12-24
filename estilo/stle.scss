@@ -382,7 +382,7 @@ header{
 
 /*Projetos*/
 .fundoProjetos{
-    background-color: rgb(15, 15, 15);
+    background-color: #0f0f0f;
     padding: 50px 0px 50px 0px;
 
     .subTituloProjeto{
@@ -442,8 +442,18 @@ header{
    transform: scale(1.1);
     }
     #projeto3{
+      p {
+        font-size: .7em;
+      }
+    }
+    #projeto6, #projeto7{
       p{
         font-size: .8em;
+      }
+    }
+    #projeto8{
+      h1{
+        font-size: 1.8em;
       }
     }
     .descriçãoProjeto{
@@ -479,17 +489,28 @@ header{
     margin: auto;
     width:100%;  
   }
-
+  #displayFlexProjeto{
+    margin-bottom: 200px;
+  }
   /*Sobre mim*/
+
+  #ondaFundoSobre{
+    margin: -190px 0px 0px 0px;
+  }
+
 .fundoSobre{
   letter-spacing: 3px;
-  background-image: radial-gradient( rgba(5,8,114,1) 0%, rgba(7,3,53,1) 100% );
+  background-color: #070335 ;
 
+  #hSobre{
+    margin-top: 0px;
+  }
   #testeInline{
     display: none;
+    padding-top: 0px;
   }
   h1{
-    padding:50px;
+    padding: 0px 50px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -564,6 +585,8 @@ header{
  /*fundoContato*/
 .fundoContato{
   width: 100%;
+  margin-top: -8px ;
+
   height: 100vh;
   background-color: rgb(15, 15, 15);
   font-family: 'Poppins', sans-serif;
@@ -716,27 +739,27 @@ header{
         width: 50px;
     }
 .flexSobre{
-  img{
-    max-width: 250px;
-    margin-left: 30px;
-  }
-  h2{
-    font-size: .8em;
-  }
-  .textoSobre{
-    max-width: 800px;
-  }
-  .tecSobre{
-    .TecImgSobre{
-      max-width: 80%;
-      max-height: 500px;
-      img{
-        width: 24px;
-        margin: 30px;
+    img{
+      max-width: 250px;
+      margin-left: 30px;
+    }
+    h2{
+      font-size: .8em;
+    }
+    .textoSobre{
+      max-width: 800px;
+    }
+    .tecSobre{
+      .TecImgSobre{
+        max-width: 80%;
+        max-height: 500px;
+        img{
+          width: 24px;
+          margin: 30px;
+        }
       }
     }
   }
-}
 }
 @media (max-width:800px){
     header{

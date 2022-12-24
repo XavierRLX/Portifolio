@@ -537,7 +537,7 @@ header a :hover {
 
 /*Projetos*/
 .fundoProjetos {
-  background-color: rgb(15, 15, 15);
+  background-color: #0f0f0f;
   padding: 50px 0px 50px 0px;
 }
 .fundoProjetos .subTituloProjeto {
@@ -595,7 +595,13 @@ header a :hover {
   transform: scale(1.1);
 }
 .fundoProjetos #projeto3 p {
+  font-size: 0.7em;
+}
+.fundoProjetos #projeto6 p, .fundoProjetos #projeto7 p {
   font-size: 0.8em;
+}
+.fundoProjetos #projeto8 h1 {
+  font-size: 1.8em;
 }
 .fundoProjetos .descriçãoProjeto {
   display: flex;
@@ -631,16 +637,28 @@ header a :hover {
   width: 100%;
 }
 
+#displayFlexProjeto {
+  margin-bottom: 200px;
+}
+
 /*Sobre mim*/
+#ondaFundoSobre {
+  margin: -190px 0px 0px 0px;
+}
+
 .fundoSobre {
   letter-spacing: 3px;
-  background-image: radial-gradient(rgb(5, 8, 114) 0%, rgb(7, 3, 53) 100%);
+  background-color: #070335;
+}
+.fundoSobre #hSobre {
+  margin-top: 0px;
 }
 .fundoSobre #testeInline {
   display: none;
+  padding-top: 0px;
 }
 .fundoSobre h1 {
-  padding: 50px;
+  padding: 0px 50px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -656,7 +674,7 @@ header a :hover {
 .fundoSobre .flexSobre {
   max-width: 1200px;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 51px;
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -711,6 +729,7 @@ header a :hover {
 /*fundoContato*/
 .fundoContato {
   width: 100%;
+  margin-top: -8px;
   height: 100vh;
   background-color: rgb(15, 15, 15);
   font-family: "Poppins", sans-serif;
@@ -1025,7 +1044,7 @@ header a :hover {
     height: 80vh;
   }
   .fundoContato h1 {
-    margin: -60px 0px 20px 0px;
+    margin: -80px 0px 20px 0px;
     padding: 20px 0px 0px 0px;
     font-size: 2em;
   }

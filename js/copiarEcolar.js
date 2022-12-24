@@ -1,10 +1,10 @@
-function copiarEm  (){
+function copiarEm() {
     let copiarE = document.getElementById("copiarEmail").value;
 
-   if (navigator.clipboard.writeText(copiarE)){
-    document.getElementById("botaoEm").style.filter = "grayscale(100%)";
-    document.getElementById("copiadoEm").style.display = "inline";
-   }
+    if (navigator.clipboard.writeText(copiarE)) {
+        document.getElementById("botaoEm").style.filter = "grayscale(100%)";
+        document.getElementById("copiadoEm").style.display = "inline";
+    }
    setInterval(function() {
     document.getElementById("botaoEm").style.filter = "none";
     document.getElementById("copiadoEm").style.display = "none";
