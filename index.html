@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="fundos-fotos/xavier.ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/norma.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="estilo/stle.css">
-    <link rel="stylesheet" href="estilo/styleSlide.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Xavier</title>
 </head>
 <body onload="reload()">
@@ -38,131 +39,172 @@
                     <h1>Olá, me chamo</h1>
                     <h2 id="hmdois">Renan Xavier.</h2>
                     <p id="preEscrição">Construo elementos para a internet.</p> <br>
-                    <p id="descrição">Sou um desenvolvedor web especializado em construir experiências digitais excepcionais. Atualmente, estou focando em criar landing pages, sites para empresas e entre outros.</p>
+                    <p id="descrição">Sou um desenvolvedor especializado em construir experiências digitais excepcionais. Atualmente, estou focando em criar landing pages, sites para empresas e entre outros.</p>
                 </div>
             </section>
         </div>
-
+        <img id="ondaPrincipal" src="fundos-fotos/wave (2).png" alt="">
         <section class="fundoProjetos">
             
             <h2  data-aos="fade-down" id="projeto" class="tituloProjeto"> <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>t</span><span>o</span><span>s</span></h2>
             <h3 data-aos="fade-up" class="subTituloProjeto">Sites/Landing Pages</h3>
-                <div class="displayFlex">
-                    <a href="https://xavierrlx.github.io/Bootstrap.2/" target="_blank">
-                        <div data-aos="fade-up" id="projeto1" class="cardProjeto">
-                            <img class="imagemProjeto" src="fundos-fotos/fundo-boot.jpg" alt="">
-                            <h1>Bootstrap</h1>
-                            <div class="descriçãoProjeto">
-                                <p>Desenvolvido pelo framework do css, utilizando DropDown, carrousel em animações</p>
+                
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                       
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-boot.jpg" alt="" class="card-img">
+                                </div>
                             </div>
-                            <div class="botaocard">
-                                <button>Site</button>
-                                <button>GitHub</button>
+        
+                            <div class="card-content">
+                                <h2 class="name">Bootstrap</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://xavierrlx.github.io/osvingadores/" target="_blank">
-                        <div data-aos="fade-up" id="projeto2" class="cardProjeto">
-                            <img class="imagemProjeto" src="fundos-fotos/fundo-vinga.jpg" alt="">
-                            <h1>Paralax</h1>
-                           <div class="descriçãoProjeto">
-                               <p>Site criado para desmonstrar o efeito "paralax" das imagens com o tema dos VINGADORES
-                               </p>
-                           </div>
-                           <div class="botaocard">
-                            <button>Site</button>
-                            <button>GitHub</button>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-vinga.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+        
+                            <div class="card-content">
+                                <h2 class="name">Paralax</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
+                            </div>
                         </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-ham.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+        
+                            <div class="card-content">
+                                <h2 class="name">Buger</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
+                            </div>
                         </div>
-                    </a>
-                   <a href="https://xavierrlx.github.io/Xavierburger/1Pagweb/index.html" target="_blank">
-                       <div data-aos="fade-up" id="projeto3" class="cardProjeto">
-                        <img class="imagemProjeto" src="fundos-fotos/fundo-ham.jpg" alt="">
-                        <h1>Burger</h1>
-                         <div class="descriçãoProjeto">
-                           <p>1º site (responsivo) desenvolvido com as noções básicas de JS: funções, eventos, DOM. Usando Moral, tela de login, formulário.</p>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-android.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+        
+                            <div class="card-content">
+                                <h2 class="name">Android</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
+                            </div>
                         </div>
-                        <div class="botaocard">
-                            <button>Site</button>
-                            <button>GitHub</button>
-                         </div>
-                        </div>
-                   </a>
-               <a href="https://xavierrlx.github.io/projeto" target="_blank">
-                   <div data-aos="fade-up" id="projeto4" class="cardProjeto">
-                       <img class="imagemProjeto" src="fundos-fotos/fundo-android.jpg" alt="">
-                       <h1>Android</h1>
-                      <div class="descriçãoProjeto">                         
-                          <p>Primeiro projeto responsivo com as noções básicas de HTML5 E CSS3</p>
-                        </div>
-                        <div class="botaocard">
-                            <button>Site</button>
-                            <button>GitHub</button>
-                       </div>
                     </div>
-               </a>
                 </div>
+        
+                <div id="setaSlider" class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+                
         </section>
 
         <hr class="separador">
         
         <section id="fundoProjetosDois" class="fundoProjetos">
             <h3 data-aos="fade-up" class="subTituloProjeto">Utilitários</h3>
-                <main id="displayFlexProjeto" class="displayFlex">
-                    <a href="https://xavierrlx.github.io/calculadora" target="_blank">
-                        <div data-aos="fade-up" id="projeto5" class="cardProjeto">
-                             <img class="imagemProjeto" src="fundos-fotos/fundo-calc.jpg" alt="">
-                             <h1>Calculadora</h1>
-                            <div class="descriçãoProjeto">
-                                <p>Criado com javaScript puro e possuindo a opção de modo de cor (claro e escuro)</p>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-calc.jpg" alt="" class="card-img">
+                                </div>
                             </div>
-                            <div class="botaocard">
-                                <button>Site</button>
-                                <button>GitHub</button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://xavierrlx.github.io/Relogio" target="_blank">
-                        <div data-aos="fade-up" id="projeto6" class="cardProjeto">
-                            <img class="imagemProjeto" src="fundos-fotos/fundo-relogio.jpg" alt="">
-                            <h1> Relógio digital </h1>
-                           <div class="descriçãoProjeto">
-                               <p>API podendo ver a temperatura local. Junto ao um cronomêtro e temporiazador.</p>
-                           </div>
-                           <div class="botaocard">
-                            <button>Site</button>
-                            <button>GitHub</button>
-                        </div>
-                            </div>
-                    </a>
-                    <a href="https://xavierrlx.github.io/AdicionarProdutos" target="_blank">
-                       <div data-aos="fade-up" id="projeto7" class="cardProjeto">
-                        <img class="imagemProjeto" src="fundos-fotos/fundo-lista.jpg" alt="">
-                        <h1>Lista de compras</h1>
-                       <div class="descriçãoProjeto">
-                           <p> Lista adcionada dinamicamento pelo javaScript, tendo opção de "adcionar", "editar" e "apagar" </p>
-                          </div>
-                          <div class="botaocard">
-                            <button>Site</button>
-                            <button>GitHub</button>
-                        </div>
-                        </div>
-                    </a>
-                    <a href="https://xavierrlx.github.io/javascriptex" target="_blank">
-                        <div data-aos="fade-up" id="projeto8" class="cardProjeto">
-                            <img class="imagemProjeto" src="fundos-fotos/fundo-ex.js.jpg" alt="">
-                            <h1>Exercícios javaScript</h1> 
-                            <div class="descriçãoProjeto">
-                                <p>Relizados com meus aprendizados uniciais com JS</p>
-                            </div>
-                            <div class="botaocard">
-                                <button>Site</button>
-                                <button>GitHub</button>
+        
+                            <div class="card-content">
+                                <h2 class="name">Calculadora</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
                             </div>
                         </div>
-                    </a>
-                </main>
-
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-relogio.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+        
+                            <div class="card-content">
+                                <h2 class="name">Relógio Digital</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-lista.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+        
+                            <div class="card-content">
+                                <h2 class="name">Lista de Compras</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+        
+                                <div class="card-image">
+                                    <img src="fundos-fotos/fundo-ex.js.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+        
+                            <div class="card-content">
+                                <h2 class="name">Exercícios JavaScript</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+        
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
 
 
             <div class="foto-html-css">
@@ -225,8 +267,6 @@
      <section class="fundoContato">
         <main id="mainContato">
             <h1><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>t</span><span>o</span></h1>
-                <h2>Agradeço por visitar o meu <span>portifolio</span> !</h2>
-                <h3>Caso se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato comigo atravez desses meios abaixo.</h3>
                 <article>
                 <h2>E-mail :</h2>
                 <div class="CopiaeCola">
@@ -242,6 +282,8 @@
                     <input id="copiarNumber" value ="+55 21 96473-4161" readonly></input>
                     <img id="botaoNum" onclick="copiarNumb()" src="fundos-fotos/ferramenta-de-copia.png" alt="">
                 </div> <br>
+                <h2>Agradeço por visitar o meu <span>portifolio</span> !</h2>
+                <h3>Caso se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato comigo atravez desses meios abaixo.</h3>
                 <p id="copiadoNum">COPIADO!</p>
                 <div class="imagensRedes">
                     <img src="fundos-fotos/instagram (1).png" alt="">
@@ -253,12 +295,17 @@
       </section>
 
     </div>
-    
+</body>
+
+<!-- Swiper JS -->
+<script src="js2/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script src="js2/script.js"></script>
     <script src="js/preload.js"></script>
     <script src="js/digitando.js"></script>
     <script src="js/copiarEcolar.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/Slide.js"></script>
     <script>
       AOS.init({
         delay: 100,
