@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Xavier</title>
 </head>
-<body onload="reload()">
+<body onload="preload()">
 
-    <div id="reloadid" class="reload">
+    <div id="preloadid" class="preload">
         <div class="carregamento"></div>
     </div>
 
-    <div id="nloadid">
+    <div id="onloadid">
         <div class="fundoPrincipal">
             <header>
                 <div class="logotipo">
@@ -43,10 +43,11 @@
                 </div>
             </section>
         </div>
-        <img id="ondaPrincipal" src="fundos-fotos/wave (2).png" alt="">
+        <svg class="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+
         <section class="fundoProjetos">
             
-            <h2  data-aos="fade-down" id="projeto" class="tituloProjeto"> <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>t</span><span>o</span><span>s</span></h2>
+            <h2  data-aos="fade-down" id="projeto" class="tituloProjeto"> <span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>T</span><span>O</span><span>S</span></h2>
             <h3 data-aos="fade-up" class="subTituloProjeto">Sites/Landing Pages</h3>
                 
             <div class="slide-container swiper">
@@ -64,9 +65,9 @@
         
                             <div class="card-content">
                                 <h2 class="name">Bootstrap</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="description">Desenvolvido pelo framework do css, utilizando DropDown, carrousel e animações</p>
         
-                                <button class="button">View More</button>
+                                <a href=""><button class="button">Visualizar</button></a>
                             </div>
                         </div>
                         <div class="card swiper-slide">
@@ -80,9 +81,9 @@
         
                             <div class="card-content">
                                 <h2 class="name">Paralax</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="description">Site criado para desmonstrar o efeito "paralax" das imagens com o tema dos VINGADORES</p>
         
-                                <button class="button">View More</button>
+                                <a href=""><button class="button">Visualizar</button></a>
                             </div>
                         </div>
                         <div class="card swiper-slide">
@@ -96,9 +97,8 @@
         
                             <div class="card-content">
                                 <h2 class="name">Buger</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                <button class="button">View More</button>
+                                <p class="description">Primeiro site (responsivo) com as noções básicas de javaScript: funções, events, DOM. Modal, Menu, tela de login, form.</p>
+                                <a href=""><button class="button">Visualizar</button></a>
                             </div>
                         </div>
                         <div class="card swiper-slide">
@@ -112,9 +112,9 @@
         
                             <div class="card-content">
                                 <h2 class="name">Android</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="description">Primeiro projeto responsivo com as noções básicas de HTML5 E CSS3 junto com o professor Guanabara.</p>
         
-                                <button class="button">View More</button>
+                                <a href=""><button class="button">Visualizar</button></a>
                             </div>
                         </div>
                     </div>
@@ -143,8 +143,8 @@
                                     </div>
                                     <div class="card-content">
                                         <h2 class="name">Calculadora</h2>
-                                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                                        <button class="button">View More</button>
+                                        <p class="description">Criado com javaScript puro e possuindo a opção de modo de cor. <br>(claro e escuro)</p>
+                                        <a href=""><button class="button">Visualizar</button></a>
                                     </div>
                                 </div>
                                 <div class="card swiper-slide">
@@ -156,8 +156,8 @@
                                     </div>
                                     <div class="card-content">
                                         <h2 class="name">Relógio Digital</h2>
-                                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                                        <button class="button">View More</button>
+                                        <p class="description">Relógio com a API podendo ver a temperatura local. Junto ao um cronomêtro e um temporiazador.</p>
+                                        <a href=""><button class="button">Visualizar</button></a>
                                     </div>
                                 </div>
                                 <div class="card swiper-slide">
@@ -169,8 +169,8 @@
                                     </div>
                                     <div class="card-content">
                                         <h2 class="name">Lista de Compras</h2>
-                                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                                        <button class="button">View More</button>
+                                        <p class="description">Lista adcionada dinamicamento pelo javaScript, tendo opção de "adcionar", "editar" e "apagar"</p>
+                                        <a href=""><button class="button">Visualizar</button></a>
                                     </div>
                                 </div>
                                 <div class="card swiper-slide">
@@ -182,8 +182,8 @@
                                     </div>
                                     <div class="card-content">
                                         <h2 class="name">Exercícios JavaScript</h2>
-                                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                                        <button class="button">View More</button>
+                                        <p class="description">Alguns exercícios feito meus aprendizados uniciais com linguagem javaScript pelo professor Guanabara.</p>
+                                        <a href=""><button class="button">Visualizar</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -216,7 +216,7 @@
          <svg id="ondaFundoSobre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#070335" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 
         <div id="testeInline">
-            <h1 id="hSobre" data-aos="fade-down"><span>S</span><span>o</span><span>b</span><span>r</span><span>e</span> <span>m</span><span>i</span><span>m</span></h1>
+            <h1 id="hSobre" data-aos="fade-down"><span>S</span><span>O</span><span>B</span><span>R</span><span>E</span></h1>
             <div onload="SobreInline()" id="fundoSobreNone" class="flexSobre">
                 <div data-aos="fade-right"class="imagemSobre"><img src="fundos-fotos/avatarRenanSite.png" alt=""></div>
                 <main data-aos="fade-up" class="textoSobre">
@@ -228,6 +228,7 @@
                     <h2>Final de 2022 consegui um estágio focando em desenvolvimento de sistemas. Portando estou aprendendo mais sobre o back-and. Estou usando C#/asp.net junto com SQL Server. </h2>
                 </main>
             </div>
+            
             <main id="imgSobre" class="tecSobre">
                 <div data-aos="fade-up" class="TecImgSobre">
                     <figure><img src="fundos-fotos/html-5.png" alt="">
@@ -247,12 +248,12 @@
                 </div>
             </main>
         </div>
-        <svg id="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <svg class="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
      </section>
 
      <section class="fundoContato">
         <main id="mainContato">
-            <h1><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>t</span><span>o</span></h1>
+            <h1><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>T</span><span>O</span></h1>
                 <article>
                 <h2>E-mail :</h2>
                 <div class="CopiaeCola">
@@ -269,13 +270,15 @@
                     <img id="botaoNum" onclick="copiarNumb()" src="fundos-fotos/ferramenta-de-copia.png" alt="">
                 </div> <br>
                 <p id="copiadoNum">COPIADO!</p>
+                <div class="agradecimento">
+                    <h2>Agradeço por visitar o meu <span>portifolio</span> !</h2>
+                    <h3>Caso se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato comigo atrávez desses meios.</h3>
+                </div>
                 <div class="imagensRedes">
                     <img src="fundos-fotos/instagram (1).png" alt="">
                     <img src="fundos-fotos/github.png" alt="">
                     <img src="fundos-fotos/linkedin.png" alt="">
                 </div>
-                <h2>Agradeço por visitar o meu <span>portifolio</span> !</h2>
-                <h3>Caso se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato comigo atravez desses meios abaixo.</h3>
                 </article>
         </main>
       </section>

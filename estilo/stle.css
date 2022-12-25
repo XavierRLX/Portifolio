@@ -759,7 +759,6 @@ header a :hover {
 .fundoContato main {
   color: #ffffff;
   max-width: 1200px;
-  margin: auto;
   text-align: center;
 }
 .fundoContato main article {
@@ -777,7 +776,7 @@ header a :hover {
 .fundoContato main .imagensRedes {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 90px;
   padding: 10px;
 }
 .fundoContato main .imagensRedes img {
@@ -828,7 +827,11 @@ header a :hover {
   display: none;
 }
 
-#ondeContato {
+.agradecimento h3, .agradecimento h2 {
+  color: #ffffff;
+}
+
+.ondeContato {
   margin-top: -200px;
 }
 

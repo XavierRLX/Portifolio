@@ -616,7 +616,6 @@ header{
   main{
     color: #ffffff;
     max-width: 1200px;
-    margin: auto;
     text-align: center;
 
     article{
@@ -634,7 +633,7 @@ header{
     .imagensRedes{
       display: flex;
       justify-content: center;
-      margin-top: 50px;
+      margin-top: 90px;
       padding: 10px;
 
       img{
@@ -686,7 +685,12 @@ header{
   color: #000000;
   display: none;
  }
- #ondeContato{
+ .agradecimento{
+  h3, h2{
+    color: #ffffff
+  }
+ }
+ .ondeContato{
   margin-top: -200px ;
  }
 
