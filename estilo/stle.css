@@ -662,7 +662,7 @@ header a :hover {
 
 /*Sobre mim*/
 #ondaFundoSobre {
-  margin: -190px 0px 0px 0px;
+  margin: -210px 0px 0px 0px;
 }
 
 .fundoSobre {
@@ -748,7 +748,7 @@ header a :hover {
 /*fundoContato*/
 .fundoContato {
   width: 100%;
-  margin-top: -8px;
+  margin-top: -100px;
   height: 100vh;
   background-color: rgb(15, 15, 15);
   font-family: "Poppins", sans-serif;
@@ -826,6 +826,10 @@ header a :hover {
   background-color: #ffffff;
   color: #000000;
   display: none;
+}
+
+#ondeContato {
+  margin-top: -200px;
 }
 
 @media (max-width: 1450px) {
@@ -973,11 +977,11 @@ header a :hover {
     display: none;
   }
   .foto-react {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 280px;
+    max-height: 280px;
     margin-top: 210px;
     overflow: hidden;
-    left: 15% !important;
+    left: 20% !important;
   }
   .fundoApresentação .apresentação {
     padding: 10px;
@@ -1052,6 +1056,7 @@ header a :hover {
   }
   .fundoSobre .tecSobre {
     margin-top: 20px;
+    margin-bottom: 40px;
   }
   .fundoSobre .tecSobre .TecImgSobre {
     display: flex;
@@ -1065,6 +1070,7 @@ header a :hover {
   }
   .fundoContato {
     height: 80vh;
+    margin-top: -10px;
   }
   .fundoContato h1 {
     margin: -80px 0px 20px 0px;

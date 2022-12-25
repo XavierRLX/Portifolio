@@ -7,12 +7,12 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.slide-container{
+.slide-container, .slide-container2{
   max-width: 1120px;
   width: 100%;
   padding: 40px 0;
 }
-.slide-content{
+.slide-content, .slide-content2 {
   margin: 0 40px;
   overflow: hidden;
   border-radius: 25px;
@@ -108,10 +108,10 @@
 .swiper-navBtn::after{
   font-size: 35px;
 }
-.swiper-button-next{
+.swiper-button-next, .swiper-button-next2{
   right: 0;
 }
-.swiper-button-prev{
+.swiper-button-prev, .swiper-button-prev2{
   left: 0;
 }
 .swiper-pagination-bullet{
@@ -121,12 +121,15 @@
 .swiper-pagination-bullet-active{
   background-color: #4070F4;
 }
+#pagination2{
+  margin: -20px 0px 0px 50%;
+}
 
 @media screen and (max-width: 768px) {
   .slide-content{
     margin: 0 10px;
   }
   .swiper-navBtn{
-    display: none;
+    display: inline;
   }
 }

@@ -514,7 +514,7 @@ header{
   /*Sobre mim*/
 
   #ondaFundoSobre{
-    margin: -190px 0px 0px 0px;
+    margin: -210px 0px 0px 0px;
   }
 
 .fundoSobre{
@@ -604,7 +604,7 @@ header{
  /*fundoContato*/
 .fundoContato{
   width: 100%;
-  margin-top: -8px ;
+  margin-top: -100px ;
 
   height: 100vh;
   background-color: rgb(15, 15, 15);
@@ -685,6 +685,9 @@ header{
   background-color: #ffffff;
   color: #000000;
   display: none;
+ }
+ #ondeContato{
+  margin-top: -200px ;
  }
 
 @media (max-width:1450px) {
@@ -856,11 +859,11 @@ header{
         }
       }
     .foto-react{
-        max-width: 250px;
-        max-height: 250px;
+        max-width: 280px;
+        max-height: 280px;
         margin-top: 210px;
         overflow: hidden;
-        left: 15% !important ;
+        left: 20% !important ;
     }
     .fundoApresentação{
 
@@ -945,6 +948,7 @@ header{
     }
     .tecSobre{
       margin-top: 20px;
+      margin-bottom: 40px;
       .TecImgSobre{
         display: flex;
         img{
@@ -959,6 +963,7 @@ header{
   }
   .fundoContato{
     height: 80vh;  
+    margin-top: -10px;
     h1{
       margin: -80px 0px 20px 0px;
       padding: 20px 0px 0px 0px;
@@ -976,5 +981,4 @@ header{
       padding: 10px;
     }
    }
-  
 }
