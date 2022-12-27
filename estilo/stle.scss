@@ -385,9 +385,9 @@ header{
 
 /*Projetos*/
 .fundoProjetos{
+
     background-color: #0f0f0f;
     padding: 50px 0px 50px 0px;
-
     .FlexButton{
       display: flex;
       align-items: center;
@@ -501,6 +501,9 @@ header{
         border-radius: 2px;
       }
     }
+}
+.ondaPrincipal{
+  margin-top: -230px;
 }
 .separador{
     border-color:#4203ee;

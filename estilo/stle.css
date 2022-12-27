@@ -649,6 +649,10 @@ header a :hover {
   border-radius: 2px;
 }
 
+.ondaPrincipal {
+  margin-top: -230px;
+}
+
 .separador {
   border-color: #4203ee;
   box-sizing: border-box;
