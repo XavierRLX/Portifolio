@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="fundos-fotos/xavier.ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagens/xavier.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="estilo/stle.css">
+    <link rel="stylesheet" href="CSS/Style.css.map">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/Animações.css">
+    <link rel="stylesheet" href="CSS/slide.css">
+    <link rel="stylesheet" href="CSS/Loading.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+
     <title>Xavier</title>
 </head>
 <body onload="preload()">
@@ -23,7 +26,7 @@
         <div class="fundoPrincipal">
             <header>
                 <div class="logotipo">
-                    <img class="fotoLogo" src="fundos-fotos/xavier.ico.png" alt=""><h1 id="nomeLogo">AVIER</h1>
+                    <img class="fotoLogo" src="Imagens/xavier.ico.png" alt=""><h1 id="nomeLogo">AVIER</h1>
                 </div>
                 <ul class="menu">
                     <a href="#"><p>Home</p></a>
@@ -34,7 +37,7 @@
             </header>
 
             <section class="fundoApresentação">
-                <img class="foto-react" src="fundos-fotos/react.png" alt="">
+                <img class="foto-react" src="Imagens/react.png" alt="">
                 <div class="apresentação">
                     <h1>Olá, me chamo</h1>
                     <h2 id="hmdois">Renan Xavier.</h2>
@@ -125,8 +128,8 @@
 
         <section id="fundoProjetosDois" class="fundoProjetos">
             <h3 data-aos="fade-up" class="subTituloProjeto">Sites</h3>
-            <div class="slide-container swiper">
-                    <div class="slide-content">
+            <div data-aos="fade-down" class="slide-container swiper">
+                    <div data-aos="fade-down" class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
                        
                             <a href="https://xavierrlx.github.io/Bootstrap.2/" target="_blank">
@@ -134,7 +137,7 @@
                                     <div class="image-content">
                                         <span class="overlay"></span>
                                         <div class="card-image">
-                                            <img src="fundos-fotos/fundo-boot.jpg" alt="" class="card-img">
+                                            <img src="Imagens/fundo-boot.jpg" alt="" class="card-img">
                                         </div>
                                     </div>
                                     <div class="card-content">
@@ -149,7 +152,7 @@
                                     <div class="image-content">
                                         <span class="overlay"></span>
                                         <div class="card-image">
-                                            <img src="fundos-fotos/fundo-vinga.jpg" alt="" class="card-img">
+                                            <img src="Imagens/fundo-vinga.jpg" alt="" class="card-img">
                                         </div>
                                     </div>
                                     <div class="card-content">
@@ -164,7 +167,7 @@
                                     <div class="image-content">
                                         <span class="overlay"></span>
                                         <div class="card-image">
-                                            <img src="fundos-fotos/fundo-ham.jpg" alt="" class="card-img">
+                                            <img src="Imagens/fundo-ham.jpg" alt="" class="card-img">
                                         </div>
                                     </div>
                                     <div class="card-content">
@@ -179,7 +182,7 @@
                                     <div class="image-content">
                                         <span class="overlay"></span>
                                         <div class="card-image">
-                                            <img src="fundos-fotos/fundo-android.jpg" alt="" class="card-img">
+                                            <img src="Imagens/fundo-android.jpg" alt="" class="card-img">
                                         </div>
                                     </div>
                                     <div class="card-content">
@@ -197,20 +200,20 @@
             <div id="pagination2" class="swiper-pagination2"></div>
 
             <div class="foto-html-css">
-                <img id="foto-html" src="fundos-fotos/codificacao.png" alt="icone-html" >
+                <img id="foto-html" src="Imagens/codificacao.png" alt="icone-html" >
             </div>
             <div class="foto-js">
-                <img id="foto-jss" src="fundos-fotos/js.png" alt="icone-js">
+                <img id="foto-jss" src="Imagens/js.png" alt="icone-js">
             </div>
             <div class="redeSocias">
                 <div class="imagensRedes">
-                    <a href="https://www.instagram.com/yxavier_rlx/" target="_blank"><img  src="fundos-fotos/instagram (1).png" alt="instagram"></a>
-                    <a href="https://github.com/XavierRLX" target="_blank"><img src="fundos-fotos/github.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank"><img src="fundos-fotos/linkedin.png" alt="linkedin"></a>
+                    <a href="https://www.instagram.com/yxavier_rlx/" target="_blank"><img  src="Imagens/instagram (1).png" alt="instagram"></a>
+                    <a href="https://github.com/XavierRLX" target="_blank"><img src="Imagens/github.png" alt="github"></a>
+                    <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank"><img src="Imagens/linkedin.png" alt="linkedin"></a>
                 </div>
             </div>
             <div class="html">
-                <img id="foto-ht" src="fundos-fotos/programacao.png" alt="icone-fechamento">
+                <img id="foto-ht" src="Imagens/programacao.png" alt="icone-fechamento">
             </div>
         </section>
         
@@ -219,14 +222,14 @@
         <section id="fundoProjetosTres" class="fundoProjetos">
             <h3 data-aos="fade-up" class="subTituloProjeto">Ferramentas</h3>
             <div class="slide-container swiper">
-                    <div class="slide-content">
+                    <div data-aos="fade-down" class="slide-content">
                             <div class="card-wrapper swiper-wrapper">
                                 <a href="https://xavierrlx.github.io/calculadora/" target="_blank">
                                     <div class="card swiper-slide">
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="fundos-fotos/fundo-calc.jpg" alt="" class="card-img">
+                                                <img src="Imagens/fundo-calc.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -241,7 +244,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="fundos-fotos/fundo-relogio.jpg" alt="" class="card-img">
+                                                <img src="Imagens/fundo-relogio.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -256,7 +259,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="fundos-fotos/fundo-lista.jpg" alt="" class="card-img">
+                                                <img src="Imagens/fundo-lista.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -271,7 +274,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="fundos-fotos/fundo-ex.js.jpg" alt="" class="card-img">
+                                                <img src="Imagens/fundo-ex.js.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -295,7 +298,7 @@
         <section id="fundoProjetosTres" class="fundoProjetos">
             <h3 data-aos="fade-up" class="subTituloProjeto">Games</h3>
             <div class="slide-container swiper">
-                    <div class="slide-content">
+                    <div data-aos="fade-down" class="slide-content">
                             <div class="card-wrapper swiper-wrapper">
                                 <a href="https://xavierrlx.github.io/calculadora/" target="_blank">
                                     <div class="card swiper-slide">
@@ -386,12 +389,12 @@
 
      <section class="fundoSobre">
 
-         <svg id="ondaFundoSobre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#070335" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+         <svg id="ondaFundoSobre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(5,8,114,1)" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 
         <div id="testeInline">
             <h1 id="hSobre" data-aos="fade-down"><span>S</span><span>O</span><span>B</span><span>R</span><span>E</span></h1>
             <div onload="SobreInline()" id="fundoSobreNone" class="flexSobre">
-                <div data-aos="fade-right"class="imagemSobre"><img src="fundos-fotos/avatarRenanSite.png" alt=""></div>
+                <div data-aos="fade-right"class="imagemSobre"><img src="Imagens/avatarRenanSite.png" alt=""></div>
                 <main data-aos="fade-up" class="textoSobre">
                     <h2>Desde novo sempre tive uma certa facilidade com a tecnoligia em geral mas nunca me despertou o desejo de estudar sobre esta area.</h2> <br>
                     <h2>Desde 2017 que concluí meu ensino médio até 2021, tentei ingressar na carreira militar, na logistica e na enfermagem.</h2> <br>
@@ -404,19 +407,19 @@
             
             <main id="imgSobre" class="tecSobre">
                 <div data-aos="fade-up" class="TecImgSobre">
-                    <figure><img src="fundos-fotos/html-5.png" alt="">
+                    <figure><img src="Imagens/html-5.png" alt="">
                     <figcaption>HTML 5</figcaption></figure>
-                    <figure><img src="fundos-fotos/css-3.png" alt="">
+                    <figure><img src="Imagens/css-3.png" alt="">
                     <figcaption>CSS 3</figcaption></figure>
-                    <figure><img src="fundos-fotos/bootstrap.png" alt="">
+                    <figure><img src="Imagens/bootstrap.png" alt="">
                     <figcaption>BOOTSTRAP</figcaption></figure>
-                    <figure><img src="fundos-fotos/sass.png">
+                    <figure><img src="Imagens/sass.png">
                     <figcaption>SASS</figcaption></figure>
-                    <figure><img src="fundos-fotos/jsSobre.png">
+                    <figure><img src="Imagens/jsSobre.png">
                     <figcaption>JAVASCRIPT</figcaption></figure>
-                    <figure><img src="fundos-fotos/icons8-react-64.png" alt="">
+                    <figure><img src="Imagens/icons8-react-64.png" alt="">
                     <figcaption>REACT</figcaption></figure>
-                    <figure><img src="fundos-fotos/mysql.png">
+                    <figure><img src="Imagens/mysql.png">
                     <figcaption>BANCO DE DADOS</figcaption></figure>
                 </div>
             </main>
@@ -431,7 +434,7 @@
                 <h2>E-mail :</h2>
                 <div class="CopiaeCola">
                     <input id="copiarEmail" value = "renanlima2000.aer@gmail.com" readonly ></input>
-                    <img id="botaoEm" onclick="copiarEm()" src="fundos-fotos/ferramenta-de-copia.png" alt=""></img>
+                    <img id="botaoEm" onclick="copiarEm()" src="Imagens/ferramenta-de-copia.png" alt=""></img>
                 </div> <br>
                 <p id="copiadoEm">COPIADO!</p>
                 </article>
@@ -440,7 +443,7 @@
                 <h2>Telefone :</h2>
                 <div class="NumberCopiaeCola">
                     <input id="copiarNumber" value ="+55 21 96473-4161" readonly></input>
-                    <img id="botaoNum" onclick="copiarNumb()" src="fundos-fotos/ferramenta-de-copia.png" alt="">
+                    <img id="botaoNum" onclick="copiarNumb()" src="Imagens/ferramenta-de-copia.png" alt="">
                 </div> <br>
                 <p id="copiadoNum">COPIADO!</p>
                 <div class="agradecimento">
@@ -448,9 +451,9 @@
                     <h3>Caso se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato comigo atrávez desses meios.</h3>
                 </div>
                 <div class="imagensRedes">
-                    <img src="fundos-fotos/instagram (1).png" alt="">
-                    <img src="fundos-fotos/github.png" alt="">
-                    <img src="fundos-fotos/linkedin.png" alt="">
+                    <img class="RedesContato" src="Imagens/instagram (1).png" alt="">
+                    <img class="RedesContato"src="Imagens/github.png" alt="">
+                    <img class="RedesContato" src="Imagens/linkedin.png" alt="">
                 </div>
                 </article>
         </main>
@@ -460,10 +463,10 @@
 </body>
 
 <!-- Swiper JS -->
-<script src="js2/swiper-bundle.min.js"></script>
+<script src="js/SliderJs/swiper-bundle.min.js"></script>
+<script src="js/SliderJs/script.js"></script>
 
 <!-- JavaScript -->
-<script src="js2/script.js"></script>
     <script src="js/preload.js"></script>
     <script src="js/digitando.js"></script>
     <script src="js/copiarEcolar.js"></script>

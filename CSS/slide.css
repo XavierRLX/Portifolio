@@ -1,4 +1,3 @@
-/* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 *{
@@ -7,25 +6,24 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: #EFEFEF;
-}
-.slide-container{
+.slide-container, .slide-container2{
   max-width: 1120px;
   width: 100%;
   padding: 40px 0;
 }
-.slide-content{
+.slide-content, .slide-content2 {
   margin: 0 40px;
   overflow: hidden;
   border-radius: 25px;
 }
 .card{
   border-radius: 25px;
-  background-color: #FFF;
+  box-shadow:  0px 0px 2px 0px #000000;
+  background-color: rgb(37, 36, 36);
+  color: #ffffff;
+}
+.card:hover{
+  box-shadow:  0px 0px 2px 2px #4203ee;
 }
 .image-content,
 .card-content{
@@ -45,7 +43,7 @@ body{
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #4070F4;
+  background-color: rgb(37, 36, 36);
   border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
@@ -56,18 +54,18 @@ body{
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #4070F4;
+  background-color: rgb(37, 36, 36);
 }
 .overlay::after{
   border-radius: 0 25px 0 0;
-  background-color: #FFF;
+  background-color:rgb(37, 36, 36);
 }
 .card-image{
   position: relative;
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background: #FFF;
+  background: #4203ee;
   padding: 3px;
 }
 .card-image .card-img{
@@ -75,16 +73,17 @@ body{
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #4070F4;
+  border: 4px solid rgb(rgb(37, 36, 36));
 }
 .name{
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: #4203ee;
+  text-align: center;
 }
 .description{
   font-size: 14px;
-  color: #707070;
+  color: #ffffff;
   text-align: center;
 }
 .button{
@@ -92,7 +91,7 @@ body{
   font-size: 16px;
   color: #FFF;
   padding: 8px 16px;
-  background-color: #4070F4;
+  background-color: #4203ee;
   border-radius: 6px;
   margin: 14px;
   cursor: pointer;
@@ -101,22 +100,21 @@ body{
 .button:hover{
   background: #265DF2;
 }
-
 .swiper-navBtn{
-  color: #6E93f7;
+  color: #4203ee;
   transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
-  color: #4070F4;
+  color: #4203ee;
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after{
   font-size: 35px;
 }
-.swiper-button-next{
+.swiper-button-next, .swiper-button-next2{
   right: 0;
 }
-.swiper-button-prev{
+.swiper-button-prev, .swiper-button-prev2{
   left: 0;
 }
 .swiper-pagination-bullet{
@@ -126,12 +124,18 @@ body{
 .swiper-pagination-bullet-active{
   background-color: #4070F4;
 }
+#pagination2{
+  margin: -20px 0px 0px 50%;
+}
 
 @media screen and (max-width: 768px) {
   .slide-content{
     margin: 0 10px;
   }
   .swiper-navBtn{
-    display: none;
+    display: inline;
   }
-}''
+  .slide-content {
+    margin: 40px;
+  }
+}

@@ -1,0 +1,26 @@
+/*pre-laod*/
+#onloadid{
+    display: none;
+}
+.preload{
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient( rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    transition: 1000s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .carregamento{
+    animation: preload 1s infinite;
+    border: 6px solid #3201b9;
+    border-top-color: #11c0e5;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    }
+
