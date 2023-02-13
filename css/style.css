@@ -73,8 +73,7 @@ header a :hover {
   background-color: #A940E8;
   box-shadow: 0 3px 20px 0 #000000;
   border-radius: 5px;
-  -webkit-animation: 1s;
-          animation: 1s;
+  animation: 1s;
 }
 
 /*Cor do background da tela principal*/
@@ -99,8 +98,7 @@ header a :hover {
   top: 15%;
   left: 50%;
   position: absolute;
-  -webkit-animation: girando360 25s 5.5s infinite linear, piscando 9.5s linear both;
-          animation: girando360 25s 5.5s infinite linear, piscando 9.5s linear both;
+  animation: girando360 25s 5.5s infinite linear, piscando 9.5s linear both;
 }
 .fundoApresentação .apresentação {
   position: relative;
@@ -114,8 +112,7 @@ header a :hover {
   max-width: 438px;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
-          animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
+  animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
 }
 .fundoApresentação h2, .fundoApresentação p {
   font-family: "Poppins", sans-serif;
@@ -123,14 +120,12 @@ header a :hover {
 }
 .fundoApresentação #preEscrição {
   max-width: 1250px;
-  -webkit-animation: focandoTexto 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: focandoTexto 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: focandoTexto 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .fundoApresentação #descrição {
   font-size: 1em;
   max-width: 700px;
-  -webkit-animation: animaTextoDireita 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-          animation: animaTextoDireita 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: animaTextoDireita 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 .fundoApresentação #descrição, .fundoApresentação #preEscrição {
   display: none;
@@ -151,8 +146,7 @@ header a :hover {
 }
 
 .foto-html-css:hover {
-  -webkit-animation: girando360 1s infinite linear;
-          animation: girando360 1s infinite linear;
+  animation: girando360 1s infinite linear;
 }
 
 .foto-js {
@@ -164,8 +158,7 @@ header a :hover {
 }
 
 #foto-jss:hover {
-  -webkit-animation: vibração 0.5s linear infinite both;
-          animation: vibração 0.5s linear infinite both;
+  animation: vibração 0.5s linear infinite both;
 }
 
 #foto-jss, #foto-html {
@@ -182,8 +175,7 @@ header a :hover {
 }
 
 #foto-ht:hover {
-  -webkit-animation: tremer 0.3s linear infinite both;
-          animation: tremer 0.3s linear infinite both;
+  animation: tremer 0.3s linear infinite both;
 }
 
 .redeSocias {
@@ -211,8 +203,7 @@ header a :hover {
 .redeSocias .imagensRedes img:hover {
   box-shadow: 0 3px 20px 0 #000000;
   border-radius: 5px;
-  -webkit-animation: 1s;
-          animation: 1s;
+  animation: 1s;
 }
 
 /*Projetos*/
@@ -236,6 +227,7 @@ header a :hover {
 }
 .fundoProjetos .subTituloProjeto {
   color: #970ee7 !important;
+  font-size: 2em;
 }
 .fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
   text-align: center;
@@ -466,8 +458,7 @@ header a :hover {
 .fundoContato main .imagensRedes img:hover {
   box-shadow: 0 3px 20px 0 #000000;
   border-radius: 5px;
-  -webkit-animation: 1s;
-          animation: 1s;
+  animation: 1s;
 }
 .fundoContato h1 {
   margin: -50px 0px 100px 0px;
