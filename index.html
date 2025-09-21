@@ -1,442 +1,451 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="Imagens/xavier.ico.png" type="image/x-icon">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="Imagens/xavier.ico.png" type="image/x-icon">
 
-    <!-- CSS -->
-    <!-- Removido o .map (não é CSS) -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="CSS/Style.css">
-    <link rel="stylesheet" href="CSS/Animações.css">
-    <link rel="stylesheet" href="CSS/slide.css">
-    <link rel="stylesheet" href="CSS/Loading.css">
+  <!-- Swiper & AOS (usados nos seus data-aos e sliders) -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <title>Xavier</title>
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="CSS/Style.css">
+  <link rel="stylesheet" href="CSS/Animações.css">
+  <link rel="stylesheet" href="CSS/slide.css">
+  <link rel="stylesheet" href="CSS/Loading.css">
+
+  <title>Xavier</title>
 </head>
 <body onload="preload()">
 
-    <!-- Link de pulo de conteúdo (acessibilidade) -->
-    <a class="skip-link" href="#projeto">Pular para projetos</a>
+  <!-- Link de pulo para acessibilidade -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <div id="preloadid" class="preload" role="status" aria-live="polite" aria-label="Carregando">
-        <div class="carregamento"></div>
-    </div>
+  <div id="preloadid" class="preload" aria-hidden="true">
+    <div class="carregamento" aria-label="Carregando"></div>
+  </div>
 
-    <div id="onloadid">
-        <div class="fundoPrincipal">
-            <header role="banner">
-                <div class="logotipo">
-                    <img class="fotoLogo" src="Imagens/xavier.ico.png" alt="Logotipo Xavier">
-                    <h1 id="nomeLogo" aria-label="Xavier">AVIER</h1>
-                </div>
-
-                <!-- Navegação semântica -->
-                <nav class="nav-principal" aria-label="Navegação principal">
-                    <ul class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#projeto">Projetos</a></li>
-                        <li><a href="#hSobre">Sobre</a></li>
-                        <li><a href="#mainContato">Contato</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <section class="fundoApresentação" aria-labelledby="hmdois">
-                <img class="foto-react" src="Imagens/react.png" alt="Logotipo React girando decorativo" loading="lazy">
-                <div class="apresentação">
-                    <h1>Olá, me chamo</h1>
-                    <h2 id="hmdois">Renan Xavier.</h2>
-                    <p id="preEscrição">Faço parte do time dos desenvolvedores!</p> <br>
-                    <p id="descrição">Desenvolvedor especializado em construir experiências digitais.</p>
-                </div>
-            </section>
+  <div id="onloadid">
+    <div class="fundoPrincipal">
+      <header role="banner">
+        <div class="logotipo">
+          <img class="fotoLogo" src="Imagens/xavier.ico.png" alt="Logotipo Xavier">
+          <h1 id="nomeLogo" aria-label="Xavier">XAVIER</h1>
         </div>
 
-        <svg class="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true" focusable="false"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <!-- Navegação principal -->
+        <nav class="nav" aria-label="Navegação principal">
+          <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projeto">Projetos</a></li>
+            <li><a href="#hSobre">Sobre</a></li>
+            <li><a href="#mainContato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <!-- Projetos -->
-        <section class="fundoProjetos" aria-labelledby="projeto">
-            <h2 data-aos="fade-down" id="projeto" class="tituloProjeto">
-                <span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>T</span><span>O</span><span>S</span>
-            </h2>
-
-            <section id="fundoProjetosDois" class="fundoProjetos" aria-label="Lista de sites">
-                <h3 data-aos="fade-up" class="subTituloProjeto">Sites</h3>
-
-                <div data-aos="fade-down" class="slide-container swiper" aria-live="polite">
-                    <div data-aos="fade-down" class="slide-content">
-                        <div class="card-wrapper swiper-wrapper">
-
-                            <a href="https://xavierrlx.github.io/TemperoDivino/" target="_blank" rel="noopener">
-                                <article class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay" aria-hidden="true"></span>
-                                        <div class="card-image">
-                                            <img src="Imagens/TemperoDivino.png" alt="Prévia do site Tempero Divino" class="card-img" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="name">Sociais</h4>
-                                        <p class="description">Primeiro site para terceiros, inspirado no Linktree, com botões que redirecionam para os canais oficiais.</p>
-                                        <p class="button">Visualizar</p>
-                                    </div>
-                                </article>
-                            </a>
-
-                            <a href="https://xavierrlx.github.io/Hamburgueria/" target="_blank" rel="noopener">
-                                <article class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay" aria-hidden="true"></span>
-                                        <div class="card-image">
-                                            <img src="Imagens/fundo-boot.jpg" alt="Prévia do site Hamburgueria" class="card-img" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="name">Hamburgueria (Bootstrap)</h4>
-                                        <p class="description">Site de uma hamburgueria com carrinho e integração ao WhatsApp para receber pedidos.</p>
-                                        <p class="button">Visualizar</p>
-                                    </div>
-                                </article>
-                            </a>
-
-                            <a href="https://xavierrlx.github.io/osvingadores/" target="_blank" rel="noopener">
-                                <article class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay" aria-hidden="true"></span>
-                                        <div class="card-image">
-                                            <img src="Imagens/fundo-vinga.jpg" alt="Efeito Parallax com tema Vingadores" class="card-img" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="name">Parallax</h4>
-                                        <p class="description">Demonstração do efeito “parallax” com o tema Vingadores.</p>
-                                        <p class="button">Visualizar</p>
-                                    </div>
-                                </article>
-                            </a>
-
-                            <a href="https://xavierrlx.github.io/Xavierburger/" target="_blank" rel="noopener">
-                                <article class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay" aria-hidden="true"></span>
-                                        <div class="card-image">
-                                            <img src="Imagens/fundo-ham.jpg" alt="Projeto Burger com JS" class="card-img" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="name">Burger</h4>
-                                        <p class="description">Projeto responsivo usando JS (funções, eventos e DOM): modal, menu, tela de login e formulário.</p>
-                                        <p class="button">Visualizar</p>
-                                    </div>
-                                </article>        
-                            </a>
-
-                            <a href="https://xavierrlx.github.io/projeto/" target="_blank" rel="noopener">
-                                <article class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay" aria-hidden="true"></span>
-                                        <div class="card-image">
-                                            <img src="Imagens/fundo-android.jpg" alt="Projeto Android responsivo" class="card-img" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="name">Android</h4>
-                                        <p class="description">Projeto responsivo com noções básicas de HTML5 e CSS3 (curso Guanabara).</p>
-                                        <p class="button">Visualizar</p>
-                                    </div>
-                                </article>
-                            </a>
-
-                            <a href="https://directionpack.onrender.com/home" target="_blank" rel="noopener">
-                                <article class="card swiper-slide">
-                                    <div class="image-content">
-                                        <span class="overlay" aria-hidden="true"></span>
-                                        <div class="card-image">
-                                            <img src="Imagens/dpimg.png" alt="Direction Pack em Node.js" class="card-img" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="name">Direction Pack</h4>
-                                        <p class="description">Configurações principais em Node.js: criação de usuário, autenticação e consumo de API.</p>
-                                        <p class="button">Visualizar</p>
-                                    </div>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="swiper-button-next swiper-navBtn" aria-label="Próximo"></div>
-                        <div class="swiper-button-prev swiper-navBtn" aria-label="Anterior"></div>
-                    </div>
-                </div>
-                <div class="swiper-pagination2" id="pagination2" aria-hidden="true"></div>
-
-                <div class="foto-html-css" aria-hidden="true">
-                    <img id="foto-html" src="Imagens/codificacao.png" alt="" >
-                </div>
-                <div class="foto-js" aria-hidden="true">
-                    <img id="foto-jss" src="Imagens/js.png" alt="">
-                </div>
-
-                <div class="redeSocias">
-                    <div class="imagensRedes">
-                        <a href="https://www.instagram.com/yxavier_rlx/" target="_blank" rel="noopener" aria-label="Instagram"><img src="Imagens/instagram (1).png" alt=""></a>
-                        <a href="https://github.com/XavierRLX" target="_blank" rel="noopener" aria-label="GitHub"><img src="Imagens/github.png" alt=""></a>
-                        <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="Imagens/linkedin.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="html" aria-hidden="true">
-                    <img id="foto-ht" src="Imagens/programacao.png" alt="">
-                </div>
-            </section>
-        </section>
-
-        <hr class="separador" aria-hidden="true">
-
-        <section id="fundoProjetosTres" class="fundoProjetos" aria-label="Ferramentas">
-            <h3 data-aos="fade-up" class="subTituloProjeto">Ferramentas</h3>
-
-            <div class="slide-container swiper">
-                <div data-aos="fade-down" class="slide-content">
-                    <div class="card-wrapper swiper-wrapper">
-
-                        <a href="https://xavierrlx.github.io/Calculadora/" target="_blank" rel="noopener">
-                            <article class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay" aria-hidden="true"></span>
-                                    <div class="card-image">
-                                        <img src="Imagens/fundo-calc.jpg" alt="Calculadora com modo claro/escuro" class="card-img" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="name">Calculadora</h4>
-                                    <p class="description">Criada com JavaScript puro e opção de tema claro/escuro.</p>
-                                    <p class="button">Visualizar</p>
-                                </div>
-                            </article>
-                        </a>
-
-                        <a href="https://xavierrlx.github.io/RelogioDigital/" target="_blank" rel="noopener">
-                            <article class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay" aria-hidden="true"></span>
-                                    <div class="card-image">
-                                        <img src="Imagens/fundo-relogio.jpg" alt="Relógio digital com clima" class="card-img" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="name">Relógio Digital</h4>
-                                    <p class="description">Relógio com clima local, cronômetro e temporizador.</p>
-                                    <p class="button">Visualizar</p>
-                                </div>
-                            </article>
-                        </a>
-
-                        <a href="https://xavierrlx.github.io/AdicionarProdutos/" target="_blank" rel="noopener">
-                            <article class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay" aria-hidden="true"></span>
-                                    <div class="card-image">
-                                        <img src="Imagens/fundo-lista.jpg" alt="Lista de compras interativa" class="card-img" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="name">Lista de Compras</h4>
-                                    <p class="description">Lista adicionada dinamicamente (JS) com opções de adicionar, editar e apagar.</p>
-                                    <p class="button">Visualizar</p>
-                                </div>
-                            </article>
-                        </a>
-
-                        <a href="https://xavierrlx.github.io/javascriptex/" target="_blank" rel="noopener">
-                            <article class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay" aria-hidden="true"></span>
-                                    <div class="card-image">
-                                        <img src="Imagens/fundo-ex.js.jpg" alt="Exercícios JavaScript" class="card-img" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="name">Exercícios JavaScript</h4>
-                                    <p class="description">Exercícios dos aprendizados iniciais com a linguagem JavaScript (prof. Guanabara).</p>
-                                    <p class="button">Visualizar</p>
-                                </div>
-                            </article>
-                        </a>
-
-                    </div>
-                    <div class="swiper-button-next swiper-navBtn" aria-label="Próximo"></div>
-                    <div class="swiper-button-prev swiper-navBtn" aria-label="Anterior"></div>
-                </div>
-            </div>
-            <div class="swiper-pagination2" id="pagination2" aria-hidden="true"></div>
-        </section>
-
-        <hr class="separador" aria-hidden="true">
-
-        <section id="fundoProjetosQuatro" class="fundoProjetos" aria-label="Games">
-            <h3 data-aos="fade-up" class="subTituloProjeto">Games</h3>
-
-            <div class="slide-container swiper">
-                <div data-aos="fade-down" class="slide-content">
-                    <div class="card-wrapper swiper-wrapper">
-
-                        <!-- Cards de placeholder “Em breve” -->
-                        <article class="card swiper-slide" aria-label="Em breve">
-                            <div class="image-content">
-                                <span class="overlay" aria-hidden="true"></span>
-                                <div class="card-image"></div>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="name">Em breve</h4>
-                                <p class="description">Estudando...</p>
-                                <p class="button">Indisponível</p>
-                            </div>
-                        </article>
-
-                        <article class="card swiper-slide" aria-label="Em breve">
-                            <div class="image-content">
-                                <span class="overlay" aria-hidden="true"></span>
-                                <div class="card-image"></div>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="name">Em breve</h4>
-                                <p class="description">Estudando...</p>
-                                <p class="button">Indisponível</p>
-                            </div>
-                        </article>
-
-                        <article class="card swiper-slide" aria-label="Em breve">
-                            <div class="image-content">
-                                <span class="overlay" aria-hidden="true"></span>
-                                <div class="card-image"></div>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="name">Em breve</h4>
-                                <p class="description">Estudando...</p>
-                                <p class="button">Indisponível</p>
-                            </div>
-                        </article>
-
-                        <article class="card swiper-slide" aria-label="Em breve">
-                            <div class="image-content">
-                                <span class="overlay" aria-hidden="true"></span>
-                                <div class="card-image"></div>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="name">Em breve</h4>
-                                <p class="description">Estudando...</p>
-                                <p class="button">Indisponível</p>
-                            </div>
-                        </article>
-
-                        <article class="card swiper-slide" aria-label="Em breve">
-                            <div class="image-content">
-                                <span class="overlay" aria-hidden="true"></span>
-                                <div class="card-image"></div>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="name">Em breve</h4>
-                                <p class="description">Estudando...</p>
-                                <p class="button">Indisponível</p>
-                            </div>
-                        </article>
-
-                    </div>
-                    <div class="swiper-button-next swiper-navBtn" aria-label="Próximo"></div>
-                    <div class="swiper-button-prev swiper-navBtn" aria-label="Anterior"></div>
-                </div>
-            </div>
-            <div class="swiper-pagination2" id="pagination2" aria-hidden="true"></div>
-        </section>
-
-        <section class="fundoSobre" aria-labelledby="hSobre">
-
-            <svg id="ondaFundoSobre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true" focusable="false"><path fill="rgba(5,8,114,1)" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-
-            <div id="testeInline">
-                <h2 id="hSobre" data-aos="fade-down"><span>S</span><span>O</span><span>B</span><span>R</span><span>E</span></h2>
-
-                <div onload="SobreInline()" id="fundoSobreNone" class="flexSobre">
-                    <div data-aos="fade-right" class="imagemSobre">
-                        <img src="Imagens/avatarRenanSite.png" alt="Avatar de Renan Xavier">
-                    </div>
-                    <main data-aos="fade-up" class="textoSobre">
-                        <h3>Desde novo sempre tive facilidade com tecnologia, mas só em 2021 decidi estudar a área a fundo.</h3> <br>
-                        <h3>Entre 2017 e 2021 tentei carreira militar, logística e enfermagem.</h3> <br>
-                        <h3>Em 2021, mergulhei no universo da tecnologia. Ingressei na faculdade e em cursos online para evoluir progressivamente até me inserir profissionalmente.</h3> <br>
-                        <h3>Hoje foco meus estudos em Front-end. Tenho base sólida em HTML5, CSS3 e JavaScript. Atualmente me dedico a React e MySQL.</h3>
-                        <br>
-                        <h3>No final de 2022, consegui um estágio em desenvolvimento de sistemas. Estou aprendendo mais sobre back-end usando C#/ASP.NET e SQL Server.</h3>
-                    </main>
-                </div>
-
-                <main id="imgSobre" class="tecSobre" aria-label="Tecnologias">
-                    <div data-aos="fade-up" class="TecImgSobre">
-                        <figure><img src="Imagens/html-5.png" alt="HTML 5"><figcaption>HTML 5</figcaption></figure>
-                        <figure><img src="Imagens/css-3.png" alt="CSS 3"><figcaption>CSS 3</figcaption></figure>
-                        <figure><img src="Imagens/bootstrap.png" alt="Bootstrap"><figcaption>BOOTSTRAP</figcaption></figure>
-                        <figure><img src="Imagens/sass.png" alt="Sass"><figcaption>SASS</figcaption></figure>
-                        <figure><img src="Imagens/jsSobre.png" alt="JavaScript"><figcaption>JAVASCRIPT</figcaption></figure>
-                        <figure><img src="Imagens/icons8-react-64.png" alt="React"><figcaption>REACT</figcaption></figure>
-                        <figure><img src="Imagens/mysql.png" alt="Banco de Dados"><figcaption>BANCO DE DADOS</figcaption></figure>
-                    </div>
-                </main>
-            </div>
-
-            <svg class="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true" focusable="false"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-        </section>
-
-        <section class="fundoContato" aria-labelledby="tituloContato">
-            <main id="mainContato">
-                <h2 id="tituloContato"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>T</span><span>O</span></h2>
-
-                <article>
-                    <h3>E-mail :</h3>
-                    <div class="CopiaeCola">
-                        <input id="copiarEmail" value="renanlima2000.aer@gmail.com" readonly aria-label="E-mail" />
-                        <img id="botaoEm" onclick="copiarEm()" src="Imagens/ferramenta-de-copia.png" alt="Copiar e-mail" />
-                    </div>
-                    <p id="copiadoEm" role="status" aria-live="polite">COPIADO!</p>
-                </article>
-
-                <article>
-                    <h3>Telefone :</h3>
-                    <div class="NumberCopiaeCola">
-                        <input id="copiarNumber" value="+55 21 96473-4161" readonly aria-label="Telefone" />
-                        <img id="botaoNum" onclick="copiarNumb()" src="Imagens/ferramenta-de-copia.png" alt="Copiar telefone" />
-                    </div>
-                    <p id="copiadoNum" role="status" aria-live="polite">COPIADO!</p>
-
-                    <div class="agradecimento">
-                        <h3>Agradeço por visitar o meu <span>portfólio</span>!</h3>
-                        <p>Caso tenha gostado dos meus projetos e do meu perfil e deseje me fazer uma proposta, por favor, entre em contato através desses meios.</p>
-                    </div>
-
-                    <nav class="imagensRedes" aria-label="Minhas redes">
-                        <a href="https://www.instagram.com/yxavier_rlx/" target="_blank" rel="noopener" aria-label="Instagram"><img class="RedesContato" src="Imagens/instagram (1).png" alt=""></a>
-                        <a href="https://github.com/XavierRLX" target="_blank" rel="noopener" aria-label="GitHub"><img class="RedesContato" src="Imagens/github.png" alt=""></a>
-                        <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank" rel="noopener" aria-label="LinkedIn"><img class="RedesContato" src="Imagens/linkedin.png" alt=""></a>
-                    </nav>
-                </article>
-            </main>
-        </section>
+      <section id="home" class="fundoApresentação" aria-labelledby="hmdois">
+        <img class="foto-react" src="Imagens/react.png" alt="Ícone decorativo do React" width="600" height="600" loading="eager">
+        <div class="apresentação" id="conteudo">
+          <h1>Olá, me chamo</h1>
+          <h2 id="hmdois">Renan Xavier.</h2>
+          <p id="preEscrição">Faço parte do time de desenvolvedores!</p><br>
+          <p id="descrição">Desenvolvedor especializado em construir experiências digitais.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projeto">Ver projetos</a>
+            <a class="btn btn-ghost" href="#mainContato">Falar comigo</a>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <!-- JS existentes (mantidos) -->
-    <script src="js/SliderJs/swiper-bundle.min.js"></script>
-    <script src="js/SliderJs/script.js"></script>
+    <svg class="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 
-    <script src="js/preload.js"></script>
-    <script src="js/digitando.js"></script>
-    <script src="js/copiarEcolar.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- Mantido o elemento bundle do Swiper caso use nos seus scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <!-- PROJETOS -->
+    <section class="fundoProjetos" aria-labelledby="projeto">
+      <h2 data-aos="fade-down" id="projeto" class="tituloProjeto"><span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>T</span><span>O</span><span>S</span></h2>
+
+      <!-- Seção Sites -->
+      <section id="fundoProjetosDois" class="fundoProjetos" aria-label="Sites">
+        <h3 data-aos="fade-up" class="subTituloProjeto">Sites</h3>
+
+        <div data-aos="fade-down" class="slide-container swiper">
+          <div data-aos="fade-down" class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+
+              <a href="https://xavierrlx.github.io/TemperoDivino/" target="_blank" rel="noopener">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay" aria-hidden="true"></span>
+                    <div class="card-image">
+                      <img src="Imagens/TemperoDivino.png" alt="Prévia do site Tempero Divino" class="card-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Sociais</h2>
+                    <p class="description">Primeiro site desenvolvido para terceiros. Inspirado no Linktree, com botões que redirecionam para os canais oficiais.</p>
+                    <p class="button">Visualizar</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://xavierrlx.github.io/Hamburgueria/" target="_blank" rel="noopener">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay" aria-hidden="true"></span>
+                    <div class="card-image">
+                      <img src="Imagens/fundo-boot.jpg" alt="Prévia do site de hamburgueria" class="card-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Hamburgueria</h2>
+                    <p class="description">Site de uma hamburgueria. Carrinho e integração com a API do WhatsApp para receber pedidos.</p>
+                    <p class="button">Visualizar</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://xavierrlx.github.io/osvingadores/" target="_blank" rel="noopener">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay" aria-hidden="true"></span>
+                    <div class="card-image">
+                      <img src="Imagens/fundo-vinga.jpg" alt="Efeito parallax com tema Vingadores" class="card-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Parallax</h2>
+                    <p class="description">Site criado para demonstrar o efeito “parallax” nas imagens com o tema dos Vingadores.</p>
+                    <p class="button">Visualizar</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://xavierrlx.github.io/Xavierburger/" target="_blank" rel="noopener">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay" aria-hidden="true"></span>
+                    <div class="card-image">
+                      <img src="Imagens/fundo-ham.jpg" alt="Prévia do projeto Burger" class="card-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Burger</h2>
+                    <p class="description">Primeiro site responsivo com JS puro: funções, events, DOM; modal, menu, tela de login e formulários.</p>
+                    <p class="button">Visualizar</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://xavierrlx.github.io/projeto/" target="_blank" rel="noopener">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay" aria-hidden="true"></span>
+                    <div class="card-image">
+                      <img src="Imagens/fundo-android.jpg" alt="Primeiro projeto responsivo Android" class="card-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Android</h2>
+                    <p class="description">Primeiro projeto responsivo com noções de HTML5 e CSS3 junto ao professor Guanabara.</p>
+                    <p class="button">Visualizar</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://directionpack.onrender.com/home" target="_blank" rel="noopener">
+                <div class="card swiper-slide">
+                  <div class="image-content">
+                    <span class="overlay" aria-hidden="true"></span>
+                    <div class="card-image">
+                      <img src="Imagens/dpimg.png" alt="Direction Pack em Node.js" class="card-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Direction Pack</h2>
+                    <p class="description">Configurações principais em Node.js, criação de usuário, autenticação e consumo de API.</p>
+                    <p class="button">Visualizar</p>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+            <div class="swiper-button-next swiper-navBtn" aria-label="Próximo"></div>
+            <div class="swiper-button-prev swiper-navBtn" aria-label="Anterior"></div>
+          </div>
+        </div>
+        <div id="pagination2" class="swiper-pagination2" aria-hidden="true"></div>
+
+        <div class="foto-html-css" aria-hidden="true">
+          <img id="foto-html" src="Imagens/codificacao.png" alt="" loading="lazy">
+        </div>
+        <div class="foto-js" aria-hidden="true">
+          <img id="foto-jss" src="Imagens/js.png" alt="" loading="lazy">
+        </div>
+
+        <div class="redeSocias">
+          <div class="imagensRedes">
+            <a href="https://www.instagram.com/yxavier_rlx/" target="_blank" rel="noopener" aria-label="Instagram"><img src="Imagens/instagram (1).png" alt="" loading="lazy"></a>
+            <a href="https://github.com/XavierRLX" target="_blank" rel="noopener" aria-label="GitHub"><img src="Imagens/github.png" alt="" loading="lazy"></a>
+            <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="Imagens/linkedin.png" alt="" loading="lazy"></a>
+          </div>
+        </div>
+        <div class="html" aria-hidden="true">
+          <img id="foto-ht" src="Imagens/programacao.png" alt="" loading="lazy">
+        </div>
+      </section>
+    </section>
+
+    <hr class="separador" aria-hidden="true">
+
+    <!-- FERRAMENTAS -->
+    <section id="fundoProjetosTres" class="fundoProjetos" aria-label="Ferramentas">
+      <h3 data-aos="fade-up" class="subTituloProjeto">Ferramentas</h3>
+      <div class="slide-container swiper">
+        <div data-aos="fade-down" class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+
+            <a href="https://xavierrlx.github.io/Calculadora/" target="_blank" rel="noopener">
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image">
+                    <img src="Imagens/fundo-calc.jpg" alt="Calculadora com modo claro/escuro" class="card-img" loading="lazy">
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Calculadora</h2>
+                  <p class="description">Feita com JavaScript puro, com opção de tema claro e escuro.</p>
+                  <p class="button">Visualizar</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://xavierrlx.github.io/RelogioDigital/" target="_blank" rel="noopener">
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image">
+                    <img src="Imagens/fundo-relogio.jpg" alt="Relógio digital com clima, cronômetro e temporizador" class="card-img" loading="lazy">
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Relógio Digital</h2>
+                  <p class="description">Relógio com API para clima local, além de cronômetro e temporizador.</p>
+                  <p class="button">Visualizar</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://xavierrlx.github.io/AdicionarProdutos/" target="_blank" rel="noopener">
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image">
+                    <img src="Imagens/fundo-lista.jpg" alt="Lista de compras interativa" class="card-img" loading="lazy">
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Lista de Compras</h2>
+                  <p class="description">Lista adicionada dinamicamente com JavaScript, com opções de adicionar, editar e apagar.</p>
+                  <p class="button">Visualizar</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://xavierrlx.github.io/javascriptex/" target="_blank" rel="noopener">
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image">
+                    <img src="Imagens/fundo-ex.js.jpg" alt="Exercícios de JavaScript" class="card-img" loading="lazy">
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Exercícios JavaScript</h2>
+                  <p class="description">Alguns exercícios iniciais com JavaScript, acompanhando o professor Guanabara.</p>
+                  <p class="button">Visualizar</p>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="swiper-button-next swiper-navBtn" aria-label="Próximo"></div>
+          <div class="swiper-button-prev swiper-navBtn" aria-label="Anterior"></div>
+        </div>
+      </div>
+      <div id="pagination2" class="swiper-pagination2" aria-hidden="true"></div>
+    </section>
+
+    <hr class="separador" aria-hidden="true">
+
+    <!-- GAMES -->
+    <section id="fundoProjetosGames" class="fundoProjetos" aria-label="Games">
+      <h3 data-aos="fade-up" class="subTituloProjeto">Games</h3>
+      <div class="slide-container swiper">
+        <div data-aos="fade-down" class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+
+            <!-- Placeholders "Em breve" -->
+            <a href="#" aria-disabled="true">
+              <div class="card swiper-slide" aria-label="Projeto em breve">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image" aria-hidden="true"></div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Em breve</h2>
+                  <p class="description">Estudando…</p>
+                  <p class="button" aria-hidden="true">Indisponível</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" aria-disabled="true">
+              <div class="card swiper-slide" aria-label="Projeto em breve">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image" aria-hidden="true"></div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Em breve</h2>
+                  <p class="description">Estudando…</p>
+                  <p class="button" aria-hidden="true">Indisponível</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" aria-disabled="true">
+              <div class="card swiper-slide" aria-label="Projeto em breve">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image" aria-hidden="true"></div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Em breve</h2>
+                  <p class="description">Estudando…</p>
+                  <p class="button" aria-hidden="true">Indisponível</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" aria-disabled="true">
+              <div class="card swiper-slide" aria-label="Projeto em breve">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image" aria-hidden="true"></div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Em breve</h2>
+                  <p class="description">Estudando…</p>
+                  <p class="button" aria-hidden="true">Indisponível</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" aria-disabled="true">
+              <div class="card swiper-slide" aria-label="Projeto em breve">
+                <div class="image-content">
+                  <span class="overlay" aria-hidden="true"></span>
+                  <div class="card-image" aria-hidden="true"></div>
+                </div>
+                <div class="card-content">
+                  <h2 class="name">Em breve</h2>
+                  <p class="description">Estudando…</p>
+                  <p class="button" aria-hidden="true">Indisponível</p>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="swiper-button-next swiper-navBtn" aria-label="Próximo"></div>
+          <div class="swiper-button-prev swiper-navBtn" aria-label="Anterior"></div>
+        </div>
+      </div>
+      <div id="pagination2" class="swiper-pagination2" aria-hidden="true"></div>
+    </section>
+
+    <section class="fundoSobre" aria-labelledby="hSobre">
+      <svg id="ondaFundoSobre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true"><path fill="rgba(5,8,114,1)" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+
+      <div id="testeInline">
+        <h1 id="hSobre" data-aos="fade-down"><span>S</span><span>O</span><span>B</span><span>R</span><span>E</span></h1>
+
+        <div onload="SobreInline()" id="fundoSobreNone" class="flexSobre">
+          <div data-aos="fade-right" class="imagemSobre"><img src="Imagens/avatarRenanSite.png" alt="Avatar de Renan Xavier" loading="lazy"></div>
+          <main data-aos="fade-up" class="textoSobre">
+            <h2>Desde novo sempre tive facilidade com tecnologia, mas não tinha o desejo de estudar a área.</h2><br>
+            <h2>De 2017 (término do ensino médio) até 2021, tentei ingressar nas carreiras militar, logística e enfermagem.</h2><br>
+            <h2>Em 2021 decidi mergulhar no universo da tecnologia. Entrei na faculdade e iniciei diversos cursos para evoluir e atuar profissionalmente.</h2><br>
+            <h2>Atualmente foco em Front-end (HTML5, CSS3 e JavaScript) e estudo React e MySQL. No fim de 2022 consegui um estágio em desenvolvimento de sistemas, aprendendo mais sobre back-end com C#/ASP.NET e SQL Server.</h2>
+          </main>
+        </div>
+
+        <main id="imgSobre" class="tecSobre">
+          <div data-aos="fade-up" class="TecImgSobre">
+            <figure><img src="Imagens/html-5.png" alt="HTML 5"><figcaption>HTML 5</figcaption></figure>
+            <figure><img src="Imagens/css-3.png" alt="CSS 3"><figcaption>CSS 3</figcaption></figure>
+            <figure><img src="Imagens/bootstrap.png" alt="Bootstrap"><figcaption>BOOTSTRAP</figcaption></figure>
+            <figure><img src="Imagens/sass.png" alt="SASS"><figcaption>SASS</figcaption></figure>
+            <figure><img src="Imagens/jsSobre.png" alt="JavaScript"><figcaption>JAVASCRIPT</figcaption></figure>
+            <figure><img src="Imagens/icons8-react-64.png" alt="React"><figcaption>REACT</figcaption></figure>
+            <figure><img src="Imagens/mysql.png" alt="Banco de Dados"><figcaption>BANCO DE DADOS</figcaption></figure>
+          </div>
+        </main>
+      </div>
+
+      <svg class="ondeContato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true"><path fill="#0f0f0f" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="fundoContato">
+      <main id="mainContato">
+        <h1><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>T</span><span>O</span></h1>
+
+        <article>
+          <h2>E-mail :</h2>
+          <div class="CopiaeCola">
+            <input id="copiarEmail" value="renanlima2000.aer@gmail.com" readonly aria-label="E-mail para contato">
+            <img id="botaoEm" onclick="copiarEm()" src="Imagens/ferramenta-de-copia.png" alt="Copiar e-mail" role="button" tabindex="0">
+          </div><br>
+          <p id="copiadoEm" aria-live="polite">COPIADO!</p>
+        </article>
+
+        <article>
+          <h2>Telefone :</h2>
+          <div class="NumberCopiaeCola">
+            <input id="copiarNumber" value="+55 21 96473-4161" readonly aria-label="Telefone para contato">
+            <img id="botaoNum" onclick="copiarNumb()" src="Imagens/ferramenta-de-copia.png" alt="Copiar telefone" role="button" tabindex="0">
+          </div><br>
+          <p id="copiadoNum" aria-live="polite">COPIADO!</p>
+
+          <div class="agradecimento">
+            <h2>Agradeço por visitar o meu <span>portfólio</span>!</h2>
+            <h3>Se gostou dos meus projetos e do meu perfil e deseja me fazer uma proposta, por favor, entre em contato através desses meios.</h3>
+          </div>
+
+          <div class="imagensRedes" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/yxavier_rlx/" target="_blank" rel="noopener" aria-label="Instagram"><img class="RedesContato" src="Imagens/instagram (1).png" alt=""></a>
+            <a href="https://github.com/XavierRLX" target="_blank" rel="noopener" aria-label="GitHub"><img class="RedesContato" src="Imagens/github.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/renanxavier2000rlx/" target="_blank" rel="noopener" aria-label="LinkedIn"><img class="RedesContato" src="Imagens/linkedin.png" alt=""></a>
+          </div>
+        </article>
+      </main>
+    </section>
+  </div>
+
+  <!-- JS (mantidos) -->
+  <script src="js/SliderJs/swiper-bundle.min.js"></script>
+  <script src="js/SliderJs/script.js"></script>
+
+  <script src="js/preload.js"></script>
+  <script src="js/digitando.js"></script>
+  <script src="js/copiarEcolar.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </body>
 </html>
