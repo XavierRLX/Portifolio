@@ -1,764 +1,361 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+/* ===== Reset/Vars ===== */
+:root{
+  --bg:#0f0f0f;
+  --bg-accent:rgb(5, 8, 114);
+  --text:#ffffff;
+  --muted:#b9b9b9;
+  --brand:#A940E8;
+  --brand-2:#4203ee;
+  --card:#252424;
+  --border:#2f2f2f;
+  --radius:12px;
+}
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
-  cursor: default;
-  word-spacing: 2;
+  box-sizing: border-box;
 }
-* span:hover {
-  color: #970ee7;
+
+/* Acessibilidade: foco visível */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }
+
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:0;
+  top:-100%;
+  background:var(--brand);
+  color:#fff;
+  padding:.5rem .75rem;
+  border-radius:0 0 8px 0;
+  z-index:9999;
+}
+.skip-link:focus{ top:0; }
 
 /* cor do srcoll*/
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-track { background: #ffffff; }
 body::-webkit-scrollbar-thumb {
-  background-color: #4203ee;
-  border: 3px solid #4203ee;
+  background-color: var(--brand-2);
+  border: 3px solid var(--brand-2);
 }
 
 /* Parte do cabeçalho*/
-body {
-  background-color: rgb(15, 15, 15);
-}
+body { background-color: var(--bg); color: var(--text); }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
+a { text-decoration: none; color: var(--text); }
+a, button, .button, .menu a, .imagensRedes a { cursor: pointer; }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(15,15,15,.75);
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid var(--border);
 }
-header .logotipo, header .fotoLogo, header #nomeLogo, header .menu {
-  cursor: pointer;
-}
-header .logotipo {
-  display: flex;
-  padding: 20px;
-}
-header .fotoLogo {
-  width: 40px;
-  height: 40px;
-}
-header #nomeLogo {
-  margin: 5.4px 0px 0px 10px;
-  font-weight: 300;
-  letter-spacing: 4px;
-}
+header .logotipo, header .fotoLogo, header #nomeLogo, header .menu { cursor: default; }
+header .logotipo { display: flex; align-items: center; gap: 10px; padding: 10px 20px; }
+header .fotoLogo { width: 40px; height: 40px; }
+header #nomeLogo { margin: 0; font-weight: 600; letter-spacing: 4px; font-family: "Kdam Thmor Pro", sans-serif; }
+
+.nav { display:flex; }
 header .menu {
   display: flex;
-  justify-content: space-around;
-  width: 400px;
-  padding: 20px;
-  position: relative;
+  gap: 8px;
+  padding: 10px 20px;
+  list-style: none;
 }
-header p {
-  padding: 5px;
+header .menu a{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
-header a :hover {
-  background-color: #A940E8;
+header .menu a:hover,
+header .menu a:focus{
+  background-color: var(--brand);
   box-shadow: 0 3px 20px 0 #000000;
-  border-radius: 5px;
-  animation: 1s;
 }
 
 /*Cor do background da tela principal*/
 .fundoPrincipal {
-  background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgb(5, 8, 114) 0%, rgb(7, 3, 53) 97.5%);
-  height: 100vh;
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, var(--bg-accent) 0%, rgb(7, 3, 53) 97.5%);
+  min-height: 100vh;
   width: 100%;
 }
 
 /* Apresentação Renan Xavier*/
 .fundoApresentação {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  min-height: 70vh;
   color: #ffffff;
-  padding: 10px;
-}
-.fundoApresentação .foto-react {
-  width: 600px;
-  height: 600px;
-  top: 15%;
-  left: 50%;
-  position: absolute;
-  animation: girando360 25s 5.5s infinite linear, piscando 9.5s linear both;
-}
-.fundoApresentação .apresentação {
+  padding: 24px 10px 10px;
   position: relative;
 }
-.fundoApresentação h1 {
-  font-family: "Kdam Thmor Pro", sans-serif;
+.fundoApresentação .foto-react {
+  width: clamp(180px, 40vw, 560px);
+  height: auto;
+  top: 15%;
+  right: 5%;
+  position: absolute;
+  animation: girando360 25s 5.5s infinite linear, piscando 9.5s linear both;
+  opacity: .85;
 }
+.fundoApresentação .apresentação { position: relative; max-width: 900px; }
+.fundoApresentação h1 { font-family: "Kdam Thmor Pro", sans-serif; font-size: clamp(1rem, 2vw, 1.25rem); color: var(--muted); }
 .fundoApresentação #hmdois {
   color: #970ee7;
   border-right: 3px solid #000000;
-  max-width: 438px;
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   animation: ponteiro 1s infinite normal, digitando 1.5s 0s normal;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.1;
 }
-.fundoApresentação h2, .fundoApresentação p {
-  font-family: "Poppins", sans-serif;
-  font-size: 4em;
-}
-.fundoApresentação #preEscrição {
-  max-width: 1250px;
-  animation: focandoTexto 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.fundoApresentação #descrição {
-  font-size: 1em;
-  max-width: 700px;
-  animation: animaTextoDireita 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-.fundoApresentação #descrição, .fundoApresentação #preEscrição {
-  display: none;
-}
+.fundoApresentação h2, .fundoApresentação p { font-family: "Poppins", sans-serif; }
+.fundoApresentação p { font-size: clamp(1rem, 2.5vw, 1.125rem); color: var(--muted); }
+.fundoApresentação #preEscrição { max-width: 68ch; animation: focandoTexto 1.5s 1s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+.fundoApresentação #descrição { max-width: 68ch; animation: animaTextoDireita 1s 1.5s cubic-bezier(0.215,0.61,0.355,1) both; }
+.fundoApresentação #descrição, .fundoApresentação #preEscrição { display: none; }
 
-#ondaPrincipal {
-  margin-top: -50px;
-  width: 100%;
+/* CTAs do Hero */
+.hero-cta{ display:flex; gap:10px; margin-top: 10px; }
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.6rem 1rem; border-radius:10px; font-weight:600;
+  border:1px solid transparent;
 }
+.btn-primary{ background: var(--brand-2); color:#fff; }
+.btn-primary:hover{ filter: brightness(1.08); }
+.btn-ghost{ background: transparent; border-color: var(--border); color:#fff; }
+.btn-ghost:hover{ background:#1b1b1b; }
 
 /* Pngs-fundoPrincipal*/
 .foto-html-css {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10% 2% 0% 0%;
-  cursor: pointer;
+  position: absolute; top: 0; right: 0; margin: 10% 2% 0 0; cursor: pointer;
 }
-
-.foto-html-css:hover {
-  animation: girando360 1s infinite linear;
-}
+.foto-html-css:hover { animation: girando360 1s infinite linear; }
 
 .foto-js {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0% 0% 5% 2%;
-  cursor: pointer;
+  position: absolute; bottom: 0; left: 0; margin: 0 0 5% 2%; cursor: pointer;
 }
+#foto-jss:hover { animation: vibração 0.5s linear infinite both; }
+#foto-jss, #foto-html { width: 80px; }
 
-#foto-jss:hover {
-  animation: vibração 0.5s linear infinite both;
-}
-
-#foto-jss, #foto-html {
-  width: 80px;
-}
-
-#foto-ht {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-right: 10px;
-  width: 100px;
-  cursor: pointer;
-}
-
-#foto-ht:hover {
-  animation: tremer 0.3s linear infinite both;
-}
+#foto-ht { position: absolute; right: 0; bottom: 0; margin-right: 10px; width: 100px; cursor: pointer; }
+#foto-ht:hover { animation: tremer 0.3s linear infinite both; }
 
 .redeSocias {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-right: 50%;
-  margin-left: 50%;
-  width: 100px;
-  cursor: pointer;
+  position: absolute; right: 0; bottom: 0; margin-right: 50%; margin-left: 50%; width: 100px; cursor: default;
 }
-.redeSocias .imagensRedes {
-  display: flex;
-  padding: 10px;
-}
-.redeSocias .imagensRedes .RedesContato {
-  max-width: 50px;
-  max-height: 50px;
-}
-.redeSocias .imagensRedes img {
-  max-width: 50px;
-  max-height: 50px;
-  padding: 5px;
-}
+.redeSocias .imagensRedes { display: flex; padding: 10px; }
+.redeSocias .imagensRedes .RedesContato { max-width: 50px; max-height: 50px; }
+.redeSocias .imagensRedes img { max-width: 50px; max-height: 50px; padding: 5px; }
 .redeSocias .imagensRedes img:hover {
   box-shadow: 0 3px 20px 0 #000000;
   border-radius: 5px;
-  animation: 1s;
+  transition: .2s;
 }
 
 /*Projetos*/
-.fundoProjetos {
-  background-color: #0f0f0f;
-  padding: 50px 0px 50px 0px;
-}
-.fundoProjetos .FlexButton {
-  display: flex;
-  align-items: center;
-}
-.fundoProjetos #setaEsquerda, .fundoProjetos #setaDireita {
-  width: 50px;
-  height: 50px;
-}
-.fundoProjetos #setaEsquerda {
-  margin: 0px 0px 0px 40px;
-}
-.fundoProjetos #setaDireita {
-  margin: 0px 40px 0px 0px;
-}
-.fundoProjetos .subTituloProjeto {
-  color: #970ee7 !important;
-  font-size: 2em;
-}
+.fundoProjetos { background-color: #0f0f0f; padding: 50px 0; }
+.fundoProjetos .subTituloProjeto { color: #970ee7 !important; font-size: 2em; }
 .fundoProjetos .tituloHover, .fundoProjetos .descriçãoHover {
-  text-align: center;
-  letter-spacing: 3px;
-  margin: 40px;
-  font-size: 2em;
-  font-family: "Poppins", sans-serif;
+  text-align: center; letter-spacing: 3px; margin: 40px; font-size: 2em; font-family: "Poppins", sans-serif;
 }
 .fundoProjetos .tituloProjeto {
-  margin-bottom: 100px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 4em;
-  text-align: center;
-  color: #ffffff;
+  margin-bottom: 60px; font-family: "Poppins", sans-serif; font-weight: 300; font-size: clamp(2rem, 6vw, 4rem); text-align: center; color: #ffffff;
 }
 .fundoProjetos .subTituloProjeto, .fundoProjetos .tituloCardUti {
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.fundoProjetos .displayFlex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-}
-.fundoProjetos .cardProjeto {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 350px;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  margin: 0px 10px 50px 10px;
-  cursor: pointer;
-  overflow: hidden;
-  box-shadow: 0 3px 20px 0 #000000;
-}
-.fundoProjetos .cardProjeto:hover {
-  box-shadow: 0 3px 10px 0 #4203ee;
-}
-.fundoProjetos .imagemProjeto {
-  width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.fundoProjetos .imagemProjeto:hover {
-  transform: scale(1.1);
-}
-.fundoProjetos #projeto3 p {
-  font-size: 0.7em;
-}
-.fundoProjetos #projeto6 p, .fundoProjetos #projeto7 p {
-  font-size: 0.8em;
-}
-.fundoProjetos #projeto8 h1 {
-  font-size: 1.8em;
-}
-.fundoProjetos .descriçãoProjeto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 300px;
-  padding: 10px;
-  color: #ffffff;
-}
-.fundoProjetos .tituloCardUti {
-  margin: 100px 0px 100px 0px;
-}
-.fundoProjetos .botaocard {
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  width: 200px;
-}
-.fundoProjetos .botaocard button {
-  width: 80px;
-  height: 30px;
-  border-style: none;
-  background-color: #A940E8;
-  border-radius: 2px;
+  color: #ffffff; font-family: "Poppins", sans-serif; text-align: center; margin-bottom: 30px;
 }
 
-.ondaPrincipal {
-  margin-top: -230px;
+.displayFlex{ display:flex; flex-wrap:wrap; justify-content:center; margin:auto; }
+.cardProjeto {
+  display: flex; align-items: center; flex-direction: column; height: 350px;
+  font-family: "Poppins", sans-serif; text-align: center; margin: 0 10px 50px; cursor: pointer; overflow: hidden; box-shadow: 0 3px 20px 0 #000000;
+}
+.cardProjeto:hover { box-shadow: 0 3px 10px 0 var(--brand-2); }
+
+.imagemProjeto {
+  width: 300px; object-fit: cover; transition: transform 0.5s ease;
+}
+.imagemProjeto:hover { transform: scale(1.05); }
+
+#projeto3 p { font-size: 0.7em; }
+#projeto6 p, #projeto7 p { font-size: 0.8em; }
+#projeto8 h1 { font-size: 1.8em; }
+
+.descriçãoProjeto {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 250px; height: 300px; padding: 10px; color: #ffffff;
 }
 
-.separador {
-  border-color: #4203ee;
-  box-sizing: border-box;
-  margin: auto;
-  width: 100%;
+.tituloCardUti { margin: 80px 0; }
+
+.botaocard { padding: 10px; display: flex; justify-content: space-around; width: 200px; }
+.botaocard button {
+  width: 80px; height: 30px; border-style: none; background-color: var(--brand); border-radius: 6px;
 }
 
-#displayFlexProjeto {
-  margin-bottom: 200px;
-}
+.ondaPrincipal { margin-top: -230px; }
+.separador { border-color: var(--brand-2); box-sizing: border-box; margin: auto; width: 100%; }
+#displayFlexProjeto { margin-bottom: 200px; }
 
 /*Sobre mim*/
-#ondaFundoSobre {
-  margin: -210px 0px 0px 0px;
-}
-
-.fundoSobre {
-  letter-spacing: 3px;
-  background-color: rgb(5, 8, 114);
-}
-.fundoSobre #hSobre {
-  margin-top: 0px;
-}
-.fundoSobre #testeInline {
-  display: none;
-  padding-top: 0px;
-}
+#ondaFundoSobre { margin: -210px 0 0 0; }
+.fundoSobre { letter-spacing: 3px; background-color: var(--bg-accent); }
+.fundoSobre #hSobre { margin-top: 0; }
+.fundoSobre #testeInline { display: block; padding-top: 0; }
 .fundoSobre h1 {
-  padding: 0px 50px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 4em;
-  text-align: center;
-  color: #ffffff;
+  padding: 0 50px; text-align: center; font-family: "Poppins", sans-serif; font-weight: 300;
+  font-size: clamp(2rem, 5vw, 4rem); color: #ffffff;
 }
-.fundoSobre h2 {
-  font-size: 1em;
-  font-weight: 400;
-  word-spacing: 5px;
+.fundoSobre h2 { font-size: 1em; font-weight: 400; word-spacing: 5px; }
+.flexSobre {
+  max-width: 1200px; margin: auto; padding-top: 51px; display: flex; align-items: center; color: #ffffff; font-family: "Poppins", sans-serif;
 }
-.fundoSobre .flexSobre {
-  max-width: 1200px;
-  margin: auto;
-  padding-top: 51px;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
+.imagemSobre img {
+  width: 400px; margin-right: 80px; filter: drop-shadow(10px 10px 10px #000000); cursor: pointer;
 }
-.fundoSobre .imagemSobre img {
-  width: 400px;
-  margin-right: 80px;
-  filter: drop-shadow(10px 10px 10px #000000);
-  cursor: pointer;
+.imagemSobre img:hover { filter: drop-shadow(0px 10px 10px var(--brand)); }
+.tecSobre { margin-top: 100px; text-align: center; }
+.TecImgSobre {
+  display: flex; max-width: 80%; max-height: 500px; margin: auto; justify-content: center; flex-wrap: wrap;
 }
-.fundoSobre .imagemSobre img:hover {
-  filter: drop-shadow(0px 10px 10px #A940E8);
-}
-.fundoSobre .tecSobre {
-  margin-top: 100px;
-  text-align: center;
-}
-.fundoSobre .tecSobre .TecImgSobre {
-  display: flex;
-  max-width: 80%;
-  max-height: 500px;
-  margin: auto;
-  justify-content: center;
-}
-.fundoSobre .tecSobre .TecImgSobre img {
-  width: 64px;
-  margin: 30px;
-  filter: contrast(80%);
-  filter: grayscale(100%);
-  cursor: pointer;
-}
-.fundoSobre .tecSobre .TecImgSobre img:hover {
-  filter: brightness(150%);
-  filter: contrast(120%);
-  filter: drop-shadow(10px 10px 10px #000000);
-}
-.fundoSobre .tecSobre .TecImgSobre figure {
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
-}
-.fundoSobre .tecSobre .TecImgSobre figure figcaption {
-  filter: opacity(0%);
-}
-.fundoSobre .tecSobre .TecImgSobre figure:hover {
-  cursor: pointer;
-}
-.fundoSobre .tecSobre .TecImgSobre figure:hover figcaption {
-  filter: opacity(100%);
-}
+.TecImgSobre img { width: 64px; margin: 30px; filter: contrast(80%) grayscale(100%); cursor: pointer; }
+.TecImgSobre img:hover { filter: brightness(150%) contrast(120%) drop-shadow(10px 10px 10px #000000); }
+.TecImgSobre figure { font-family: "Poppins", sans-serif; color: #ffffff; }
+.TecImgSobre figure figcaption { opacity: 0; transition: .2s; }
+.TecImgSobre figure:hover figcaption { opacity: 1; }
 
 /*fundoContato*/
 .fundoContato {
-  width: 100%;
-  margin-top: -100px;
-  height: 100vh;
-  background-color: rgb(15, 15, 15);
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%; margin-top: -100px; min-height: 100vh; background-color: var(--bg);
+  font-family: "Poppins", sans-serif; display: flex; justify-content: center; align-items: center;
 }
-.fundoContato main {
-  color: #ffffff;
-  max-width: 1200px;
-  text-align: center;
-}
-.fundoContato main article {
-  color: #970ee7;
-  margin-top: 80px;
-}
+.fundoContato main { color: #ffffff; max-width: 1200px; text-align: center; padding: 0 16px; }
+.fundoContato main article { color: #970ee7; margin-top: 40px; }
 .fundoContato main article input {
-  width: 212px;
-  background-color: rgb(15, 15, 15);
-  color: #ffffff;
-  border: none;
-  font-family: "Poppins";
-  text-align: center;
+  width: 260px; background-color: var(--bg); color: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: .5rem .75rem; font-family: "Poppins"; text-align: center;
 }
 .fundoContato main .imagensRedes {
-  display: flex;
-  justify-content: center;
-  margin-top: 90px;
-  padding: 10px;
+  display: flex; justify-content: center; margin-top: 40px; padding: 10px; gap: 8px;
 }
-.fundoContato main .imagensRedes img {
-  max-width: 30px;
-  max-height: 30px;
-  padding: 5px;
-}
+.fundoContato main .imagensRedes img { max-width: 30px; max-height: 30px; padding: 5px; }
 .fundoContato main .imagensRedes img:hover {
-  box-shadow: 0 3px 20px 0 #000000;
-  border-radius: 5px;
-  animation: 1s;
+  box-shadow: 0 3px 20px 0 #000000; border-radius: 5px; transition:.2s;
 }
 .fundoContato h1 {
-  margin: -50px 0px 100px 0px;
-  text-align: center;
-  font-weight: 300;
-  font-size: 4em;
-  text-align: center;
-  color: #ffffff;
+  margin: -50px 0 40px 0; text-align: center; font-weight: 300; font-size: clamp(2rem,5vw,4rem); color: #ffffff;
 }
-.fundoContato h2 {
-  margin-bottom: 10px;
-}
-.fundoContato h2 span {
-  color: #970ee7;
-}
+.fundoContato h2 { margin-bottom: 10px; }
+.fundoContato h2 span { color: #970ee7; }
 
-.CopiaeCola, .NumberCopiaeCola {
-  display: flex;
-  justify-content: center;
-}
-.CopiaeCola img, .NumberCopiaeCola img {
-  width: 20px;
-  height: 20px;
-  margin: 3px 0px 0px 5px;
-}
+.CopiaeCola, .NumberCopiaeCola { display: flex; justify-content: center; align-items: center; gap: 6px; }
+.CopiaeCola img, .NumberCopiaeCola img { width: 24px; height: 24px; margin: 0; }
 
 #copiadoNum, #copiadoEm {
-  margin: auto;
-  margin-top: 10px;
-  padding: 3px;
-  text-align: center;
-  width: 80px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: #000000;
-  display: none;
+  margin: 10px auto 0; padding: 3px; text-align: center; width: 100px; border-radius: 10px;
+  background-color: #ffffff; color: #000000; display: none;
 }
 
-.agradecimento h3, .agradecimento h2 {
-  color: #ffffff;
-}
+.agradecimento h3, .agradecimento h2 { color: #ffffff; }
 
-.ondeContato {
-  margin-top: -220px;
-}
+.ondeContato { margin-top: -220px; }
 
+/* ====== Breakpoints ====== */
 @media (max-width: 1450px) {
-  #foto-jss, #foto-html, #foto-ht {
-    width: 70px;
-  }
-  .foto-react {
-    max-width: 400px;
-    max-height: 400px;
-    margin-top: 90px;
-  }
-  .fundoProjetos .cardProjeto {
-    max-width: 1000px;
-    margin: 0px 10px 50px 10px;
-  }
-  .fundoProjetos .imagemProjeto {
-    width: 250px;
-  }
-  .fundoProjetos .descriçãoProjeto {
-    width: 250px;
-    margin: auto;
-    font-size: 0.8em;
-  }
+  #foto-jss, #foto-html, #foto-ht { width: 70px; }
+  .fundoProjetos .cardProjeto { max-width: 1000px; margin: 0 10px 50px; }
+  .fundoProjetos .imagemProjeto { width: 250px; }
+  .fundoProjetos .descriçãoProjeto { width: 250px; margin: auto; font-size: 0.9em; }
 }
+
 @media (max-width: 1260px) {
-  #foto-jss, #foto-html, #foto-ht {
-    width: 60px;
-  }
-  .fundoApresentação h1 {
-    font-size: 1em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
-    font-size: 3em;
-  }
-  .fundoApresentação #descrição {
-    font-size: 0.8em;
-    width: 700px;
-  }
+  #foto-jss, #foto-html, #foto-ht { width: 60px; }
+  .fundoApresentação #descrição { width: 100%; }
 }
+
 @media (max-width: 1100px) {
-  .foto-react {
-    max-width: 300px;
-    max-height: 300px;
-    margin-top: 120px;
-  }
-  .fundoApresentação h1 {
-    font-size: 0.8em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
-    font-size: 2em;
-  }
-  .fundoApresentação #descrição {
-    font-size: 0.8em;
-    width: 700px;
-  }
-  #foto-jss, #foto-html, #foto-ht {
-    width: 50px;
-  }
-  .flexSobre img {
-    max-width: 250px;
-    margin-left: 30px;
-  }
-  .flexSobre h2 {
-    font-size: 0.8em;
-  }
-  .flexSobre .textoSobre {
-    max-width: 800px;
-  }
-  .flexSobre .tecSobre .TecImgSobre {
-    max-width: 80%;
-    max-height: 400px;
-  }
-  .flexSobre .tecSobre .TecImgSobre img {
-    width: 24px;
-    margin: 30px;
-  }
+  .fundoApresentação .foto-react { width: clamp(160px, 28vw, 320px); top: 18%; right: 2%; }
+  #foto-jss, #foto-html, #foto-ht { width: 50px; }
+  .flexSobre img { max-width: 250px; margin-left: 30px; }
+  .flexSobre h2 { font-size: 0.95em; }
+  .flexSobre .textoSobre { max-width: 800px; }
+  .flexSobre .tecSobre .TecImgSobre { max-width: 80%; max-height: 400px; }
+  .flexSobre .tecSobre .TecImgSobre img { width: 48px; margin: 24px; }
 }
-.tecSobre figure {
-  width: 80px;
-}
+.tecSobre figure { width: 80px; }
 
 @media (max-width: 800px) {
-  header {
-    padding: 5px;
-  }
-  header .logotipo {
-    padding: 10px;
-  }
-  header .fotoLogo {
-    width: 20px;
-    height: 20px;
-  }
-  header #nomeLogo {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 5px;
-    font-weight: 300;
-    letter-spacing: 3px;
-  }
-  header .menu {
-    width: 400px;
-    padding: 15px;
-    position: relative;
-    font-size: 0.8em;
-  }
-  header .menu :hover {
-    box-shadow: inset 0 -20px 0 #11c0e5;
-  }
-  .foto-react {
-    max-width: 180px;
-    max-height: 180px;
-    margin-top: 110px;
-  }
-  .fundoApresentação h1 {
-    font-size: 0.6em;
-  }
-  .fundoApresentação h2, .fundoApresentação p {
-    font-size: 1em;
-  }
-  .fundoApresentação #descrição {
-    font-size: 0.5em;
-    width: 500px;
-  }
-  #foto-jss, #foto-html, #foto-ht {
-    width: 40px;
-  }
+  header{ padding: 8px; }
+  header .logotipo { padding: 8px 10px; gap:8px; }
+  header .fotoLogo { width: 28px; height: 28px; }
+  header #nomeLogo { font-size: 1rem; letter-spacing: 3px; }
+  header .menu { padding: 10px; gap: 4px; font-size: 0.9em; }
+
+  .fundoApresentação h1 { font-size: .9em; }
+  .fundoApresentação p { font-size: 1rem; }
+  #foto-jss, #foto-html, #foto-ht { width: 40px; }
 }
+
 @media (max-width: 600px) {
-  header {
-    padding: 5px;
+  header { padding: 6px; }
+  header .logotipo { padding: 6px 8px; }
+  header .fotoLogo { width: 24px; height: 24px; }
+  header #nomeLogo { font-size: 1em; letter-spacing: 3px; }
+  header .menu { display: none; } /* mantém layout limpo no mobile */
+
+  .fundoApresentação { padding-top: 60px; }
+  .fundoApresentação .foto-react {
+    max-width: 240px; margin-top: 120px; left: auto; right: 5%; position: absolute;
   }
-  header .logotipo {
-    padding: 10px;
-  }
-  header .fotoLogo {
-    width: 20px;
-    height: 20px;
-  }
-  header #nomeLogo {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 5px;
-    font-weight: 300;
-    letter-spacing: 3px;
-  }
-  header .menu {
-    display: none;
-  }
-  .foto-react {
-    max-width: 280px;
-    max-height: 280px;
-    margin-top: 210px;
-    overflow: hidden;
-    left: 20% !important;
-  }
-  .fundoApresentação .apresentação {
-    padding: 10px;
-    width: 100%;
-    margin: auto;
-    margin-top: 50px;
-  }
-  .fundoApresentação h1 {
-    font-size: 1em;
-  }
-  .fundoApresentação h2 {
-    width: 240px;
-    font-size: 2em;
-  }
-  .fundoApresentação p {
-    font-size: 1.4em;
-  }
-  .fundoApresentação #descrição {
-    font-size: 0.6em;
-    width: 300px;
-  }
-  #foto-jss, #foto-html, #foto-ht {
-    width: 40px;
-  }
-  .redeSocias {
-    margin-right: 42%;
-  }
-  .redeSocias .imagensRedes {
-    display: flex;
-    padding: 10px;
-  }
-  .redeSocias .imagensRedes img {
-    max-width: 30px;
-    max-height: 30px;
-  }
-  #projeto {
-    font-size: 2em;
-  }
-  .imagemProjeto {
-    max-width: 500px;
-    max-height: 350px;
-    margin: auto;
-  }
-  .descriçãoProjeto {
-    margin-top: 10px;
-    font-size: 0.4em;
-  }
-  .subTituloProjeto, .tituloCardUti {
-    font-size: 0.7em;
-  }
-  .tituloCardUti {
-    margin: 0px;
-  }
-  .fundoSobre h1 {
-    padding: 50px;
-    font-size: 2em;
-  }
-  .fundoSobre h2 {
-    padding: 20px;
-    font-size: 0.8em;
-    font-weight: 400;
-    word-spacing: 1px;
-  }
-  .fundoSobre .flexSobre {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-  }
-  .fundoSobre .imagemSobre img {
-    width: 220px;
-    margin: 0px 30px 20px 0px;
-  }
-  .fundoSobre .tecSobre {
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-  .fundoSobre .tecSobre .TecImgSobre {
-    display: flex;
-  }
-  .fundoSobre .tecSobre .TecImgSobre img {
-    width: 30px;
-    margin: 10px;
-  }
-  .fundoSobre .tecSobre .TecImgSobre figcaption {
-    display: none;
-  }
-  .fundoContato {
-    height: 80vh;
-    margin-top: -10px;
-  }
-  .fundoContato h1 {
-    margin: -80px 0px 20px 0px;
-    padding: 20px 0px 0px 0px;
-    font-size: 2em;
-  }
-  .fundoContato h2 {
-    margin-bottom: 10px;
-    font-size: 1em;
-  }
-  .fundoContato h2 span {
-    color: #970ee7;
-  }
-  .fundoContato h3 {
-    font-size: 0.6em;
-    padding: 10px;
-  }
-}/*# sourceMappingURL=Style.css.map */
+  .fundoApresentação .apresentação { padding: 10px; width: 100%; margin: auto; margin-top: 30px; }
+  .fundoApresentação h1 { font-size: 1em; }
+  .fundoApresentação h2 { width: auto; font-size: 1.8em; }
+  .fundoApresentação p { font-size: 1.1em; }
+  .fundoApresentação #descrição { font-size: .95em; width: 100%; }
+
+  .redeSocias { margin-right: 42%; }
+  .redeSocias .imagensRedes img { max-width: 30px; max-height: 30px; }
+
+  #projeto { font-size: 2em; }
+  .imagemProjeto { max-width: 500px; max-height: 350px; margin: auto; }
+  .descriçãoProjeto { margin-top: 10px; font-size: 0.9em; }
+  .subTituloProjeto, .tituloCardUti { font-size: 1em; }
+  .tituloCardUti { margin: 0; }
+
+  .fundoSobre h1 { padding: 40px 20px; font-size: 2rem; }
+  .fundoSobre h2 { padding: 10px 20px; font-size: 0.95em; word-spacing: 1px; }
+  .fundoSobre .flexSobre { padding-top: 30px; flex-direction: column; }
+  .fundoSobre .imagemSobre img { width: 220px; margin: 0 30px 20px 0; }
+  .fundoSobre .tecSobre { margin: 20px 0 40px; }
+  .fundoSobre .tecSobre .TecImgSobre img { width: 36px; margin: 10px; }
+  .fundoSobre .tecSobre .TecImgSobre figcaption { display: none; }
+
+  .fundoContato { min-height: 80vh; margin-top: -10px; }
+  .fundoContato h1 { margin: -40px 0 20px; padding-top: 20px; font-size: 2em; }
+  .fundoContato h2 { margin-bottom: 10px; font-size: 1em; }
+  .fundoContato h3 { font-size: 0.9em; padding: 10px; }
+}
